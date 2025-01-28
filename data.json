@@ -2,6 +2,7 @@
     {
       "id": 1,
       "name": "Sampaio Corrêa",
+      "status": "A",
       "image": "/img/sampaio-correa-logo.svg",
       "history": "Fundado em 1923, o Sampaio Corrêa é um dos maiores times do Maranhão.",
       "curiosities": [
@@ -12,6 +13,7 @@
     {
       "id": 2,
       "name": "Moto Club",
+      "status": "A",
       "image": "/img/Moto_Club_logo.png",
       "history": "Fundado em 1937, o Moto Club tem grande rivalidade com o Sampaio Corrêa.",
       "curiosities": [
@@ -22,6 +24,7 @@
     {
       "id": 3,
       "name": "MAC (Maranhão Atlético Clube)",
+      "status": "A",
       "image": "/img/Maranhão_Atlético_Clube.png",
       "history": "Fundado em 1932, o Maranhão Atlético Clube é conhecido como Demolidor de Cartazes.",
       "curiosities": [
@@ -32,6 +35,7 @@
     {
       "id": 4,
       "name": "Sociedade Imperatriz de Desportos",
+      "status": "A",
       "image": "/img/Imperatriz FC.svg",
       "history": "Fundada em 4 de janeiro de 1962 sob o nome de Sociedade Atlética Imperatriz, cuja sigla (SAI) era a mesma do Sindicato dos Arrumadores de Imperatriz, cujo time amador serviu de base nos primeiros anos.",
       "curiosities": [
@@ -41,6 +45,7 @@
     {
       "id": 5,
       "name": "Cordino Esporte Clube",
+      "status": "B",
       "image": "/img/Cordino_EC_logo.png",
       "history": "A equipe surgiu da seleção municipal de Barra do Corda, que disputava o 'Copão Maranhão do Sul', torneio intermunicipal da região. Entusiasmados, os dirigentes e a prefeitura resolveram profissionalizar a equipe, pagando todas as taxas junto à FMF e o primeiro torneio que participou foi na Segunda Divisão Maranhense de 2010.",
       "curiosities": [
@@ -52,6 +57,7 @@
       "id": 6,
       "name": "Pinheiro Atlético Clube",
       "image": "/img/PinheiroMA.png",
+      "status": "A",
       "history": "O clube foi fundado no dia 1º de abril de 1989 e jogou o Campeonato Maranhense de Futebol de 1989 a 1993, obtendo sua melhor colocação em 1992, quando terminou o estadual na 3ª colocação. Licenciou-se em 1994, retornando em 2016 jogando o Campeonato Maranhense de Futebol - Segunda Divisão e perdendo a final pro Americano.",
       "curiosities": [
         "Possui 15 títulos estaduais.",
@@ -61,6 +67,7 @@
     {
       "id": 7,
       "name": "Tuntum Esporte Clube",
+      "status": "A",
       "image": "/img/Escudo_Tuntum_EC.png",
       "history": "O clube teve sua fundação e apresentação em 1 de junho de 2021 e com o apoio da prefeitura da cidade, que fica a 365 km de distância da capital, São Luis.",
       "curiosities": [
@@ -71,6 +78,7 @@
     {
       "id": 8,
       "name": "Instituto de Administração de Projetos Educacionais Futebol Clube - IAPE",
+      "status": "A",
       "image": "/img/iape.png",
       "history": "Foi fundado em 10 de agosto de 2008.",
       "curiosities": [
@@ -81,6 +89,7 @@
     {
       "id": 9,
       "name": "Esporte Clube Viana",
+      "status": "A",
       "image": "/img/ECViana.png",
       "history": "O Viana foi fundado em 15 de julho de 1995 por um grupo de moradores da cidade. Eles queriam fundar um time e torcer para uma equipe local; daí deu a ideia de fundar o Esporte Clube Viana.",
       "curiosities": [
@@ -91,6 +100,7 @@
     {
       "id": 10,
       "name": "Bacabal Esporte Clube",
+      "status": "B",
       "image": "/img/EscudoBacabal.png",
       "history": "O Bacabal Esporte Clube foi fundado em 12 de março de 1974.",
       "curiosities": [
@@ -101,6 +111,7 @@
     {
       "id": 11,
       "name": "Expressinho Futebol Clube",
+      "status": "B",
       "image": "/img/ExpressinhoFC.png",
       "history": "Licenciado desde 2005, voltou a disputar campeonatos em 2012, mais precisamente o Campeonato Maranhense Sub-16. Atualmente disputa a Segunda Divisão estadual, mas em vez de representar São Luís, cidade onde o clube foi fundado em 1975, representou o município de Santa Rita, más em 2013 o clube voltou a representara cidade de São Luís.",
       "curiosities": [
@@ -111,6 +122,7 @@
     {
       "id": 12,
       "name": "São José de Ribamar Esporte Clube",
+      "status": "B",
       "image": "/img/Escudo-do-São-José-de-Ribamar.png",
       "history": "Em 2007 o clube subiu para a primeira divisão do maranhense como o vice campeonato da segunda.",
       "curiosities": [
@@ -121,6 +133,7 @@
     {
       "id": 13,
       "name": "Sociedade Esportiva Tupan",
+      "status": "B",
       "image": "/img/SETupan.png",
       "history": "O Tupan Sport Clube fundado em 23 de dezembro de 1924 começou a disputar o campeonato Maranhense em 1926, depois disputou o ano de 1930, foi campeão maranhense em 1932, bicampeão maranhense em 1935, e tri campeão maranhense em 1938",
       "curiosities": [
@@ -131,6 +144,7 @@
     {
       "id": 14,
       "name": "Americano Futebol Clube",
+      "status": "B",
       "image": "/img/AmericanoMA.png",
       "history": "É um clube brasileiro de futebol, da cidade de Bacabal. Suas cores são azul, vermelho e branco.",
       "curiosities": [
@@ -141,6 +155,7 @@
     {
       "id": 15,
       "name": "São Luís Futebol Clube",
+      "status": "B",
       "image": "/img/EscudoSaoLuisFC.png",
       "history": "O São Luís Futebol Clube é uma equipe que atua no futebol profissional maranhense, fundo em 3 de agosto de 2001 como uma equipe amadora passou boa parte disputando competições amadoras como as categorias de base sub-15, sub-17 e sub-19 a equipe se sagrou-se campeão campeão do Campeonato maranhense Sub-17 de 2018 após vencer Cantareira por 1 a 0. e ainda venceu o seu segundo estadual em 2022 mas na categoria sub-15.",
       "curiosities": [
@@ -151,6 +166,7 @@
     {
       "id": 16,
       "name": "Santa Quitéria Futebol Clube",
+      "status": "B",
       "image": "/img/santa_quiteria.png",
       "history": "Fundado em 2003, disputou seu primeiro campeonato oficial e inaugurou seu estádio em 2005, quando venceu pela primeira vez o Campeonato Maranhense de Futebol Segunda Divisão,contra o Juventude, garantindo o direito de disputar o Campeonato Maranhense de 2006[4].",
       "curiosities": [
@@ -161,10 +177,22 @@
     {
       "id": 17,
       "name": "Timon Esporte Clube",
+      "status": "B",
       "image": "/img/TimonEC.png",
       "history": "Estreou em competições em 2007 quando disputou o Campeonato Maranhense – Série B do mesmo ano.",
       "curiosities": [
         "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Luso Brasileiro",
+      "status": "Inativo",
+      "image": "/img/SCLusoBrasileiro.png",
+      "history": "O Sport Club Luso Brasileiro foi um clube de futebol com sede em São Luís, capital do estado do Maranhão. Sua fundação remonta a 1917, sendo estabelecido pelo comerciante português Edgar Figueira, que assumiu também a presidência até agosto de 1919.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
         "Foi o primeiro time maranhense a disputar um campeonato nacional."
       ]
     }
