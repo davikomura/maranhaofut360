@@ -1,17 +1,40 @@
-import TeamList from "../components/TeamList";
+import { LeagueTable } from "../components/LeagueTable";
+// import TeamList from "../components/TeamList";
 
 export const SerieA = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-900 via-gray-800 to-black">
       <main className="max-w-6xl mx-auto py-8 px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-          Lista de Times da Série A
+        {/* Seção da Tabela */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-center text-gray-300 mb-6">
+            Tabela do Campeonato Maranhense Série A
           </h2>
-          <p className="text-center text-gray-600 mb-10">
-          Clique em um time para explorar sua história e curiosidades.
-          </p>
-          <TeamList status="A"/>
+          <LeagueTable league="A" />
+        </section>
+
+        {/* Estatísticas */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-center text-gray-300 mb-6">
+            Artilheiros e Estatísticas
+          </h2>
+          {/* Componente para artilheiros e estatísticas futuras */}
+        </section>
+
+        {/* Lista de Times */}
+        {/* <h2 className="text-2xl font-bold text-center text-gray-300 mb-6">
+          Times Participantes
+        </h2>
+        <TeamList status="A" /> */}
+
+        {/* Histórico de edições */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-center text-gray-300 mb-6">
+            Histórico de Campeões
+          </h2>
+          {/* Lista histórica de campeões */}
+        </section>
       </main>
     </div>
-  )
-}
+  );
+};

@@ -195,6 +195,61 @@
         "Possui 8 títulos estaduais.",
         "Foi o primeiro time maranhense a disputar um campeonato nacional."
       ]
+    },
+    {
+      "id": 19,
+      "name": "Juventude Samas",
+      "status": "Inativo",
+      "image": "/img/SEJuventude.png",
+      "history": "O clube foi fundado em 14 de junho de 1979 na cidade de Caxias e sob o nome de Duque de Caxias Atlético Clube.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Chapadinha Futebol Clube",
+      "status": "Inativo",
+      "image": "/img/Chapadinha.png",
+      "history": "O Chapadinha disputou 6 edições do Campeonato Maranhense, tendo como melhor posição o terceiro lugar em 2005. A única participação do clube em competições nacionais foi em 2003, quando disputou a Série C, sendo eliminado na segunda fase.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Araioses Futebol Clube",
+      "status": "Inativo",
+      "image": "/img/AraiosesFC.png",
+      "history": "O Araioses estreou no Campeonato Maranhense da Segunda Divisão, onde foi vice-campeão e conquistou o acesso inédito à elite do Campeonato Maranhense.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Balsas Esporte Clube",
+      "status": "Inativo",
+      "image": "/img/BalsasEC.png",
+      "history": "Fundado em 1999 pelo desportista Carmegildo Xavier, o clube disputou em 2012 sua primeira competição oficial, o Campeonato Maranhense da 2ª Divisão no qual conquistou o título. Disputou a o Campeonato Maranhense da 1ª Divisão de 2013 a 2015.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Sabiá Futebol Clube",
+      "status": "Inativo",
+      "image": "/img/SabiaFC.png",
+      "history": "O clube surgiu em 2007 a partir da ideia de um grupo de amigos desportistas de uma construtora chamada 'Barros Construção Empreendimentos Ltda.', que resolveram fundar um time de futebol de campo amador, e assim fundaram o 'Sabiá FC'.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
     }
   ]
   
