@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import teamsData from "./data/teams.json";
 
 interface Team {
   name: string;
@@ -10,7 +11,7 @@ interface Team {
   losses: number;
   goalsFor: number;
   goalsAgainst: number;
-  goalDifference?: number;
+  goalDifference: number;
 }
 
 interface LeagueProps {
@@ -18,30 +19,20 @@ interface LeagueProps {
 }
 
 export const LeagueTable = ({ league }: LeagueProps) => {
-  const [teams, setTeams] = useState<Team[]>([]);
+  // Calcula o saldo de gols para cada time e ordena por pontos e saldo de gols
+  const teamsWithGoalDifference: Team[] = teamsData.map(
+    (team: Omit<Team, "goalDifference">) => ({
+      ...team,
+      goalDifference: team.goalsFor - team.goalsAgainst,
+    })
+  );
 
-  useEffect(() => {
-    fetch("/teams.json")
-      .then((response) => response.json())
-      .then((data: Team[]) => {
-        // Adiciona o saldo de gols a cada time
-        const teamsWithGoalDifference = data.map((team) => ({
-          ...team,
-          goalDifference: team.goalsFor - team.goalsAgainst, // Calcula saldo de gols
-        }));
-  
-        // Ordena os times com base em pontos e saldo de gols
-        const sortedTeams = teamsWithGoalDifference.sort((a, b) => {
-          if (b.points !== a.points) {
-            return b.points - a.points; // Ordena por pontos
-          }
-          return b.goalDifference - a.goalDifference; // Desempata por saldo de gols
-        });
-  
-        setTeams(sortedTeams);
-      })
-      .catch((error) => console.error("Erro ao carregar os dados: ", error));
-  }, []);
+  const sortedTeams = teamsWithGoalDifference.sort((a, b) => {
+    if (b.points !== a.points) {
+      return b.points - a.points;
+    }
+    return b.goalDifference - a.goalDifference;
+  });
 
   return (
     <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -63,20 +54,27 @@ export const LeagueTable = ({ league }: LeagueProps) => {
           </tr>
         </thead>
         <tbody>
-          {teams.map((team, index) => {
+          {sortedTeams.map((team, index) => {
             const isTop4 = index < 4;
-            const isBottom2 = index >= teams.length - 2;
-
+            const isBottom2 = index >= sortedTeams.length - 2;
             return (
               <tr
                 key={team.name}
                 className={`text-center border-b border-gray-700 ${
-                  isTop4 ? "bg-green-700" : isBottom2 ? "bg-red-700" : ""
+                  isTop4
+                    ? "bg-green-700"
+                    : isBottom2
+                    ? "bg-red-700"
+                    : ""
                 }`}
               >
                 <td className="p-2">{index + 1}</td>
                 <td className="p-2 flex items-center gap-2">
-                  <img src={team.logo} alt={team.name} className="w-6 h-6" />
+                  <img
+                    src={team.logo}
+                    alt={team.name}
+                    className="w-6 h-6"
+                  />
                   {team.name}
                 </td>
                 <td className="p-2">{team.points}</td>
@@ -87,7 +85,7 @@ export const LeagueTable = ({ league }: LeagueProps) => {
                 <td className="p-2">
                   {team.goalsFor}:{team.goalsAgainst}
                 </td>
-                <td className="p-2">{team.goalsFor - team.goalsAgainst}</td>
+                <td className="p-2">{team.goalDifference}</td>
               </tr>
             );
           })}
