@@ -1,14 +1,47 @@
+import { useEffect, useState } from "react";
+
+interface Team {
+  name: string;
+  logo: string;
+  points: number;
+  games: number;
+  wins: number;
+  draws: number;
+  losses: number;
+  goalsFor: number;
+  goalsAgainst: number;
+  goalDifference?: number;
+}
+
 interface LeagueProps {
-    league?: string; // 'Status' é opcional e do tipo string
-  }
+  league?: string;
+}
 
 export const LeagueTable = ({ league }: LeagueProps) => {
-  // Dados fictícios para exibição inicial
-  const teams = [
-    { position: 1, name: "Time A", points: 30, games: 15, wins: 9, draws: 3, losses: 3 },
-    { position: 2, name: "Time B", points: 28, games: 15, wins: 8, draws: 4, losses: 3 },
-    { position: 3, name: "Time C", points: 25, games: 15, wins: 7, draws: 4, losses: 4 },
-  ];
+  const [teams, setTeams] = useState<Team[]>([]);
+
+  useEffect(() => {
+    fetch("/src/components/data/teams.json")
+      .then((response) => response.json())
+      .then((data: Team[]) => {
+        // Adiciona o saldo de gols a cada time
+        const teamsWithGoalDifference = data.map((team) => ({
+          ...team,
+          goalDifference: team.goalsFor - team.goalsAgainst, // Calcula saldo de gols
+        }));
+  
+        // Ordena os times com base em pontos e saldo de gols
+        const sortedTeams = teamsWithGoalDifference.sort((a, b) => {
+          if (b.points !== a.points) {
+            return b.points - a.points; // Ordena por pontos
+          }
+          return b.goalDifference - a.goalDifference; // Desempata por saldo de gols
+        });
+  
+        setTeams(sortedTeams);
+      })
+      .catch((error) => console.error("Erro ao carregar os dados: ", error));
+  }, []);
 
   return (
     <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -25,22 +58,41 @@ export const LeagueTable = ({ league }: LeagueProps) => {
             <th className="p-2">V</th>
             <th className="p-2">E</th>
             <th className="p-2">D</th>
+            <th className="p-2">Gols</th>
+            <th className="p-2">SG</th>
           </tr>
         </thead>
         <tbody>
-          {teams.map((team) => (
-            <tr key={team.position} className="text-center border-b border-gray-700">
-              <td className="p-2">{team.position}</td>
-              <td className="p-2">{team.name}</td>
-              <td className="p-2">{team.points}</td>
-              <td className="p-2">{team.games}</td>
-              <td className="p-2">{team.wins}</td>
-              <td className="p-2">{team.draws}</td>
-              <td className="p-2">{team.losses}</td>
-            </tr>
-          ))}
+          {teams.map((team, index) => {
+            const isTop4 = index < 4;
+            const isBottom2 = index >= teams.length - 2;
+
+            return (
+              <tr
+                key={team.name}
+                className={`text-center border-b border-gray-700 ${
+                  isTop4 ? "bg-green-700" : isBottom2 ? "bg-red-700" : ""
+                }`}
+              >
+                <td className="p-2">{index + 1}</td>
+                <td className="p-2 flex items-center gap-2">
+                  <img src={team.logo} alt={team.name} className="w-6 h-6" />
+                  {team.name}
+                </td>
+                <td className="p-2">{team.points}</td>
+                <td className="p-2">{team.games}</td>
+                <td className="p-2">{team.wins}</td>
+                <td className="p-2">{team.draws}</td>
+                <td className="p-2">{team.losses}</td>
+                <td className="p-2">
+                  {team.goalsFor}:{team.goalsAgainst}
+                </td>
+                <td className="p-2">{team.goalsFor - team.goalsAgainst}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
   );
-}
+};

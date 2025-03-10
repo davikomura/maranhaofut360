@@ -14,12 +14,11 @@ export const SerieA = () => {
         </section>
 
         {/* Estatísticas */}
-        <section className="mt-12">
+        {/* <section className="mt-12">
           <h2 className="text-2xl font-bold text-center text-gray-300 mb-6">
             Artilheiros e Estatísticas
           </h2>
-          {/* Componente para artilheiros e estatísticas futuras */}
-        </section>
+        </section> */}
 
         {/* Lista de Times */}
         {/* <h2 className="text-2xl font-bold text-center text-gray-300 mb-6">
@@ -28,12 +27,11 @@ export const SerieA = () => {
         <TeamList status="A" /> */}
 
         {/* Histórico de edições */}
-        <section className="mt-12">
+        {/* <section className="mt-12">
           <h2 className="text-2xl font-bold text-center text-gray-300 mb-6">
             Histórico de Campeões
           </h2>
-          {/* Lista histórica de campeões */}
-        </section>
+        </section> */}
       </main>
     </div>
   );

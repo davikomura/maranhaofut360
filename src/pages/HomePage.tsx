@@ -12,21 +12,21 @@ export default function HomePage() {
             className="bg-gray-800 text-white p-4 md:p-8 rounded-xl shadow-xl hover:scale-105 transition-transform flex flex-col items-center border-t-4 border-yellow-500"
           >
             <span className="text-xl md:text-3xl font-extrabold">Série A</span>
-            <p className="text-sm md:text-lg text-gray-400 mt-2">Times da elite do futebol maranhense</p>
+            <p className="text-sm md:text-lg text-gray-400 mt-2">Primeira Divisão do Futebol Maranhense</p>
           </Link>
           <Link
             to="/Serie-B"
             className="bg-gray-800 text-white p-4 md:p-8 rounded-xl shadow-xl hover:scale-105 transition-transform flex flex-col items-center border-t-4 border-blue-500"
           >
             <span className="text-xl md:text-3xl font-extrabold">Série B</span>
-            <p className="text-sm md:text-lg text-gray-400 mt-2">Clubes que disputam a segunda divisão</p>
+            <p className="text-sm md:text-lg text-gray-400 mt-2">Segunda Divisão do Futebol Maranhense</p>
           </Link>
           <Link
-            to="/extintos"
-            className="bg-gray-800 text-white p-4 md:p-8 rounded-xl shadow-xl hover:scale-105 transition-transform flex flex-col items-center border-t-4 border-red-500"
+            to="/Serie-A-Fem"
+            className="bg-gray-800 text-white p-4 md:p-8 rounded-xl shadow-xl hover:scale-105 transition-transform flex flex-col items-center border-t-4 border-blue-500"
           >
-            <span className="text-xl md:text-3xl font-extrabold">Times Extintos</span>
-            <p className="text-sm md:text-lg text-gray-400 mt-2">Clubes que fizeram história no Maranhão</p>
+            <span className="text-xl md:text-3xl font-extrabold">Série A Feminino</span>
+            <p className="text-sm md:text-lg text-gray-400 mt-2">Primeira Divisão do Futebol Maranhense Feminino</p>
           </Link>
         </div>
       </main>

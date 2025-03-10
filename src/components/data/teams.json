@@ -1,0 +1,90 @@
+[
+    {
+      "name": "Imperatriz",
+      "logo": "/img/Imperatriz FC.svg",
+      "points": 19,
+      "games": 10,
+      "wins": 5,
+      "draws": 4,
+      "losses": 1,
+      "goalsFor": 16,
+      "goalsAgainst": 8
+    },
+    {
+      "name": "Sampaio Corrêa",
+      "logo": "/img/sampaio-correa-logo.svg",
+      "points": 14,
+      "games": 7,
+      "wins": 4,
+      "draws": 2,
+      "losses": 1,
+      "goalsFor": 13,
+      "goalsAgainst": 5
+    },
+    {
+      "name": "Pinheiro",
+      "logo": "/img/PinheiroMA.png",
+      "points": 13,
+      "games": 9,
+      "wins": 4,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 12,
+      "goalsAgainst": 11
+    },
+    {
+      "name": "IAPE",
+      "logo": "/img/iape.png",
+      "points": 11,
+      "games": 7,
+      "wins": 3,
+      "draws": 2,
+      "losses": 2,
+      "goalsFor": 7,
+      "goalsAgainst": 7
+    },
+    {
+      "name": "Maranhão",
+      "logo": "/img/Maranhão_Atlético_Clube.png",
+      "points": 10,
+      "games": 6,
+      "wins": 3,
+      "draws": 1,
+      "losses": 2,
+      "goalsFor": 8,
+      "goalsAgainst": 6
+    },
+    {
+      "name": "Moto Club",
+      "logo": "/img/Moto_Club_logo.png",
+      "points": 9,
+      "games": 7,
+      "wins": 2,
+      "draws": 3,
+      "losses": 2,
+      "goalsFor": 8,
+      "goalsAgainst": 6
+    },
+    {
+      "name": "Tuntum",
+      "logo": "/img/Escudo_Tuntum_EC.png",
+      "points": 9,
+      "games": 7,
+      "wins": 2,
+      "draws": 3,
+      "losses": 2,
+      "goalsFor": 9,
+      "goalsAgainst": 8
+    },
+    {
+      "name": "Viana",
+      "logo": "/img/ECViana.png",
+      "points": 0,
+      "games": 9,
+      "wins": 0,
+      "draws": 0,
+      "losses": 9,
+      "goalsFor": 4,
+      "goalsAgainst": 26
+    }
+]  
