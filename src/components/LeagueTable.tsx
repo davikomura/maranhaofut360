@@ -18,7 +18,6 @@ interface LeagueProps {
 }
 
 export const LeagueTable = ({ league }: LeagueProps) => {
-  // Calcula o saldo de gols para cada time e ordena por pontos e saldo de gols
   const teamsWithGoalDifference: Team[] = teamsData.map(
     (team: Omit<Team, "goalDifference">) => ({
       ...team,
@@ -27,69 +26,62 @@ export const LeagueTable = ({ league }: LeagueProps) => {
   );
 
   const sortedTeams = teamsWithGoalDifference.sort((a, b) => {
-    if (b.points !== a.points) {
-      return b.points - a.points;
-    }
+    if (b.points !== a.points) return b.points - a.points;
     return b.goalDifference - a.goalDifference;
   });
 
   return (
-    <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-      <h3 className="text-xl font-bold text-center text-gray-300 mb-4">
+    <div className="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg">
+      <h3 className="text-lg md:text-xl font-bold text-center text-gray-300 mb-4">
         Classificação - Série {league}
       </h3>
-      <table className="w-full text-gray-300">
-        <thead>
-          <tr className="bg-gray-700">
-            <th className="p-2">Pos</th>
-            <th className="p-2">Time</th>
-            <th className="p-2">Pts</th>
-            <th className="p-2">J</th>
-            <th className="p-2">V</th>
-            <th className="p-2">E</th>
-            <th className="p-2">D</th>
-            <th className="p-2">Gols</th>
-            <th className="p-2">SG</th>
-          </tr>
-        </thead>
-        <tbody>
-          {sortedTeams.map((team, index) => {
-            const isTop4 = index < 4;
-            const isBottom2 = index >= sortedTeams.length - 2;
-            return (
-              <tr
-                key={team.name}
-                className={`text-center border-b border-gray-700 ${
-                  isTop4
-                    ? "bg-green-700"
-                    : isBottom2
-                    ? "bg-red-700"
-                    : ""
-                }`}
-              >
-                <td className="p-2">{index + 1}</td>
-                <td className="p-2 flex items-center gap-2">
-                  <img
-                    src={team.logo}
-                    alt={team.name}
-                    className="w-6 h-6"
-                  />
-                  {team.name}
-                </td>
-                <td className="p-2">{team.points}</td>
-                <td className="p-2">{team.games}</td>
-                <td className="p-2">{team.wins}</td>
-                <td className="p-2">{team.draws}</td>
-                <td className="p-2">{team.losses}</td>
-                <td className="p-2">
-                  {team.goalsFor}:{team.goalsAgainst}
-                </td>
-                <td className="p-2">{team.goalDifference}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+
+      <div className="overflow-x-auto">
+        <table className="w-full text-gray-300">
+          <thead>
+            <tr className="bg-gray-700 text-xs md:text-sm">
+              <th className="p-2">Pos</th>
+              <th className="p-2 text-left">Time</th>
+              <th className="p-2">Pts</th>
+              <th className="p-2 hidden md:table-cell">J</th>
+              <th className="p-2">V</th>
+              <th className="p-2">E</th>
+              <th className="p-2">D</th>
+              <th className="p-2 hidden md:table-cell">Gols</th>
+              <th className="p-2">SG</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortedTeams.map((team, index) => {
+              const isTop4 = index < 4;
+              const isBottom2 = index >= sortedTeams.length - 2;
+              return (
+                <tr
+                  key={team.name}
+                  className={`text-center border-b border-gray-700 text-xs md:text-sm ${
+                    isTop4 ? "bg-green-700" : isBottom2 ? "bg-red-700" : ""
+                  }`}
+                >
+                  <td className="p-2">{index + 1}</td>
+                  <td className="p-2 flex items-center gap-2">
+                    <img src={team.logo} alt={team.name} className="w-5 h-5 md:w-6 md:h-6" />
+                    <span className="truncate">{team.name}</span>
+                  </td>
+                  <td className="p-2 font-bold">{team.points}</td>
+                  <td className="p-2 hidden md:table-cell">{team.games}</td>
+                  <td className="p-2">{team.wins}</td>
+                  <td className="p-2">{team.draws}</td>
+                  <td className="p-2">{team.losses}</td>
+                  <td className="p-2 hidden md:table-cell">
+                    {team.goalsFor}:{team.goalsAgainst}
+                  </td>
+                  <td className="p-2">{team.goalDifference}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
