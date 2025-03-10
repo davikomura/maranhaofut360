@@ -1,4 +1,3 @@
-import React from "react";
 import teamsData from "./data/teams.json";
 
 interface Team {
