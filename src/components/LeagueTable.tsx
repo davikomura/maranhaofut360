@@ -21,7 +21,7 @@ export const LeagueTable = ({ league }: LeagueProps) => {
   const [teams, setTeams] = useState<Team[]>([]);
 
   useEffect(() => {
-    fetch("/src/components/data/teams.json")
+    fetch("/teams.json")
       .then((response) => response.json())
       .then((data: Team[]) => {
         // Adiciona o saldo de gols a cada time
