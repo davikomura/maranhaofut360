@@ -1,4 +1,5 @@
-[
+{
+  "serieA" : [
     {
       "name": "Imperatriz",
       "logo": "/img/Imperatriz FC.svg",
@@ -87,4 +88,102 @@
       "goalsFor": 4,
       "goalsAgainst": 26
     }
-]  
+  ], 
+
+  "serieB" : {
+    "group1" : [
+      {
+        "name": "Bacabal",
+        "logo": "/img/EscudoBacabal.svg",
+        "points": 0,
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0
+      },
+      {
+        "name": "Cordino",
+        "logo": "/img/Cordino_EC_logo.png",
+        "points": 0,
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0
+      },
+      {
+        "name": "Chapadinha",
+        "logo": "/img/Chapadinha.png",
+        "points": 0,
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0
+      },
+      {
+        "name": "Expressinho",
+        "logo": "/img/ExpressinhoFC.png",
+        "points": 0,
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0
+      }
+    ],
+
+    "group2" : [
+      {
+        "name": "São José",	
+        "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
+        "points": 0,
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0
+      },
+      {
+        "name": "Santa Quitéria",
+        "logo": "/img/santa_quiteria.png",
+        "points": 0,
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0
+      },
+      {
+        "name": "Timon",
+        "logo": "/img/TimonEC.png",
+        "points": 0,
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0
+      },
+      {
+        "name": "Tupan",
+        "logo": "/img/SETupan.png",
+        "points": 0,
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0
+      }
+    ]
+  }
+
+}  
