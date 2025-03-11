@@ -5,7 +5,7 @@ import Teams from './pages/Teams.tsx';
 import { About } from './pages/About.tsx';
 import { SerieA } from './pages/SerieA.tsx';
 import { SerieB } from './pages/SerieB.tsx';
-import { Extintos } from './pages/Extintos.tsx';
+import { Champions } from './pages/Champions.tsx';
 
 const routes = [
   
@@ -34,8 +34,8 @@ const routes = [
           element: <SerieB />,
         },
         {
-          path: "/extintos",
-          element: <Extintos />,
+          path: "/Lista-de-campeoes",
+          element: <Champions />,
         },
       ],
     }
