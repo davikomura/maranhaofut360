@@ -15,23 +15,23 @@
       "name": "Sampaio Corrêa",
       "logo": "/img/sampaio-correa-logo.svg",
       "points": 14,
-      "games": 7,
+      "games": 8,
       "wins": 4,
       "draws": 2,
-      "losses": 1,
+      "losses": 2,
       "goalsFor": 13,
-      "goalsAgainst": 5
+      "goalsAgainst": 6
     },
     {
       "name": "Pinheiro",
       "logo": "/img/PinheiroMA.png",
       "points": 13,
-      "games": 9,
+      "games": 10,
       "wins": 4,
       "draws": 1,
-      "losses": 1,
+      "losses": 5,
       "goalsFor": 12,
-      "goalsAgainst": 11
+      "goalsAgainst": 12
     },
     {
       "name": "IAPE",
@@ -47,23 +47,23 @@
     {
       "name": "Maranhão",
       "logo": "/img/Maranhão_Atlético_Clube.png",
-      "points": 10,
-      "games": 6,
-      "wins": 3,
+      "points": 13,
+      "games": 7,
+      "wins": 4,
       "draws": 1,
       "losses": 2,
-      "goalsFor": 8,
+      "goalsFor": 9,
       "goalsAgainst": 6
     },
     {
       "name": "Moto Club",
       "logo": "/img/Moto_Club_logo.png",
-      "points": 9,
-      "games": 7,
-      "wins": 2,
+      "points": 12,
+      "games": 8,
+      "wins": 3,
       "draws": 3,
       "losses": 2,
-      "goalsFor": 8,
+      "goalsFor": 9,
       "goalsAgainst": 6
     },
     {

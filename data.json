@@ -259,644 +259,858 @@
     {
       "edition": "1ª",
       "year": "1918",
-      "champion": "Luso Brasileiro (São Luís) (1)",
-      "runner_up": "Fênix (São Luís)"
+      "champion": "Luso Brasileiro",
+      "cityChampion": "São Luís",
+      "runner_up": "Fênix",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "2ª",
       "year": "1919",
-      "champion": "Luso Brasileiro (São Luís) (2)",
-      "runner_up": "Fênix (São Luís)"
+      "champion": "Luso Brasileiro",
+      "cityChampion": "São Luís",
+      "runner_up": "Fênix",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "3ª",
       "year": "1920",
-      "champion": "Football Athletic (São Luís) (1)",
-      "runner_up": "Anilense (São Luís)"
+      "champion": "Football Athletic",
+      "cityChampion": "São Luís",
+      "runner_up": "Anilense",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "4ª",
       "year": "1921",
-      "champion": "Fênix (São Luís) (1)",
-      "runner_up": "Luso Brasileiro (São Luís)"
+      "champion": "Fênix",
+      "cityChampion": "São Luís",
+      "runner_up": "Luso Brasileiro",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "5ª",
       "year": "1922",
-      "champion": "Luso Brasileiro (São Luís) (3)",
-      "runner_up": "Anilense (São Luís)"
+      "champion": "Luso Brasileiro",
+      "cityChampion": "São Luís",
+      "runner_up": "Anilense",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "6ª",
       "year": "1923",
-      "champion": "Luso Brasileiro (São Luís) (4)",
-      "runner_up": "Football Athletic (São Luís)"
+      "champion": "Luso Brasileiro",
+      "cityChampion": "São Luís",
+      "runner_up": "Football Athletic",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "7ª",
       "year": "1924",
-      "champion": "Luso Brasileiro (São Luís) (5)",
-      "runner_up": "Fênix (São Luís)"
+      "champion": "Luso Brasileiro",
+      "cityChampion": "São Luís",
+      "runner_up": "Fênix",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "8ª",
       "year": "1925",
-      "champion": "Luso Brasileiro (São Luís) (6)",
-      "runner_up": "Santa Cruz (São Luís)"
+      "champion": "Luso Brasileiro",
+      "cityChampion": "São Luís",
+      "runner_up": "Santa Cruz",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "9ª",
       "year": "1926",
-      "champion": "Luso Brasileiro (São Luís) (7)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Luso Brasileiro",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "10ª",
       "year": "1927*",
-      "champion": "Luso Brasileiro (São Luís) (8)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Luso Brasileiro",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "11ª",
       "year": "1928*",
-      "champion": "Vasco da Gama (São Luís) (1)",
-      "runner_up": "Luso Brasileiro (São Luís)"
+      "champion": "Vasco da Gama",
+      "cityChampion": "São Luís",
+      "runner_up": "Luso Brasileiro",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": null,
       "year": "1929*",
       "champion": "Não houve campeonato",
-      "runner_up": null
+      "cityChampion": null,
+      "runner_up": null,
+      "cityRunnerUp": null
     },
     {
       "edition": "12ª",
       "year": "1930",
-      "champion": "Sírio (São Luís) (1)",
-      "runner_up": "Anilense (São Luís)"
+      "champion": "Sírio",
+      "cityChampion": "São Luís",
+      "runner_up": "Anilense",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": null,
       "year": "1931",
       "champion": "Campeonato não concluído",
-      "runner_up": null
+      "cityChampion": null,
+      "runner_up": null,
+      "cityRunnerUp": null
     },
     {
       "edition": "13ª",
       "year": "1932",
-      "champion": "Tupan (São Luís) (1)",
-      "runner_up": "América (São Luís)"
+      "champion": "Tupan",
+      "cityChampion": "São Luís",
+      "runner_up": "América",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "14ª",
       "year": "1933",
-      "champion": "Sampaio Corrêa (São Luís) (1)",
-      "runner_up": "Tupan (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Tupan",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "15ª",
       "year": "1934",
-      "champion": "Sampaio Corrêa (São Luís) (2)",
-      "runner_up": "Tupan (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Tupan",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "16ª",
       "year": "1935",
-      "champion": "Tupan (São Luís) (2)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Tupan",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": null,
       "year": "1936",
       "champion": "Não houve campeonato",
-      "runner_up": null
+      "cityChampion": null,
+      "runner_up": null,
+      "cityRunnerUp": null
     },
     {
       "edition": "17ª",
       "year": "1937",
-      "champion": "Maranhão (São Luís) (1)",
-      "runner_up": "Tupan (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Tupan",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "18ª",
       "year": "1938",
-      "champion": "Tupan (São Luís) (3)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Tupan",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": null,
       "year": "1939",
       "champion": "Não houve campeonato",
-      "runner_up": null
+      "cityChampion": null,
+      "runner_up": null,
+      "cityRunnerUp": null
     },
     {
       "edition": "19ª",
       "year": "1940",
-      "champion": "Sampaio Corrêa (São Luís) (3)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "20ª",
       "year": "1941",
-      "champion": "Maranhão (São Luís) (2)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "21ª",
       "year": "1942",
-      "champion": "Sampaio Corrêa (São Luís) (4)",
-      "runner_up": "Football Athletic (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Football Athletic",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "22ª",
       "year": "1943",
-      "champion": "Maranhão (São Luís) (3)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "23ª",
       "year": "1944",
-      "champion": "Moto Club (São Luís) (1)",
-      "runner_up": "Botafogo (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Botafogo",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "24ª",
       "year": "1945",
-      "champion": "Moto Club (São Luís) (2)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "25ª",
       "year": "1946",
-      "champion": "Moto Club (São Luís) (3)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "26ª",
       "year": "1947",
-      "champion": "Moto Club (São Luís) (4)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "27ª",
       "year": "1948",
-      "champion": "Moto Club (São Luís) (5)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "28ª",
       "year": "1949",
-      "champion": "Moto Club (São Luís) (6)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "29ª",
       "year": "1950",
-      "champion": "Moto Club (São Luís) (7)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "30ª",
       "year": "1951",
-      "champion": "Maranhão (São Luís) (4)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "31ª",
       "year": "1952",
-      "champion": "Vitória do Mar (São Luís) (1)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Vitória do Mar",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "32ª",
       "year": "1953",
-      "champion": "Sampaio Corrêa (São Luís) (5)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "33ª",
       "year": "1954",
-      "champion": "Sampaio Corrêa (São Luís) (6)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "34ª",
       "year": "1955",
-      "champion": "Moto Club (São Luís) (8)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "35ª",
       "year": "1956",
-      "champion": "Sampaio Corrêa (São Luís) (7)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "36ª",
       "year": "1957",
-      "champion": "Ferroviário (São Luís) (1)",
-      "runner_up": "Vitória do Mar (São Luís)"
+      "champion": "Ferroviário",
+      "cityChampion": "São Luís",
+      "runner_up": "Vitória do Mar",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "37ª",
       "year": "1958",
-      "champion": "Ferroviário (São Luís) (2)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Ferroviário",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "38ª",
       "year": "1959",
-      "champion": "Moto Club (São Luís) (9)",
-      "runner_up": "Vitória do Mar (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Vitória do Mar",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "39ª",
       "year": "1960",
-      "champion": "Moto Club (São Luís) (10)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "40ª",
       "year": "1961",
-      "champion": "Sampaio Corrêa (São Luís) (8)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "41ª",
       "year": "1962",
-      "champion": "Sampaio Corrêa (São Luís) (9)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "42ª",
       "year": "1963",
-      "champion": "Maranhão (São Luís) (5)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "43ª",
       "year": "1964",
-      "champion": "Sampaio Corrêa (São Luís) (10)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "44ª",
       "year": "1965",
-      "champion": "Sampaio Corrêa (São Luís) (11)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "45ª",
       "year": "1966",
-      "champion": "Moto Club (São Luís) (11)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "46ª",
       "year": "1967",
-      "champion": "Moto Club (São Luís) (12)",
-      "runner_up": "Ferroviário (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Ferroviário",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "47ª",
       "year": "1968",
-      "champion": "Moto Club (São Luís) (13)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "48ª",
       "year": "1969",
-      "champion": "Maranhão (São Luís) (6)",
-      "runner_up": "Ferroviário (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Ferroviário",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "49ª",
       "year": "1970",
-      "champion": "Maranhão (São Luís) (7)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "50ª",
       "year": "1971",
-      "champion": "Ferroviário (São Luís) (3)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Ferroviário",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "51ª",
       "year": "1972",
-      "champion": "Sampaio Corrêa (São Luís) (12)",
-      "runner_up": "Ferroviário (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Ferroviário",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "52ª",
       "year": "1973",
-      "champion": "Ferroviário (São Luís) (4)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Ferroviário",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "53ª",
       "year": "1974",
-      "champion": "Moto Club (São Luís) (14)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "54ª",
       "year": "1975",
-      "champion": "Sampaio Corrêa (São Luís) (13)",
-      "runner_up": "Ferroviário (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Ferroviário",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "55ª",
       "year": "1976",
-      "champion": "Sampaio Corrêa (São Luís) (14)",
-      "runner_up": "Ferroviário (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Ferroviário",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "56ª",
       "year": "1977",
-      "champion": "Moto Club (São Luís) (15)",
-      "runner_up": "Bacabal (Bacabal)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Bacabal",
+      "cityRunnerUp": "Bacabal"
     },
     {
       "edition": "57ª",
       "year": "1978",
-      "champion": "Sampaio Corrêa (São Luís) (15)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "58ª",
       "year": "1979",
-      "champion": "Maranhão (São Luís) (8)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "59ª",
       "year": "1980",
-      "champion": "Sampaio Corrêa (São Luís) (16)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "60ª",
       "year": "1981",
-      "champion": "Moto Club (São Luís) (16)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "61ª",
       "year": "1982",
-      "champion": "Moto Club (São Luís) (17)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "62ª",
       "year": "1983",
-      "champion": "Moto Club (São Luís) (18)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "63ª",
       "year": "1984",
-      "champion": "Sampaio Corrêa (São Luís) (17)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "64ª",
       "year": "1985",
-      "champion": "Sampaio Corrêa (São Luís) (18)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "65ª",
       "year": "1986",
-      "champion": "Sampaio Corrêa (São Luís) (19)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "66ª",
       "year": "1987",
-      "champion": "Sampaio Corrêa (São Luís) (20)",
-      "runner_up": "Imperatriz (Imperatriz)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
     },
     {
       "edition": "67ª",
       "year": "1988",
-      "champion": "Sampaio Corrêa (São Luís) (21)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "68ª",
       "year": "1989",
-      "champion": "Moto Club (São Luís) (19)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "69ª",
       "year": "1990",
-      "champion": "Sampaio Corrêa (São Luís) (22)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "70ª",
       "year": "1991",
-      "champion": "Sampaio Corrêa (São Luís) (23)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "71ª",
       "year": "1992",
-      "champion": "Sampaio Corrêa (São Luís) (24)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "72ª",
       "year": "1993",
-      "champion": "Maranhão (São Luís) (9)",
-      "runner_up": "Imperatriz (Imperatriz)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
     },
     {
       "edition": "73ª",
       "year": "1994",
-      "champion": "Maranhão (São Luís) (10)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "74ª",
       "year": "1995",
-      "champion": "Maranhão (São Luís) (11)",
-      "runner_up": "Coroatá (Coroatá)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Coroatá",
+      "cityRunnerUp": "Coroatá"
     },
     {
       "edition": "75ª",
       "year": "1996",
-      "champion": "Bacabal (Bacabal) (1)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Bacabal",
+      "cityChampion": "Bacabal",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "76ª",
       "year": "1997",
-      "champion": "Sampaio Corrêa (São Luís) (25)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "77ª",
       "year": "1998",
-      "champion": "Sampaio Corrêa (São Luís) (26)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "78ª",
       "year": "1999",
-      "champion": "Maranhão (São Luís) (12)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "79ª",
       "year": "2000",
-      "champion": "Moto Club (São Luís) (20)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "80ª",
       "year": "2001",
-      "champion": "Moto Club (São Luís) (21)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "81ª",
       "year": "2002",
-      "champion": "Sampaio Corrêa (São Luís) (27)",
-      "runner_up": "Santa Inês (Santa Inês)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Santa Inês",
+      "cityRunnerUp": "Santa Inês"
     },
     {
       "edition": "82ª",
       "year": "2003",
-      "champion": "Sampaio Corrêa (São Luís) (28)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "83ª",
       "year": "2004",
-      "champion": "Moto Club (São Luís) (22)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "84ª",
       "year": "2005",
-      "champion": "Imperatriz (Imperatriz) (1)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Imperatriz",
+      "cityChampion": "Imperatriz",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "85ª",
       "year": "2006",
-      "champion": "Moto Club (São Luís) (23)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "86ª",
       "year": "2007",
-      "champion": "Maranhão (São Luís) (13)",
-      "runner_up": "Imperatriz (Imperatriz)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
     },
     {
       "edition": "87ª",
       "year": "2008",
-      "champion": "Moto Club (São Luís) (24)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "88ª",
       "year": "2009",
-      "champion": "JV Lideral (Imperatriz) (1)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "JV Lideral",
+      "cityChampion": "Imperatriz",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "89ª",
       "year": "2010",
-      "champion": "Sampaio Corrêa (São Luís) (29)",
-      "runner_up": "Santa Quitéria (Santa Quitéria)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Santa Quitéria",
+      "cityRunnerUp": "Santa Quitéria"
     },
     {
       "edition": "90ª",
       "year": "2011",
-      "champion": "Sampaio Corrêa (São Luís) (30)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "91ª",
       "year": "2012",
-      "champion": "Sampaio Corrêa (São Luís) (31)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "92ª",
       "year": "2013",
-      "champion": "Maranhão (São Luís) (14)",
-      "runner_up": "Imperatriz (Imperatriz)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
     },
     {
       "edition": "93ª",
       "year": "2014",
-      "champion": "Sampaio Corrêa (São Luís) (32)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "94ª",
       "year": "2015",
-      "champion": "Imperatriz (Imperatriz) (2)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Imperatriz",
+      "cityChampion": "Imperatriz",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "95ª",
       "year": "2016",
-      "champion": "Moto Club (São Luís) (25)",
-      "runner_up": "Sampaio Corrêa (São Luís)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "96ª",
       "year": "2017",
-      "champion": "Sampaio Corrêa (São Luís) (33)",
-      "runner_up": "Cordino (Barra do Corda)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Cordino",
+      "cityRunnerUp": "Barra do Corda"
     },
     {
       "edition": "97ª",
       "year": "2018",
-      "champion": "Moto Club (São Luís) (26)",
-      "runner_up": "Imperatriz (Imperatriz)"
+      "champion": "Moto Club",
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
     },
     {
       "edition": "98ª",
       "year": "2019",
-      "champion": "Imperatriz (Imperatriz) (3)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Imperatriz",
+      "cityChampion": "Imperatriz",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "99ª",
       "year": "2020",
-      "champion": "Sampaio Corrêa (São Luís) (34)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "100ª",
       "year": "2021",
-      "champion": "Sampaio Corrêa (São Luís) (35)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "101ª",
       "year": "2022",
-      "champion": "Sampaio Corrêa (São Luís) (36)",
-      "runner_up": "Cordino (Barra do Corda)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Cordino",
+      "cityRunnerUp": "Barra do Corda"
     },
     {
       "edition": "102ª",
       "year": "2023",
-      "champion": "Maranhão (São Luís) (15)",
-      "runner_up": "Moto Club (São Luís)"
+      "champion": "Maranhão",
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
     },
     {
       "edition": "103ª",
       "year": "2024",
-      "champion": "Sampaio Corrêa (São Luís) (37)",
-      "runner_up": "Maranhão (São Luís)"
+      "champion": "Sampaio Corrêa",
+      "cityChampion": "São Luís",
+      "runner_up": "Maranhão",
+      "cityRunnerUp": "São Luís"
     }
   ]
 }
