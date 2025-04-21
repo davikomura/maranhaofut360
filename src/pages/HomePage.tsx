@@ -1,32 +1,59 @@
 import { Link } from "react-router-dom";
+import { Trophy, Shield, Star } from "lucide-react";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-900 via-gray-800 to-black">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white">
       {/* Main Content */}
-      <main className="flex-grow flex flex-col items-center mt-6 md:mt-10 px-4 md:px-6 text-center">
-        <p className="text-lg md:text-xl font-medium text-gray-300">Fique por dentro de tudo do futebol maranhense</p>
-        <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl">
+      <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-6 text-center py-16">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-4">
+          Futebol Maranhense em Destaque
+        </h1>
+        <p className="text-md md:text-xl text-gray-300 max-w-2xl">
+          Acompanhe as divisões e campeões do estado que vive a paixão pelo futebol!
+        </p>
+
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-6xl">
+          {/* Série A */}
           <Link
             to="/Serie-A"
-            className="bg-gray-800 text-white p-4 md:p-8 rounded-xl shadow-xl hover:scale-105 transition-transform flex flex-col items-center border-t-4 border-yellow-500"
+            className="group bg-black border-2 border-red-600 hover:bg-red-600 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
           >
-            <span className="text-xl md:text-3xl font-extrabold">Série A</span>
-            <p className="text-sm md:text-lg text-gray-400 mt-2">Primeira Divisão do Futebol Maranhense</p>
+            <div className="flex flex-col items-center">
+              <Shield className="w-10 h-10 mb-3 text-red-500 group-hover:text-white" />
+              <span className="text-2xl font-bold text-red-400 group-hover:text-white">Série A</span>
+              <p className="text-sm text-gray-300 group-hover:text-white mt-2 text-center">
+                Primeira Divisão do Futebol Maranhense
+              </p>
+            </div>
           </Link>
+
+          {/* Série B */}
           <Link
             to="/Serie-B"
-            className="bg-gray-800 text-white p-4 md:p-8 rounded-xl shadow-xl hover:scale-105 transition-transform flex flex-col items-center border-t-4 border-blue-500"
+            className="group bg-black border-2 border-blue-600 hover:bg-blue-600 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
           >
-            <span className="text-xl md:text-3xl font-extrabold">Série B</span>
-            <p className="text-sm md:text-lg text-gray-400 mt-2">Segunda Divisão do Futebol Maranhense</p>
+            <div className="flex flex-col items-center">
+              <Star className="w-10 h-10 mb-3 text-blue-400 group-hover:text-white" />
+              <span className="text-2xl font-bold text-blue-400 group-hover:text-white">Série B</span>
+              <p className="text-sm text-gray-300 group-hover:text-white mt-2 text-center">
+                Segunda Divisão do Futebol Maranhense
+              </p>
+            </div>
           </Link>
+
+          {/* Campeões */}
           <Link
             to="/Lista-de-campeoes"
-            className="bg-gray-800 text-white p-4 md:p-8 rounded-xl shadow-xl hover:scale-105 transition-transform flex flex-col items-center border-t-4 border-green-500"
+            className="group bg-black border-2 border-yellow-500 hover:bg-yellow-500 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
           >
-            <span className="text-xl md:text-3xl font-extrabold">Campeões</span>
-            <p className="text-sm md:text-lg text-gray-400 mt-2">Lista de todos os campeões maranhenses.</p>
+            <div className="flex flex-col items-center">
+              <Trophy className="w-10 h-10 mb-3 text-yellow-400 group-hover:text-black" />
+              <span className="text-2xl font-bold text-yellow-400 group-hover:text-black">Campeões</span>
+              <p className="text-sm text-gray-300 group-hover:text-black mt-2 text-center">
+                Lista de todos os campeões maranhenses
+              </p>
+            </div>
           </Link>
         </div>
       </main>
