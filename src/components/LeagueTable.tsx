@@ -39,17 +39,17 @@ export const LeagueTable = ({ league }: LeagueProps) => {
       return (
         <tr
           key={team.name}
-          className={`text-center border-b border-gray-700 text-xs md:text-sm transition duration-200 ${
+          className={`text-center border-b border-gray-700 text-sm md:text-base transition duration-200 ${
             isTop
-              ? "bg-green-700/70 hover:bg-green-600"
+              ? "bg-green-600/10 hover:bg-green-600/20"
               : isBottom
-              ? "bg-red-700/70 hover:bg-red-600"
-              : "hover:bg-gray-700/50"
+              ? "bg-red-600/10 hover:bg-red-600/20"
+              : "hover:bg-gray-700/30"
           }`}
         >
-          <td className="p-2">{index + 1}</td>
-          <td className="p-2 flex items-center gap-2">
-            <img src={team.logo} alt={team.name} className="w-5 h-5 md:w-6 md:h-6" />
+          <td className="p-2 font-semibold">{index + 1}</td>
+          <td className="p-2 flex items-center gap-3 text-left">
+            <img src={team.logo} alt={team.name} className="w-6 h-6 rounded-full" />
             <span className="truncate">{team.name}</span>
           </td>
           <td className="p-2 font-bold">{team.points}</td>
@@ -57,9 +57,7 @@ export const LeagueTable = ({ league }: LeagueProps) => {
           <td className="p-2">{team.wins}</td>
           <td className="p-2">{team.draws}</td>
           <td className="p-2">{team.losses}</td>
-          <td className="p-2 hidden md:table-cell">
-            {team.goalsFor}:{team.goalsAgainst}
-          </td>
+          <td className="p-2 hidden md:table-cell">{team.goalsFor}:{team.goalsAgainst}</td>
           <td className="p-2">{team.goalDifference}</td>
         </tr>
       );
@@ -71,27 +69,33 @@ export const LeagueTable = ({ league }: LeagueProps) => {
       goalDifference: t.goalsFor - t.goalsAgainst,
     }));
     const sortedTeams = teamsWithGD.sort((a, b) =>
-      b.points !== a.points ? b.points - a.points : b.goalDifference - a.goalDifference
+      b.points !== a.points
+        ? b.points - a.points
+        : b.goalDifference !== a.goalDifference
+        ? b.goalDifference - a.goalDifference
+        : b.goalsFor - a.goalsFor
     );
 
     return (
-      <div className="mb-10">
+      <div className="mb-12">
         {title && (
-          <h4 className="text-center text-md md:text-lg font-bold text-gray-300 mb-2">{title}</h4>
+          <h4 className="text-center text-lg md:text-xl font-bold text-gray-100 mb-6 tracking-wide">
+            {title}
+          </h4>
         )}
         <div className="overflow-x-auto">
-          <table className="w-full text-gray-300">
-            <thead>
-              <tr className="bg-gray-700 text-xs md:text-sm uppercase">
-                <th className="p-2">Pos</th>
-                <th className="p-2 text-left">Time</th>
-                <th className="p-2">Pts</th>
-                <th className="p-2 hidden md:table-cell">J</th>
-                <th className="p-2">V</th>
-                <th className="p-2">E</th>
-                <th className="p-2">D</th>
-                <th className="p-2 hidden md:table-cell">Gols</th>
-                <th className="p-2">SG</th>
+          <table className="w-full min-w-[600px] text-gray-300 text-sm md:text-base">
+            <thead className="bg-gray-800 text-xs md:text-sm uppercase tracking-wider">
+              <tr>
+                <th className="p-3">Pos</th>
+                <th className="p-3 text-left">Time</th>
+                <th className="p-3">Pts</th>
+                <th className="p-3 hidden md:table-cell">J</th>
+                <th className="p-3">V</th>
+                <th className="p-3">E</th>
+                <th className="p-3">D</th>
+                <th className="p-3 hidden md:table-cell">Gols</th>
+                <th className="p-3">SG</th>
               </tr>
             </thead>
             <tbody>{renderTableRows(sortedTeams, top, bottom)}</tbody>
@@ -102,11 +106,7 @@ export const LeagueTable = ({ league }: LeagueProps) => {
   };
 
   return (
-    <div className="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg">
-      <h3 className="text-lg md:text-xl font-bold text-center text-gray-300 mb-4">
-        Classificação - Série {league}
-      </h3>
-
+    <div className="w-full">
       {seriesKey === "serieA"
         ? renderTable(data.serieA, undefined, 4, 2)
         : ["group1", "group2"].map((groupKey, i) =>
