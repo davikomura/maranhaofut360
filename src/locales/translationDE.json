@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "teams": "Mannschaften",
+        "about": "Über"
+    },
+    "homePage": {
+        "h1": "Hervorgehobener Fußball aus Maranhão",
+        "p1": "Verfolgen Sie die Ligen und Meister des Bundesstaates, der die Fußballleidenschaft lebt!",
+        "span1": "Serie A",
+        "p2": "Erste Liga des Fußballs von Maranhão",
+        "span2": "Serie B",
+        "p3": "Zweite Liga des Fußballs von Maranhão",
+        "span3": "Meister",
+        "p4": "Liste aller Meister von Maranhão"
+    }
+}

@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { LanguageDropdown } from "../components/LanguageDropdown";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t } = useTranslation();
+  
   return (
     <header className="bg-gradient-to-r from-black via-gray-900 to-black text-white shadow-md border-b border-red-600">
       <div className="container mx-auto flex items-center justify-between px-4 md:px-8 py-4">
@@ -24,7 +28,7 @@ export default function Header() {
                 to="/"
                 className="text-white hover:text-red-500 transition duration-300 border-b-2 border-transparent hover:border-red-500"
               >
-                Início
+                {t("nav.home")}
               </Link>
             </li>
             <li>
@@ -32,7 +36,7 @@ export default function Header() {
                 to="/teams"
                 className="text-white hover:text-blue-500 transition duration-300 border-b-2 border-transparent hover:border-blue-500"
               >
-                Times
+                {t("nav.teams")}
               </Link>
             </li>
             <li>
@@ -40,11 +44,13 @@ export default function Header() {
                 to="/about"
                 className="text-white hover:text-yellow-400 transition duration-300 border-b-2 border-transparent hover:border-yellow-400"
               >
-                Sobre
+                {t("nav.about")}
               </Link>
             </li>
           </ul>
         </nav>
+
+        <LanguageDropdown />
       </div>
     </header>
   );

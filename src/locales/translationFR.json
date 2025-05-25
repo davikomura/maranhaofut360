@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "teams": "Équipes",
+        "about": "À propos"
+    },
+    "homePage": {
+        "h1": "Football Maranhense en Vedette",
+        "p1": "Suivez les divisions et les champions de l'État qui vit la passion du football !",
+        "span1": "Série A",
+        "p2": "Première Division du Football Maranhense",
+        "span2": "Série B",
+        "p3": "Deuxième Division du Football Maranhense",
+        "span3": "Champions",
+        "p4": "Liste de tous les champions maranhenses"
+    }
+}

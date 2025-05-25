@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "home": "Home",
+        "teams": "Teams",
+        "about": "About"
+    },
+    "homePage": {
+        "h1": "Maranhão Football in Focus",
+        "p1": "Follow the divisions and champions of the state that lives and breathes football!",
+        "span1": "Serie A",
+        "p2": "First Division of Maranhão Football",
+        "span2": "Serie B",
+        "p3": "Second Division of Maranhão Football",
+        "span3": "Champions",
+        "p4": "List of all Maranhão champions"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "home": "Início",
+        "teams": "Times",
+        "about": "Sobre"
+    },
+    "homePage": {
+        "h1": "Futebol Maranhense em Destaque",
+        "p1": "Acompanhe as divisões e campeões do estado que vive a paixão pelo futebol!",
+        "span1": "Série A",
+        "p2": "Primeira Divisão do Futebol Maranhense",
+        "span2": "Série B",
+        "p3": "Segunda Divisão do Futebol Maranhense",
+        "span3": "Campeões",
+        "p4": "Lista de todos os campeões maranhenses"
+    }
+}
