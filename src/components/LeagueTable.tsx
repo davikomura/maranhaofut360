@@ -31,10 +31,15 @@ export const LeagueTable = ({ league }: LeagueProps) => {
   const seriesKey: SeriesKey = league === "B" ? "serieB" : "serieA";
   const data = teamsData as TeamsJSON;
 
-  const renderTableRows = (teams: Team[], topHighlight: number, bottomHighlight = 0) =>
+  const renderTableRows = (
+    teams: Team[],
+    topHighlight: number,
+    bottomHighlight = 0
+  ) =>
     teams.map((team, index) => {
       const isTop = index < topHighlight;
-      const isBottom = bottomHighlight > 0 && index >= teams.length - bottomHighlight;
+      const isBottom =
+        bottomHighlight > 0 && index >= teams.length - bottomHighlight;
 
       return (
         <tr
@@ -49,21 +54,33 @@ export const LeagueTable = ({ league }: LeagueProps) => {
         >
           <td className="p-2 font-semibold">{index + 1}</td>
           <td className="p-2 flex items-center gap-3 text-left">
-            <img src={team.logo} alt={team.name} className="w-6 h-6 rounded-full" />
-            <span className="truncate">{team.name}</span>
+            <img
+              src={team.logo}
+              alt={team.name}
+              className="w-6 h-6 sm:w-7 sm:h-7 rounded-full ring-1 ring-gray-500"
+            />
+            <span className="truncate font-medium">{team.name}</span>
           </td>
+
           <td className="p-2 font-bold">{team.points}</td>
           <td className="p-2 hidden md:table-cell">{team.games}</td>
           <td className="p-2">{team.wins}</td>
           <td className="p-2">{team.draws}</td>
           <td className="p-2">{team.losses}</td>
-          <td className="p-2 hidden md:table-cell">{team.goalsFor}:{team.goalsAgainst}</td>
+          <td className="p-2 hidden md:table-cell">
+            {team.goalsFor}:{team.goalsAgainst}
+          </td>
           <td className="p-2">{team.goalDifference}</td>
         </tr>
       );
     });
 
-  const renderTable = (teams: Omit<Team, "goalDifference">[], title?: string, top = 4, bottom = 2) => {
+  const renderTable = (
+    teams: Omit<Team, "goalDifference">[],
+    title?: string,
+    top = 4,
+    bottom = 2
+  ) => {
     const teamsWithGD: Team[] = teams.map((t) => ({
       ...t,
       goalDifference: t.goalsFor - t.goalsAgainst,
@@ -83,10 +100,10 @@ export const LeagueTable = ({ league }: LeagueProps) => {
             {title}
           </h4>
         )}
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[600px] text-gray-300 text-sm md:text-base">
-            <thead className="bg-gray-800 text-xs md:text-sm uppercase tracking-wider">
-              <tr>
+        <div className="overflow-x-auto rounded-xl border border-gray-700 shadow-lg">
+          <table className="w-full min-w-[650px] table-auto text-sm md:text-base text-gray-200">
+            <thead className="bg-gray-800 text-gray-300 uppercase text-xs md:text-sm tracking-wide">
+              <tr className="divide-x divide-gray-700">
                 <th className="p-3">Pos</th>
                 <th className="p-3 text-left">Time</th>
                 <th className="p-3">Pts</th>
@@ -98,7 +115,9 @@ export const LeagueTable = ({ league }: LeagueProps) => {
                 <th className="p-3">SG</th>
               </tr>
             </thead>
-            <tbody>{renderTableRows(sortedTeams, top, bottom)}</tbody>
+            <tbody className="divide-y divide-gray-700">
+              {renderTableRows(sortedTeams, top, bottom)}
+            </tbody>
           </table>
         </div>
       </div>
@@ -109,14 +128,16 @@ export const LeagueTable = ({ league }: LeagueProps) => {
     <div className="w-full">
       {seriesKey === "serieA"
         ? renderTable(data.serieA, undefined, 4, 2)
-        : ["group1", "group2"].map((groupKey, i) =>
-            renderTable(
-              data.serieB[groupKey as "group1" | "group2"],
-              `Grupo ${i + 1}`,
-              2,
-              0
-            )
-          )}
+        : ["group1", "group2"].map((groupKey, i) => (
+            <div key={groupKey}>
+              {renderTable(
+                data.serieB[groupKey as "group1" | "group2"],
+                `Grupo ${i + 1}`,
+                2,
+                0
+              )}
+            </div>
+          ))}
     </div>
   );
 };

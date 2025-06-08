@@ -13,5 +13,8 @@
         "p3": "Segunda División del Fútbol Maranhense",
         "span3": "Campeones",
         "p4": "Lista de todos los campeones maranhenses"
+    },
+    "footer": {
+        "p1": "Todos los derechos reservados."
     }
 }

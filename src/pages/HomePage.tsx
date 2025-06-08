@@ -6,7 +6,7 @@ export default function HomePage() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-r from-black via-gray-900 to-black text-white">
       {/* Main Content */}
       <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-6 text-center py-16">
         <h1 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-4">
@@ -52,7 +52,7 @@ export default function HomePage() {
           >
             <div className="flex flex-col items-center">
               <Trophy className="w-10 h-10 mb-3 text-yellow-400 group-hover:text-black" />
-              <span className="text-2xl font-bold text-yellow-400 group-hover:text-black">{t("HomePage.span3")}</span>
+              <span className="text-2xl font-bold text-yellow-400 group-hover:text-black">{t("homePage.span3")}</span>
               <p className="text-sm text-gray-300 group-hover:text-black mt-2 text-center">
                 {t("homePage.p4")}
               </p>
