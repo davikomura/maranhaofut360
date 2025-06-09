@@ -1,20 +1,57 @@
 {
-    "nav": {
-        "home": "Inicio",
-        "teams": "Equipos",
-        "about": "Acerca de"
-    },
-    "homePage": {
-        "h1": "Fútbol Maranhense en Destaque",
-        "p1": "¡Sigue las divisiones y campeones del estado que vive la pasión por el fútbol!",
-        "span1": "Serie A",
-        "p2": "Primera División del Fútbol Maranhense",
-        "span2": "Serie B",
-        "p3": "Segunda División del Fútbol Maranhense",
-        "span3": "Campeones",
-        "p4": "Lista de todos los campeones maranhenses"
-    },
-    "footer": {
-        "p1": "Todos los derechos reservados."
+  "nav": {
+    "home": "Inicio",
+    "teams": "Equipos",
+    "about": "Acerca de"
+  },
+  "homePage": {
+    "h1": "Fútbol Maranhense en Destaque",
+    "p1": "¡Sigue las divisiones y campeones del estado que vive la pasión por el fútbol!",
+    "span1": "Serie A",
+    "p2": "Primera División del Fútbol Maranhense",
+    "span2": "Serie B",
+    "p3": "Segunda División del Fútbol Maranhense",
+    "span3": "Campeones",
+    "p4": "Lista de todos los campeones maranhenses"
+  },
+  "footer": {
+    "p1": "Todos los derechos reservados."
+  },
+  "leagueTable": {
+    "position": "Pos",
+    "team": "Equipo",
+    "points": "Pts",
+    "games": "PJ",
+    "wins": "G",
+    "draws": "E",
+    "losses": "P",
+    "goals": "Goles",
+    "goalDifference": "DG",
+    "group": "Grupo"
+  },
+  "serieA": {
+    "h2": "Tabla del Maranhense Serie A"
+  },
+  "serieB": {
+    "h2": "Tabla del Maranhense Serie B"
+  },
+  "teamList": {
+    "h2": "Lista de Equipos",
+    "p": "Haz clic en un equipo para explorar su historia y curiosidades.",
+    "teamCard": {
+      "link": "Ver Más"
     }
+  },
+  "teamDetail": {
+    "h1": "Equipo no encontrado",
+    "founded": "Fundado en",
+    "noDivision": "Sin división",
+    "firstTitle": "Primer título Maranhense",
+    "lastTitle": "Último título Maranhense",
+    "curiosities": "Curiosidades"
+  },
+  "about": {
+    "title": "Sobre el Proyecto",
+    "description": "Este proyecto tiene como objetivo divulgar y organizar información sobre el Campeonato Maranhense, permitiendo que los aficionados sigan la clasificación de los equipos, conozcan más sobre los clubes y descubran curiosidades y estadísticas del torneo."
+  }
 }

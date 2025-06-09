@@ -80,7 +80,6 @@ export const Champions = () => {
         )}
 
         <div className="mt-14 space-y-10">
-          {/* Estatísticas Principais */}
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="bg-gray-900/60 border border-gray-700 rounded-xl p-6 shadow-xl ring-1 ring-white/5">
               <h2 className="text-xl font-bold text-white mb-2">Maior Campeão</h2>
@@ -97,7 +96,6 @@ export const Champions = () => {
             </div>
           </div>
 
-          {/* Gráfico de Títulos */}
           <div className="bg-gray-900/60 border border-gray-700 rounded-xl p-6 shadow-xl ring-1 ring-white/5">
             <h3 className="text-xl font-bold text-white mb-4">Títulos por Equipe</h3>
             <ul className="space-y-3">
@@ -120,7 +118,6 @@ export const Champions = () => {
             </ul>
           </div>
 
-          {/* Gráfico de Finais */}
           <div className="bg-gray-900/60 border border-gray-700 rounded-xl p-6 shadow-xl ring-1 ring-white/5">
             <h3 className="text-xl font-bold text-white mb-4">Finais Disputadas por Equipe</h3>
             <ul className="space-y-3">

@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { Trophy, Shield, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useNavigatorLanguage } from "../hooks/useNavigatorLanguage";
 
 export default function HomePage() {
+  useNavigatorLanguage();
   const { t } = useTranslation();
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-black via-gray-900 to-black text-white">
-      {/* Main Content */}
       <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-6 text-center py-16">
         <h1 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-4">
           {t("homePage.h1")}
@@ -17,7 +18,6 @@ export default function HomePage() {
         </p>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-6xl">
-          {/* Série A */}
           <Link
             to="/Serie-A"
             className="group bg-black border-2 border-red-600 hover:bg-red-600 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
@@ -31,7 +31,6 @@ export default function HomePage() {
             </div>
           </Link>
 
-          {/* Série B */}
           <Link
             to="/Serie-B"
             className="group bg-black border-2 border-blue-600 hover:bg-blue-600 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
@@ -45,7 +44,6 @@ export default function HomePage() {
             </div>
           </Link>
 
-          {/* Campeões */}
           <Link
             to="/Lista-de-campeoes"
             className="group bg-black border-2 border-yellow-500 hover:bg-yellow-500 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105"

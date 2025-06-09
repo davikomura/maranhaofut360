@@ -1,20 +1,57 @@
 {
-    "nav": {
-        "home": "Início",
-        "teams": "Times",
-        "about": "Sobre"
-    },
-    "homePage": {
-        "h1": "Futebol Maranhense em Destaque",
-        "p1": "Acompanhe as divisões e campeões do estado que vive a paixão pelo futebol!",
-        "span1": "Série A",
-        "p2": "Primeira Divisão do Futebol Maranhense",
-        "span2": "Série B",
-        "p3": "Segunda Divisão do Futebol Maranhense",
-        "span3": "Campeões",
-        "p4": "Lista de todos os campeões maranhenses"
-    },
-    "footer": {
-        "p1": "Todos os direitos reservados."
+  "nav": {
+    "home": "Início",
+    "teams": "Times",
+    "about": "Sobre"
+  },
+  "homePage": {
+    "h1": "Futebol Maranhense em Destaque",
+    "p1": "Acompanhe as divisões e campeões do estado que vive a paixão pelo futebol!",
+    "span1": "Série A",
+    "p2": "Primeira Divisão do Futebol Maranhense",
+    "span2": "Série B",
+    "p3": "Segunda Divisão do Futebol Maranhense",
+    "span3": "Campeões",
+    "p4": "Lista de todos os campeões maranhenses"
+  },
+  "footer": {
+    "p1": "Todos os direitos reservados."
+  },
+  "leagueTable": {
+    "position": "Pos",
+    "team": "Time",
+    "points": "Pts",
+    "games": "J",
+    "wins": "V",
+    "draws": "E",
+    "losses": "D",
+    "goals": "Gols",
+    "goalDifference": "SG",
+    "group": "Grupo"
+  },
+  "serieA": {
+    "h2": "Tabela do Maranhense Série A"
+  },
+  "serieB": {
+    "h2": "Tabela do Maranhense Série B"
+  },
+  "teamList": {
+    "h2": "Lista de Times",
+    "p": "Clique em um time para explorar sua história e curiosidades.",
+    "teamCard": {
+      "link": "Ver Mais"
     }
+  },
+  "teamDetail": {
+    "h1": "Time não encontrado",
+    "founded": "Fundado em",
+    "noDivision": "Sem divisão",
+    "firstTitle": "Primeiro título maranhense",
+    "lastTitle": "Último título maranhense",
+    "curiosities": "Curiosidades"
+  },
+  "about": {
+    "title": "Sobre o Projeto",
+    "description": "Este projeto tem como objetivo divulgar e organizar informações sobre o Campeonato Maranhense, permitindo que torcedores acompanhem a classificação dos times, conheçam mais sobre as equipes, e fiquem por dentro de curiosidades e estatísticas do torneio."
+  }
 }

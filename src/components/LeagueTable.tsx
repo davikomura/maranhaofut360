@@ -1,4 +1,5 @@
 import teamsData from "./data/teams.json";
+import { useTranslation } from "react-i18next";
 
 interface Team {
   name: string;
@@ -30,6 +31,7 @@ type SeriesKey = "serieA" | "serieB";
 export const LeagueTable = ({ league }: LeagueProps) => {
   const seriesKey: SeriesKey = league === "B" ? "serieB" : "serieA";
   const data = teamsData as TeamsJSON;
+  const { t } = useTranslation();
 
   const renderTableRows = (
     teams: Team[],
@@ -104,15 +106,19 @@ export const LeagueTable = ({ league }: LeagueProps) => {
           <table className="w-full min-w-[650px] table-auto text-sm md:text-base text-gray-200">
             <thead className="bg-gray-800 text-gray-300 uppercase text-xs md:text-sm tracking-wide">
               <tr className="divide-x divide-gray-700">
-                <th className="p-3">Pos</th>
-                <th className="p-3 text-left">Time</th>
-                <th className="p-3">Pts</th>
-                <th className="p-3 hidden md:table-cell">J</th>
-                <th className="p-3">V</th>
-                <th className="p-3">E</th>
-                <th className="p-3">D</th>
-                <th className="p-3 hidden md:table-cell">Gols</th>
-                <th className="p-3">SG</th>
+                <th className="p-3">{t("leagueTable.position")}</th>
+                <th className="p-3 text-left">{t("leagueTable.team")}</th>
+                <th className="p-3">{t("leagueTable.points")}</th>
+                <th className="p-3 hidden md:table-cell">
+                  {t("leagueTable.games")}
+                </th>
+                <th className="p-3">{t("leagueTable.wins")}</th>
+                <th className="p-3">{t("leagueTable.draws")}</th>
+                <th className="p-3">{t("leagueTable.losses")}</th>
+                <th className="p-3 hidden md:table-cell">
+                  {t("leagueTable.goals")}
+                </th>
+                <th className="p-3">{t("leagueTable.goalDifference")}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-700">
@@ -132,7 +138,7 @@ export const LeagueTable = ({ league }: LeagueProps) => {
             <div key={groupKey}>
               {renderTable(
                 data.serieB[groupKey as "group1" | "group2"],
-                `Grupo ${i + 1}`,
+                `${t("leagueTable.group")} ${i + 1}`,
                 2,
                 0
               )}

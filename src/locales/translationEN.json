@@ -1,20 +1,57 @@
 {
-    "nav": {
-        "home": "Home",
-        "teams": "Teams",
-        "about": "About"
-    },
-    "homePage": {
-        "h1": "Maranhão Football in Focus",
-        "p1": "Follow the divisions and champions of the state that lives and breathes football!",
-        "span1": "Serie A",
-        "p2": "First Division of Maranhão Football",
-        "span2": "Serie B",
-        "p3": "Second Division of Maranhão Football",
-        "span3": "Champions",
-        "p4": "List of all Maranhão champions"
-    },
-    "footer": {
-        "p1": "All rights reserved."
+  "nav": {
+    "home": "Home",
+    "teams": "Teams",
+    "about": "About"
+  },
+  "homePage": {
+    "h1": "Maranhão Football in Focus",
+    "p1": "Follow the divisions and champions of the state that lives and breathes football!",
+    "span1": "Serie A",
+    "p2": "First Division of Maranhão Football",
+    "span2": "Serie B",
+    "p3": "Second Division of Maranhão Football",
+    "span3": "Champions",
+    "p4": "List of all Maranhão champions"
+  },
+  "footer": {
+    "p1": "All rights reserved."
+  },
+  "leagueTable": {
+    "position": "Pos",
+    "team": "Team",
+    "points": "Pts",
+    "games": "P",
+    "wins": "W",
+    "draws": "D",
+    "losses": "L",
+    "goals": "Goals",
+    "goalDifference": "GD",
+    "group": "Group"
+  },
+  "serieA": {
+    "h2": "Maranhão Serie A Table"
+  },
+  "serieB": {
+    "h2": "Maranhão Serie B Table"
+  },
+  "teamList": {
+    "h2": "Team List",
+    "p": "Click on a team to explore its history and curiosities.",
+    "teamCard": {
+      "link": "See More"
     }
+  },
+  "teamDetail": {
+    "h1": "Team not found",
+    "founded": "Founded in",
+    "noDivision": "No division",
+    "firstTitle": "First Maranhense title",
+    "lastTitle": "Last Maranhense title",
+    "curiosities": "Curiosities"
+  },
+  "about": {
+    "title": "About the Project",
+    "description": "This project aims to promote and organize information about the Maranhão Championship, allowing fans to follow team standings, learn more about the clubs, and discover curiosities and tournament statistics."
+  }
 }

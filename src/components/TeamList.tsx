@@ -3,21 +3,21 @@ import data from "../../data.json";
 import TeamCard from "./TeamCard";
 
 interface TeamListProps {
-  status?: string;
+  stateDivision?: string;
 }
 
-export default function TeamList({ status }: TeamListProps) {
+export default function TeamList({ stateDivision }: TeamListProps) {
   const teams = data.Teams;
   const [filteredTeams, setFilteredTeams] = useState(teams);
 
   useEffect(() => {
-    if (!status) {
+    if (!stateDivision) {
       setFilteredTeams(teams);
     } else {
-      const filtered = teams.filter((team) => team.status === status);
+      const filtered = teams.filter((team) => team.stateDivision === stateDivision);
       setFilteredTeams(filtered);
     }
-  }, [status, teams]);
+  }, [stateDivision, teams]);
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-2 md:px-4">

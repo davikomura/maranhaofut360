@@ -25,7 +25,6 @@ export const LanguageDropdown = () => {
     setIsOpen(false);
   };
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -38,7 +37,6 @@ export const LanguageDropdown = () => {
     };
   }, []);
 
-  // Find the current language based on i18n
   const currentLang = languages.find(lang => lang.code === i18n.language) || languages[0];
 
   return (
