@@ -61,39 +61,46 @@ export default function TeamDetail() {
     <div className="min-h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white px-4 py-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
         <div className="w-full md:w-1/3 flex flex-col items-center md:self-start">
-        <div className="w-full border border-gray-700 rounded-2xl bg-gray-950 p-6 shadow-lg flex justify-center items-center h-[300px]">
-          <img
-            src={team.image}
-            alt={`Escudo do ${team.name}`}
-            className="max-h-64 object-contain drop-shadow-xl"
-          />
+          {/* Título visível apenas no mobile */}
+          <h1 className="text-3xl font-extrabold text-blue-400 mb-4 text-center md:hidden">
+            {team.name}
+          </h1>
+
+          <div className="w-full border border-gray-700 rounded-2xl bg-gray-950 p-6 shadow-lg flex justify-center items-center h-[300px]">
+            <img
+              src={team.image}
+              alt={`Escudo do ${team.name}`}
+              className="max-h-64 object-contain drop-shadow-xl"
+            />
+          </div>
+
+          {maranhenseTitles.length > 0 && (
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+              <div className="bg-gray-950 border border-gray-800 rounded-xl px-5 py-4">
+                <p className="text-sm text-gray-400 mb-1 tracking-wide">
+                  {t("teamDetail.firstTitle")}
+                </p>
+                <p className="text-2xl font-bold text-yellow-400 leading-tight">
+                  {Math.min(...maranhenseTitles.map((c) => Number(c.year)))}
+                </p>
+              </div>
+
+              <div className="bg-gray-950 border border-gray-800 rounded-xl px-5 py-4">
+                <p className="text-sm text-gray-400 mb-1 tracking-wide">
+                  {t("teamDetail.lastTitle")}
+                </p>
+                <p className="text-2xl font-bold text-yellow-400 leading-tight">
+                  {lastTitleYear}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
 
-        {maranhenseTitles.length > 0 && (
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-            <div className="bg-gray-950 border border-gray-800 rounded-xl px-5 py-4">
-              <p className="text-sm text-gray-400 mb-1 tracking-wide">
-                {t("teamDetail.firstTitle")}
-              </p>
-              <p className="text-2xl font-bold text-yellow-400 leading-tight">
-                {Math.min(...maranhenseTitles.map((c) => Number(c.year)))}
-              </p>
-            </div>
-
-            <div className="bg-gray-950 border border-gray-800 rounded-xl px-5 py-4">
-              <p className="text-sm text-gray-400 mb-1 tracking-wide">
-                {t("teamDetail.lastTitle")}
-              </p>
-              <p className="text-2xl font-bold text-yellow-400 leading-tight">
-                {lastTitleYear}
-              </p>
-            </div>
-          </div>
-        )}
-      </div>
-
         <div className="flex-1 space-y-6">
-          <h1 className="text-4xl font-extrabold text-blue-400">{team.name}</h1>
+          <h1 className="text-4xl font-extrabold text-blue-400 hidden md:block">
+            {team.name}
+          </h1>
 
           <div className="flex flex-wrap items-center gap-3 text-sm font-medium">
             <span className="flex items-center gap-2 px-3 py-1 rounded-full bg-gray-800 text-gray-300">
