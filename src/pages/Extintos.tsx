@@ -10,7 +10,7 @@ export const Extintos = () => {
           <p className="text-center text-gray-300 mb-10">
           Clique em um time para explorar sua história e curiosidades.
           </p>
-          <TeamList status="Inativo"/>
+          <TeamList stateDivision={undefined} />
       </main>
     </div>
   )
