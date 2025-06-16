@@ -29,11 +29,21 @@
     "goalDifference": "SG",
     "group": "Grupo"
   },
+  "knockout": {
+    "title": "Fase Final - Mata-Mata",
+    "semifinal": "Semifinal",
+    "final": "Final",
+    "firstLeg": "Ida",
+    "secondLeg": "Volta",
+    "champion": "Campeão"
+  },
   "serieA": {
-    "h2": "Tabela do Maranhense Série A"
+    "h2": "Tabela do Maranhense Série A",
+    "selectYear": "Selecione o ano"
   },
   "serieB": {
-    "h2": "Tabela do Maranhense Série B"
+    "h2": "Tabela do Maranhense Série B",
+    "selectYear": "Selecione o ano"
   },
   "teamList": {
     "h2": "Lista de Times",
@@ -48,10 +58,24 @@
     "noDivision": "Sem divisão",
     "firstTitle": "Primeiro título maranhense",
     "lastTitle": "Último título maranhense",
-    "curiosities": "Curiosidades"
+    "curiosities": "Curiosidades",
+    "divisionNational": "Nacional",
+    "divisionState": "Estadual",
+    "series": "Série",
+    "titlesCount": " título do Campeonato Maranhense",
+    "titlesCount_plural": " títulos do Campeonato Maranhense"
   },
   "about": {
     "title": "Sobre o Projeto",
     "description": "Este projeto tem como objetivo divulgar e organizar informações sobre o Campeonato Maranhense, permitindo que torcedores acompanhem a classificação dos times, conheçam mais sobre as equipes, e fiquem por dentro de curiosidades e estatísticas do torneio."
+  },
+  "contact": {
+    "title": "Fale Conosco",
+    "name": "Seu nome",
+    "email": "Seu email",
+    "message": "Sua mensagem",
+    "send": "Enviar Mensagem",
+    "success": "Mensagem enviada com sucesso!",
+    "info": "Informações"
   }
 }

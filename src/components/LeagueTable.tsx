@@ -1,4 +1,4 @@
-import teamsData from "./data/teams.json";
+import teamsData from "./data/groupStage.json";
 import { useTranslation } from "react-i18next";
 
 interface Team {
@@ -15,22 +15,25 @@ interface Team {
 }
 
 interface TeamsJSON {
-  serieA: Omit<Team, "goalDifference">[];
-  serieB: {
-    group1: Omit<Team, "goalDifference">[];
-    group2: Omit<Team, "goalDifference">[];
+  [year: string]: {
+    serieA: Omit<Team, "goalDifference">[];
+    serieB: {
+      group1: Omit<Team, "goalDifference">[];
+      group2: Omit<Team, "goalDifference">[];
+    };
   };
 }
 
 interface LeagueProps {
   league?: string;
+  year: string;
 }
 
 type SeriesKey = "serieA" | "serieB";
 
-export const LeagueTable = ({ league }: LeagueProps) => {
+export const LeagueTable = ({ league, year }: LeagueProps) => {
   const seriesKey: SeriesKey = league === "B" ? "serieB" : "serieA";
-  const data = teamsData as TeamsJSON;
+  const data = (teamsData as TeamsJSON)[year];
   const { t } = useTranslation();
 
   const renderTableRows = (

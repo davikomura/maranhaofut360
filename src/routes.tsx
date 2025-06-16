@@ -7,6 +7,7 @@ import { SerieA } from './pages/SerieA.tsx';
 import { SerieB } from './pages/SerieB.tsx';
 import { Champions } from './pages/Champions.tsx';
 import TeamDetail from './pages/TeamDetail.tsx';
+import { ContactPage } from './pages/ContactPage.tsx';
 
 const routes = [
   
@@ -29,6 +30,10 @@ const routes = [
         {
           path: "/About",
           element: <About />,
+        },
+        {
+          path: "/contact",
+          element: <ContactPage />,
         },
         {
           path: "/Serie-A",

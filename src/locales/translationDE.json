@@ -29,11 +29,21 @@
     "goalDifference": "TD",
     "group": "Gruppe"
   },
+  "knockout": {
+    "title": "Endrunde - K.-o.-System",
+    "semifinal": "Halbfinale",
+    "final": "Finale",
+    "firstLeg": "Hinspiel",
+    "secondLeg": "Rückspiel",
+    "champion": "Meister"
+  },
   "serieA": {
-    "h2": "Tabelle der Maranhense Serie A"
+    "h2": "Tabelle der Maranhense Serie A",
+    "selectYear": "Jahr auswählen"
   },
   "serieB": {
-    "h2": "Tabelle der Maranhense Serie B"
+    "h2": "Tabelle der Maranhense Serie B",
+    "selectYear": "Jahr auswählen"
   },
   "teamList": {
     "h2": "Liste der Mannschaften",
@@ -48,10 +58,24 @@
     "noDivision": "Keine Liga",
     "firstTitle": "Erster Maranhense-Titel",
     "lastTitle": "Letzter Maranhense-Titel",
-    "curiosities": "Kuriositäten"
+    "curiosities": "Kuriositäten",
+    "divisionNational": "Nationale",
+    "divisionState": "Regionale",
+    "series": "Liga",
+    "titlesCount": " Titel der Staatsmeisterschaft von Maranhão",
+    "titlesCount_plural": " Titel der Staatsmeisterschaft von Maranhão"
   },
   "about": {
     "title": "Über das Projekt",
     "description": "Dieses Projekt zielt darauf ab, Informationen über die Maranhão-Meisterschaft zu verbreiten und zu organisieren, damit Fans die Tabellenstände verfolgen, mehr über die Teams erfahren und Kuriositäten und Statistiken des Turniers entdecken können."
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "name": "Ihr Name",
+    "email": "Ihre E-Mail",
+    "message": "Ihre Nachricht",
+    "send": "Nachricht senden",
+    "success": "Nachricht erfolgreich gesendet!",
+    "info": "Informationen"
   }
 }

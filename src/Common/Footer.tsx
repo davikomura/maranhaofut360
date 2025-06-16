@@ -27,7 +27,7 @@ export const Footer = () => {
             YouTube
           </a>
           <a
-            href="/contato"
+            href="/contact"
             className="hover:text-yellow-400 transition"
           >
             Contato

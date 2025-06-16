@@ -239,7 +239,7 @@
     {
       "id": 18,
       "name": "Luso Brasileiro",
-      "foundationDate": "1917-00-00",
+      "foundationDate": "1917-02-24",
       "city": "São Luís",
       "stateDivision": null,
       "stateNational": null,
@@ -347,8 +347,21 @@
         "O uniforme número um do Marília Futebol Clube é camisa azul e branco em listras verticais, calção azul e meias azuis.",
         "No ano de 2015 o time fez sua estreia em competições profissionais, na Segunda Divisão do Campeonato Maranhense sendo Vice-campeão."
       ]
+    },
+    {
+      "id": 26,
+      "name": "Sport Club Sírio Brasileiro",
+      "foundationDate": "1927-04-08",
+      "city": "São Luís",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/Sirio.png",
+      "history": "Foi uma agremiação da cidade de São Luís (MA). O Tricolor (verde, branco  vermelho) foi Fundado na sexta-feira, do dia 08 de Abril de 1927, por integrantes da Colônia Sírio-Libanesa do Maranhão juntamente com dissidentes do Sport Club Luso Brasileiro, liderados por membros das famílias Sirio-Libanesas, Heluy, Baueres, Duailibe e Nazar, residentes na capital de São Luis.",
+      "curiosities": [
+        "O uniforme número um do Marília Futebol Clube é camisa azul e branco em listras verticais, calção azul e meias azuis.",
+        "No ano de 2015 o time fez sua estreia em competições profissionais, na Segunda Divisão do Campeonato Maranhense sendo Vice-campeão."
+      ]
     }
-
   ],
   
   "champions": [
@@ -435,7 +448,7 @@
     },
     {
       "edition": "10ª",
-      "year": "1927*",
+      "year": "1927",
       "champion": "Luso Brasileiro",
       "idTeamChampion": 18,
       "cityChampion": "São Luís",
@@ -452,31 +465,13 @@
       "cityRunnerUp": "São Luís"
     },
     {
-      "edition": null,
-      "year": "1929",
-      "champion": "Não houve campeonato",
-      "idTeamChampion": null,
-      "cityChampion": null,
-      "runner_up": null,
-      "cityRunnerUp": null
-    },
-    {
       "edition": "12ª",
       "year": "1930",
       "champion": "Sírio",
-      "idTeamChampion": null,
+      "idTeamChampion": 26,
       "cityChampion": "São Luís",
       "runner_up": "Anilense",
       "cityRunnerUp": "São Luís"
-    },
-    {
-      "edition": null,
-      "year": "1931",
-      "champion": "Campeonato não concluído",
-      "idTeamChampion": null,
-      "cityChampion": null,
-      "runner_up": null,
-      "cityRunnerUp": null
     },
     {
       "edition": "13ª",
@@ -515,15 +510,6 @@
       "cityRunnerUp": "São Luís"
     },
     {
-      "edition": null,
-      "year": "1936",
-      "champion": "Não houve campeonato",
-      "idTeamChampion": null,
-      "cityChampion": null,
-      "runner_up": null,
-      "cityRunnerUp": null
-    },
-    {
       "edition": "17ª",
       "year": "1937",
       "champion": "MAC",
@@ -540,15 +526,6 @@
       "cityChampion": "São Luís",
       "runner_up": "MAC",
       "cityRunnerUp": "São Luís"
-    },
-    {
-      "edition": null,
-      "year": "1939",
-      "champion": "Não houve campeonato",
-      "idTeamChampion": null,
-      "cityChampion": null,
-      "runner_up": null,
-      "cityRunnerUp": null
     },
     {
       "edition": "19ª",

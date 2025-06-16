@@ -29,11 +29,21 @@
     "goalDifference": "GD",
     "group": "Group"
   },
+  "knockout": {
+    "title": "Knockout Stage",
+    "semifinal": "Semifinal",
+    "final": "Final",
+    "firstLeg": "First Leg",
+    "secondLeg": "Second Leg",
+    "champion": "Champion"
+  },
   "serieA": {
-    "h2": "Maranhão Serie A Table"
+    "h2": "Maranhão Serie A Table",
+    "selectYear": "Select Year"
   },
   "serieB": {
-    "h2": "Maranhão Serie B Table"
+    "h2": "Maranhão Serie B Table",
+    "selectYear": "Select Year"
   },
   "teamList": {
     "h2": "Team List",
@@ -48,10 +58,24 @@
     "noDivision": "No division",
     "firstTitle": "First Maranhense title",
     "lastTitle": "Last Maranhense title",
-    "curiosities": "Curiosities"
+    "curiosities": "Curiosities",
+    "divisionNational": "National",
+    "divisionState": "State",
+    "series": "Division",
+    "titlesCount": " Maranhão State Championship title",
+    "titlesCount_plural": " Maranhão State Championship titles"
   },
   "about": {
     "title": "About the Project",
     "description": "This project aims to promote and organize information about the Maranhão Championship, allowing fans to follow team standings, learn more about the clubs, and discover curiosities and tournament statistics."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send Message",
+    "success": "Message sent successfully!",
+    "info": "Information"
   }
 }

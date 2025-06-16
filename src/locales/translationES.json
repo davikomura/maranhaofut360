@@ -29,11 +29,21 @@
     "goalDifference": "DG",
     "group": "Grupo"
   },
+  "knockout": {
+    "title": "Fase Final - Eliminación Directa",
+    "semifinal": "Semifinal",
+    "final": "Final",
+    "firstLeg": "Ida",
+    "secondLeg": "Vuelta",
+    "champion": "Campeón"
+  },
   "serieA": {
-    "h2": "Tabla del Maranhense Serie A"
+    "h2": "Tabla del Maranhense Serie A",
+    "selectYear": "Seleccionar Año"
   },
   "serieB": {
-    "h2": "Tabla del Maranhense Serie B"
+    "h2": "Tabla del Maranhense Serie B",
+    "selectYear": "Seleccionar Año"
   },
   "teamList": {
     "h2": "Lista de Equipos",
@@ -48,10 +58,24 @@
     "noDivision": "Sin división",
     "firstTitle": "Primer título Maranhense",
     "lastTitle": "Último título Maranhense",
-    "curiosities": "Curiosidades"
+    "curiosities": "Curiosidades",
+    "divisionNational": "Nacional",
+    "divisionState": "Regional",
+    "series": "División",
+    "titlesCount": " título del Campeonato Maranhense",
+    "titlesCount_plural": " títulos del Campeonato Maranhense"
   },
   "about": {
     "title": "Sobre el Proyecto",
     "description": "Este proyecto tiene como objetivo divulgar y organizar información sobre el Campeonato Maranhense, permitiendo que los aficionados sigan la clasificación de los equipos, conozcan más sobre los clubes y descubran curiosidades y estadísticas del torneo."
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "name": "Su nombre",
+    "email": "Su correo electrónico",
+    "message": "Su mensaje",
+    "send": "Enviar Mensaje",
+    "success": "¡Mensaje enviado con éxito!",
+    "info": "Información"
   }
 }

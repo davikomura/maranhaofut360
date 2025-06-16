@@ -1,0 +1,170 @@
+{
+  "2025": {
+    "serieA": {
+      "semifinals": [
+        {
+          "team1": {
+            "id": 8,
+            "name": "IAPE",
+            "image": "/img/iape.png"
+          },
+          "team2": {
+            "id": 3,
+            "name": "Maranhão",
+            "image": "/img/Maranhão_Atlético_Clube.png"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 4
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 0
+          },
+          "aggregate": {
+            "team1": 1,
+            "team2": 4
+          },
+          "winnerId": 3
+        },
+        {
+          "team1": {
+            "id": 1,
+            "name": "Sampaio Corrêa",
+            "image": "/img/sampaio-correa-logo.svg"
+          },
+          "team2": {
+            "id": 4,
+            "name": "Imperatriz",
+            "image": "/img/Imperatriz FC.svg"
+          },
+          "firstLeg": {
+            "score1": 2,
+            "score2": 1
+          },
+          "secondLeg": {
+            "score1": 0,
+            "score2": 2
+          },
+          "aggregate": {
+            "team1": 2,
+            "team2": 3
+          },
+          "winnerId": 4
+        }
+      ],
+      "final": [
+        {
+          "team1": {
+            "id": 3,
+            "name": "Maranhão",
+            "image": "/img/Maranhão_Atlético_Clube.png"
+          },
+          "team2": {
+            "id": 4,
+            "name": "Imperatriz",
+            "image": "/img/Imperatriz FC.svg"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 2,
+            "score2": 0
+          },
+          "aggregate": {
+            "team1": 2,
+            "team2": 0
+          },
+          "winnerId": 3
+        }
+      ],
+      "championId": 3
+    }
+  },
+  "2024": {
+    "serieA": {
+      "semifinals": [
+        {
+          "team1": {
+            "id": 3,
+            "name": "Maranhão",
+            "image": "/img/Maranhão_Atlético_Clube.png"
+          },
+          "team2": {
+            "id": 2,
+            "name": "Moto Club",
+            "image": "/img/Moto_Club_logo.png"
+          },
+          "firstLeg": {
+            "score1": 1,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 2,
+            "team2": 1
+          },
+          "winnerId": 3
+        },
+        {
+          "team1": {
+            "id": 1,
+            "name": "Sampaio Corrêa",
+            "image": "/img/sampaio-correa-logo.svg"
+          },
+          "team2": {
+            "id": 4,
+            "name": "Imperatriz",
+            "image": "/img/Imperatriz FC.svg"
+          },
+          "firstLeg": {
+            "score1": 2,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 3,
+            "score2": 0
+          },
+          "aggregate": {
+            "team1": 5,
+            "team2": 0
+          },
+          "winnerId": 1
+        }
+      ],
+      "final": [
+        {
+          "team1": {
+            "id": 3,
+            "name": "Maranhão",
+            "image": "/img/Maranhão_Atlético_Clube.png"
+          },
+          "team2": {
+            "id": 1,
+            "name": "Sampaio Corrêa",
+            "image": "/img/sampaio-correa-logo.svg"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 1
+          },
+          "secondLeg": {
+            "score1": 0,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 0,
+            "team2": 2
+          },
+          "winnerId": 1
+        }
+      ],
+      "championId": 1
+    }
+  }
+}
