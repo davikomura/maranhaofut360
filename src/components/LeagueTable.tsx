@@ -1,5 +1,6 @@
 import teamsData from "./data/groupStage.json";
 import { useTranslation } from "react-i18next";
+import { KnockoutStage } from "./KnockoutStage";
 
 interface Team {
   name: string;
@@ -14,13 +15,39 @@ interface Team {
   goalDifference: number;
 }
 
+interface SerieAUnique {
+  group: "unique";
+  teams: Omit<Team, "goalDifference">[];
+}
+
+interface SerieAStages {
+  stages: {
+    [stageName: string]: {
+      groups: {
+        [groupName: string]: Omit<Team, "goalDifference">[];
+      };
+    };
+  };
+}
+
+type SerieAData = SerieAUnique | SerieAStages;
+
+interface SerieBStages {
+  stages: {
+    [stageName: string]: {
+      groups: {
+        [groupName: string]: Omit<Team, "goalDifference">[];
+      };
+    };
+  };
+}
+
+type SerieBData = SerieBStages;
+
 interface TeamsJSON {
   [year: string]: {
-    serieA: Omit<Team, "goalDifference">[];
-    serieB: {
-      group1: Omit<Team, "goalDifference">[];
-      group2: Omit<Team, "goalDifference">[];
-    };
+    serieA: SerieAData;
+    serieB: SerieBData;
   };
 }
 
@@ -66,7 +93,6 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
             />
             <span className="truncate font-medium">{team.name}</span>
           </td>
-
           <td className="p-2 font-bold">{team.points}</td>
           <td className="p-2 hidden md:table-cell">{team.games}</td>
           <td className="p-2">{team.wins}</td>
@@ -75,7 +101,7 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
           <td className="p-2 hidden md:table-cell">
             {team.goalsFor}:{team.goalsAgainst}
           </td>
-          <td className="p-2">{team.goalDifference}</td>
+          <td className="p-2">{team.goalsFor - team.goalsAgainst}</td>
         </tr>
       );
     });
@@ -90,6 +116,7 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
       ...t,
       goalDifference: t.goalsFor - t.goalsAgainst,
     }));
+
     const sortedTeams = teamsWithGD.sort((a, b) =>
       b.points !== a.points
         ? b.points - a.points
@@ -135,18 +162,67 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
 
   return (
     <div className="w-full">
-      {seriesKey === "serieA"
-        ? renderTable(data.serieA, undefined, 4, 2)
-        : ["group1", "group2"].map((groupKey, i) => (
-            <div key={groupKey}>
-              {renderTable(
-                data.serieB[groupKey as "group1" | "group2"],
-                `${t("leagueTable.group")} ${i + 1}`,
-                2,
-                0
-              )}
+      {seriesKey === "serieA" ? (
+        "group" in data.serieA ? (
+          <>
+            {renderTable(data.serieA.teams, undefined, 4, 2)}
+            <KnockoutStage league="A" year={year} stageName="unique" />
+          </>
+        ) : (
+          <>
+            {Object.entries(data.serieA.stages).map(
+              ([stageName, stageData]) => (
+                <div key={stageName} className="mb-16">
+                  <h3 className="text-xl md:text-2xl font-bold text-center text-gray-100 mb-8">
+                    {t(`leagueTable.${stageName}`)}
+                  </h3>
+                  {Object.entries(stageData.groups).map(
+                    ([groupName, teams]) => (
+                      <div key={groupName}>
+                        {renderTable(
+                          teams,
+                          `${t("leagueTable.group")} ${groupName
+                            .replace(/^group/i, "")
+                            .toUpperCase()}`,
+                          2,
+                          0
+                        )}
+                      </div>
+                    )
+                  )}
+
+                  <KnockoutStage league="A" year={year} stageName={stageName} />
+                </div>
+              )
+            )}
+            <KnockoutStage league="A" year={year} stageName="finalStage" />
+          </>
+        )
+      ) : (
+        <>
+          {Object.entries(data.serieB.stages).map(([stageName, stageData]) => (
+            <div key={stageName} className="mb-16">
+              <h3 className="text-xl md:text-2xl font-bold text-center text-gray-100 mb-8">
+                {t(`leagueTable.${stageName}`)}
+              </h3>
+              {Object.entries(stageData.groups).map(([groupName, teams]) => (
+                <div key={groupName}>
+                  {renderTable(
+                    teams,
+                    `${t("leagueTable.group")} ${groupName
+                      .replace(/^group/i, "")
+                      .toUpperCase()}`,
+                    2,
+                    0
+                  )}
+                </div>
+              ))}
             </div>
           ))}
+
+          <KnockoutStage league="B" year={year} />
+        </>
+      )}
     </div>
   );
 };

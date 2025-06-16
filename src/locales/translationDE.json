@@ -27,7 +27,9 @@
     "losses": "N",
     "goals": "Tore",
     "goalDifference": "TD",
-    "group": "Gruppe"
+    "group": "Gruppe",
+    "firstStage": "Erste Phase",
+    "secondStage": "Zweite Phase"
   },
   "knockout": {
     "title": "Endrunde - K.-o.-System",
@@ -35,7 +37,12 @@
     "final": "Finale",
     "firstLeg": "Hinspiel",
     "secondLeg": "Rückspiel",
-    "champion": "Meister"
+    "champion": "Meister",
+    "firstStage": "Erste Phase",
+    "secondStage": "Zweite Phase",
+    "mainStage": "Finalrunde - K.-o.-System",
+    "finalStage": "Endrunde",
+    "penaltys": "Elfmeterschießen"
   },
   "serieA": {
     "h2": "Tabelle der Maranhense Serie A",

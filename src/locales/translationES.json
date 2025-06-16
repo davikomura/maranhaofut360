@@ -27,7 +27,9 @@
     "losses": "P",
     "goals": "Goles",
     "goalDifference": "DG",
-    "group": "Grupo"
+    "group": "Grupo",
+    "firstStage": "Primera Fase",
+    "secondStage": "Segunda Fase"
   },
   "knockout": {
     "title": "Fase Final - Eliminación Directa",
@@ -35,7 +37,12 @@
     "final": "Final",
     "firstLeg": "Ida",
     "secondLeg": "Vuelta",
-    "champion": "Campeón"
+    "champion": "Campeón",
+    "firstStage": "Primera Fase",
+    "secondStage": "Segunda Fase",
+    "mainStage": "Fase Final - Eliminación",
+    "finalStage": "Fase Final",
+    "penaltys": "Penales"
   },
   "serieA": {
     "h2": "Tabla del Maranhense Serie A",

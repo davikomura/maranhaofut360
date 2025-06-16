@@ -1,560 +1,945 @@
 {
   "2025": {
-    "serieA": [
-      {
-        "name": "Imperatriz",
-        "logo": "/img/Imperatriz FC.svg",
-        "points": 23,
-        "games": 14,
-        "wins": 6,
-        "draws": 5,
-        "losses": 3,
-        "goalsFor": 17,
-        "goalsAgainst": 10
-      },
-      {
-        "name": "Sampaio Corrêa",
-        "logo": "/img/sampaio-correa-logo.svg",
-        "points": 23,
-        "games": 14,
-        "wins": 6,
-        "draws": 5,
-        "losses": 3,
-        "goalsFor": 18,
-        "goalsAgainst": 11
-      },
-      {
-        "name": "Pinheiro",
-        "logo": "/img/PinheiroMA.png",
-        "points": 16,
-        "games": 14,
-        "wins": 4,
-        "draws": 4,
-        "losses": 6,
-        "goalsFor": 13,
-        "goalsAgainst": 15
-      },
-      {
-        "name": "IAPE",
-        "logo": "/img/iape.png",
-        "points": 24,
-        "games": 14,
-        "wins": 7,
-        "draws": 3,
-        "losses": 4,
-        "goalsFor": 18,
-        "goalsAgainst": 13
-      },
-      {
-        "name": "Maranhão",
-        "logo": "/img/Maranhão_Atlético_Clube.png",
-        "points": 23,
-        "games": 14,
-        "wins": 6,
-        "draws": 5,
-        "losses": 3,
-        "goalsFor": 16,
-        "goalsAgainst": 10
-      },
-      {
-        "name": "Moto Club",
-        "logo": "/img/Moto_Club_logo.png",
-        "points": 23,
-        "games": 14,
-        "wins": 6,
-        "draws": 5,
-        "losses": 3,
-        "goalsFor": 15,
-        "goalsAgainst": 9
-      },
-      {
-        "name": "Tuntum",
-        "logo": "/img/Escudo_Tuntum_EC.png",
-        "points": 17,
-        "games": 14,
-        "wins": 4,
-        "draws": 5,
-        "losses": 5,
-        "goalsFor": 13,
-        "goalsAgainst": 15
-      },
-      {
-        "name": "Viana",
-        "logo": "/img/ECViana.png",
-        "points": 3,
-        "games": 14,
-        "wins": 1,
-        "draws": 0,
-        "losses": 13,
-        "goalsFor": 5,
-        "goalsAgainst": 36
-      }
-    ],
-    "serieB": {
-      "group1": [
+    "serieA": {
+      "group": "unique",
+      "teams": [
         {
-          "name": "Bacabal",
-          "logo": "/img/EscudoBacabal.svg",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Imperatriz",
+          "logo": "/img/Imperatriz FC.svg",
+          "points": 23,
+          "games": 14,
+          "wins": 6,
+          "draws": 5,
+          "losses": 3,
+          "goalsFor": 17,
+          "goalsAgainst": 10
         },
         {
-          "name": "Cordino",
-          "logo": "/img/Cordino_EC_logo.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Sampaio Corrêa",
+          "logo": "/img/sampaio-correa-logo.svg",
+          "points": 23,
+          "games": 14,
+          "wins": 6,
+          "draws": 5,
+          "losses": 3,
+          "goalsFor": 18,
+          "goalsAgainst": 11
         },
         {
-          "name": "Chapadinha",
-          "logo": "/img/Chapadinha.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Pinheiro",
+          "logo": "/img/PinheiroMA.png",
+          "points": 16,
+          "games": 14,
+          "wins": 4,
+          "draws": 4,
+          "losses": 6,
+          "goalsFor": 13,
+          "goalsAgainst": 15
         },
         {
-          "name": "Expressinho",
-          "logo": "/img/ExpressinhoFC.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        }
-      ],
-      "group2": [
-        {
-          "name": "São José",
-          "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "IAPE",
+          "logo": "/img/iape.png",
+          "points": 24,
+          "games": 14,
+          "wins": 7,
+          "draws": 3,
+          "losses": 4,
+          "goalsFor": 18,
+          "goalsAgainst": 13
         },
         {
-          "name": "Santa Quitéria",
-          "logo": "/img/santa_quiteria.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Maranhão",
+          "logo": "/img/Maranhão_Atlético_Clube.png",
+          "points": 23,
+          "games": 14,
+          "wins": 6,
+          "draws": 5,
+          "losses": 3,
+          "goalsFor": 16,
+          "goalsAgainst": 10
         },
         {
-          "name": "Timon",
-          "logo": "/img/TimonEC.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Moto Club",
+          "logo": "/img/Moto_Club_logo.png",
+          "points": 23,
+          "games": 14,
+          "wins": 6,
+          "draws": 5,
+          "losses": 3,
+          "goalsFor": 15,
+          "goalsAgainst": 9
         },
         {
-          "name": "Tupan",
-          "logo": "/img/SETupan.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
+          "name": "Tuntum",
+          "logo": "/img/Escudo_Tuntum_EC.png",
+          "points": 17,
+          "games": 14,
+          "wins": 4,
+          "draws": 5,
+          "losses": 5,
+          "goalsFor": 13,
+          "goalsAgainst": 15
+        },
+        {
+          "name": "Viana",
+          "logo": "/img/ECViana.png",
+          "points": 3,
+          "games": 14,
+          "wins": 1,
           "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "losses": 13,
+          "goalsFor": 5,
+          "goalsAgainst": 36
         }
       ]
+    },
+    "serieB": {
+      "stages": {
+        "firstStage": {
+          "groups": {
+            "groupA": [
+              {
+                "name": "Bacabal",
+                "logo": "/img/EscudoBacabal.svg",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Cordino",
+                "logo": "/img/Cordino_EC_logo.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Chapadinha",
+                "logo": "/img/Chapadinha.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Expressinho",
+                "logo": "/img/ExpressinhoFC.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              }
+            ],
+            "groupB": [
+              {
+                "name": "São José",
+                "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Santa Quitéria",
+                "logo": "/img/santa_quiteria.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Timon",
+                "logo": "/img/TimonEC.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Tupan",
+                "logo": "/img/SETupan.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              }
+            ]
+          }
+        },
+        "secondStage": {
+          "groups": {
+            "groupA": [
+              {
+                "name": "Bacabal",
+                "logo": "/img/EscudoBacabal.svg",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Cordino",
+                "logo": "/img/Cordino_EC_logo.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Chapadinha",
+                "logo": "/img/Chapadinha.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Expressinho",
+                "logo": "/img/ExpressinhoFC.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              }
+            ],
+            "groupB": [
+              {
+                "name": "São José",
+                "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Santa Quitéria",
+                "logo": "/img/santa_quiteria.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Timon",
+                "logo": "/img/TimonEC.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Tupan",
+                "logo": "/img/SETupan.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              }
+            ]
+          }
+        }
+      }
     }
   },
   "2024": {
-    "serieA": [
-      {
-        "name": "Imperatriz",
-        "logo": "/img/Imperatriz FC.svg",
-        "points": 25,
-        "games": 14,
-        "wins": 7,
-        "draws": 4,
-        "losses": 3,
-        "goalsFor": 17,
-        "goalsAgainst": 12
-      },
-      {
-        "name": "Sampaio Corrêa",
-        "logo": "/img/sampaio-correa-logo.svg",
-        "points": 26,
-        "games": 14,
-        "wins": 7,
-        "draws": 5,
-        "losses": 2,
-        "goalsFor": 21,
-        "goalsAgainst": 13
-      },
-      {
-        "name": "Pinheiro",
-        "logo": "/img/PinheiroMA.png",
-        "points": 14,
-        "games": 14,
-        "wins": 2,
-        "draws": 8,
-        "losses": 4,
-        "goalsFor": 20,
-        "goalsAgainst": 19
-      },
-      {
-        "name": "Chapadinha",
-        "logo": "/img/Chapadinha.png",
-        "points": 10,
-        "games": 14,
-        "wins": 2,
-        "draws": 4,
-        "losses": 8,
-        "goalsFor": 11,
-        "goalsAgainst": 20
-      },
-      {
-        "name": "Maranhão",
-        "logo": "/img/Maranhão_Atlético_Clube.png",
-        "points": 31,
-        "games": 14,
-        "wins": 9,
-        "draws": 4,
-        "losses": 1,
-        "goalsFor": 27,
-        "goalsAgainst": 9
-      },
-      {
-        "name": "Moto Club",
-        "logo": "/img/Moto_Club_logo.png",
-        "points": 17,
-        "games": 14,
-        "wins": 4,
-        "draws": 5,
-        "losses": 5,
-        "goalsFor": 15,
-        "goalsAgainst": 20
-      },
-      {
-        "name": "Tuntum",
-        "logo": "/img/Escudo_Tuntum_EC.png",
-        "points": 13,
-        "games": 14,
-        "wins": 5,
-        "draws": 4,
-        "losses": 5,
-        "goalsFor": 19,
-        "goalsAgainst": 23
-      },
-      {
-        "name": "Cordino",
-        "logo": "/img/Cordino_EC_logo.png",
-        "points": 7,
-        "games": 14,
-        "wins": 1,
-        "draws": 4,
-        "losses": 9,
-        "goalsFor": 14,
-        "goalsAgainst": 28
-      }
-    ],
-    "serieB": {
-      "group1": [
+    "serieA": {
+      "group": "unique",
+      "teams": [
         {
-          "name": "Bacabal",
-          "logo": "/img/EscudoBacabal.svg",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Imperatriz",
+          "logo": "/img/Imperatriz FC.svg",
+          "points": 25,
+          "games": 14,
+          "wins": 7,
+          "draws": 4,
+          "losses": 3,
+          "goalsFor": 17,
+          "goalsAgainst": 12
         },
         {
-          "name": "Cordino",
-          "logo": "/img/Cordino_EC_logo.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Sampaio Corrêa",
+          "logo": "/img/sampaio-correa-logo.svg",
+          "points": 26,
+          "games": 14,
+          "wins": 7,
+          "draws": 5,
+          "losses": 2,
+          "goalsFor": 21,
+          "goalsAgainst": 13
+        },
+        {
+          "name": "Pinheiro",
+          "logo": "/img/PinheiroMA.png",
+          "points": 14,
+          "games": 14,
+          "wins": 2,
+          "draws": 8,
+          "losses": 4,
+          "goalsFor": 20,
+          "goalsAgainst": 19
         },
         {
           "name": "Chapadinha",
           "logo": "/img/Chapadinha.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "points": 10,
+          "games": 14,
+          "wins": 2,
+          "draws": 4,
+          "losses": 8,
+          "goalsFor": 11,
+          "goalsAgainst": 20
         },
         {
-          "name": "Expressinho",
-          "logo": "/img/ExpressinhoFC.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        }
-      ],
-      "group2": [
-        {
-          "name": "São José",
-          "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Maranhão",
+          "logo": "/img/Maranhão_Atlético_Clube.png",
+          "points": 31,
+          "games": 14,
+          "wins": 9,
+          "draws": 4,
+          "losses": 1,
+          "goalsFor": 27,
+          "goalsAgainst": 9
         },
         {
-          "name": "Santa Quitéria",
-          "logo": "/img/santa_quiteria.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Moto Club",
+          "logo": "/img/Moto_Club_logo.png",
+          "points": 17,
+          "games": 14,
+          "wins": 4,
+          "draws": 5,
+          "losses": 5,
+          "goalsFor": 15,
+          "goalsAgainst": 20
         },
         {
-          "name": "Timon",
-          "logo": "/img/TimonEC.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Tuntum",
+          "logo": "/img/Escudo_Tuntum_EC.png",
+          "points": 13,
+          "games": 14,
+          "wins": 5,
+          "draws": 4,
+          "losses": 5,
+          "goalsFor": 19,
+          "goalsAgainst": 23
         },
         {
-          "name": "Tupan",
-          "logo": "/img/SETupan.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "name": "Cordino",
+          "logo": "/img/Cordino_EC_logo.png",
+          "points": 7,
+          "games": 14,
+          "wins": 1,
+          "draws": 4,
+          "losses": 9,
+          "goalsFor": 14,
+          "goalsAgainst": 28
         }
       ]
+    },
+    "serieB": {
+      "stages": {
+        "firstStage": {
+          "groups": {
+            "groupA": [
+              {
+                "name": "Bacabal",
+                "logo": "/img/EscudoBacabal.svg",
+                "points": 1,
+                "games": 2,
+                "wins": 0,
+                "draws": 1,
+                "losses": 1,
+                "goalsFor": 1,
+                "goalsAgainst": 3
+              },
+              {
+                "name": "Viana",
+                "logo": "/img/ECViana.png",
+                "points": 4,
+                "games": 2,
+                "wins": 1,
+                "draws": 1,
+                "losses": 0,
+                "goalsFor": 3,
+                "goalsAgainst": 1
+              }
+            ],
+            "groupB": [
+              {
+                "name": "São Luís",
+                "logo": "/img/EscudoSaoLuisFC.png",
+                "points": 6,
+                "games": 2,
+                "wins": 2,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 11,
+                "goalsAgainst": 2
+              },
+              {
+                "name": "Americano",
+                "logo": "/img/AmericanoMA.png",
+                "points": 3,
+                "games": 2,
+                "wins": 1,
+                "draws": 0,
+                "losses": 1,
+                "goalsFor": 3,
+                "goalsAgainst": 3
+              },
+              {
+                "name": "Expressinho",
+                "logo": "/img/ExpressinhoFC.png",
+                "points": 0,
+                "games": 2,
+                "wins": 0,
+                "draws": 0,
+                "losses": 2,
+                "goalsFor": 0,
+                "goalsAgainst": 9
+              }
+            ]
+          }
+        },
+        "secondStage": {
+          "groups": {
+            "groupA": [
+              {
+                "name": "Viana",
+                "logo": "/img/ECViana.png",
+                "points": 14,
+                "games": 6,
+                "wins": 4,
+                "draws": 2,
+                "losses": 0,
+                "goalsFor": 10,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Santa Quitéria",
+                "logo": "/img/santa_quiteria.png",
+                "points": 2,
+                "games": 6,
+                "wins": 0,
+                "draws": 2,
+                "losses": 4,
+                "goalsFor": 2,
+                "goalsAgainst": 8
+              },
+              {
+                "name": "Timon",
+                "logo": "/img/TimonEC.png",
+                "points": 6,
+                "games": 6,
+                "wins": 1,
+                "draws": 3,
+                "losses": 2,
+                "goalsFor": 2,
+                "goalsAgainst": 3
+              },
+              {
+                "name": "Itz Sport",
+                "logo": "/img/itz_sport.png",
+                "points": 9,
+                "games": 6,
+                "wins": 2,
+                "draws": 3,
+                "losses": 1,
+                "goalsFor": 4,
+                "goalsAgainst": 7
+              }
+            ],
+            "groupB": [
+              {
+                "name": "São José",
+                "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
+                "points": 7,
+                "games": 6,
+                "wins": 2,
+                "draws": 1,
+                "losses": 3,
+                "goalsFor": 8,
+                "goalsAgainst": 10
+              },
+              {
+                "name": "Tupan",
+                "logo": "/img/SETupan.png",
+                "points": 0,
+                "games": 6,
+                "wins": 0,
+                "draws": 0,
+                "losses": 6,
+                "goalsFor": 0,
+                "goalsAgainst": 18
+              },
+              {
+                "name": "São Luís",
+                "logo": "/img/EscudoSaoLuisFC.png",
+                "points": 11,
+                "games": 6,
+                "wins": 3,
+                "draws": 2,
+                "losses": 1,
+                "goalsFor": 12,
+                "goalsAgainst": 9
+              },
+              {
+                "name": "IAPE",
+                "logo": "/img/iape.png",
+                "points": 16,
+                "games": 6,
+                "wins": 5,
+                "draws": 1,
+                "losses": 0,
+                "goalsFor": 19,
+                "goalsAgainst": 2
+              }
+            ]
+          }
+        }
+      }
     }
   },
   "2023": {
-    "serieA": [
-      {
-        "name": "Imperatriz",
-        "logo": "/img/Imperatriz FC.svg",
-        "points": 25,
-        "games": 14,
-        "wins": 7,
-        "draws": 4,
-        "losses": 3,
-        "goalsFor": 17,
-        "goalsAgainst": 12
-      },
-      {
-        "name": "Sampaio Corrêa",
-        "logo": "/img/sampaio-correa-logo.svg",
-        "points": 26,
-        "games": 14,
-        "wins": 7,
-        "draws": 5,
-        "losses": 2,
-        "goalsFor": 21,
-        "goalsAgainst": 13
-      },
-      {
-        "name": "Pinheiro",
-        "logo": "/img/PinheiroMA.png",
-        "points": 14,
-        "games": 14,
-        "wins": 2,
-        "draws": 8,
-        "losses": 4,
-        "goalsFor": 20,
-        "goalsAgainst": 19
-      },
-      {
-        "name": "Chapadinha",
-        "logo": "/img/Chapadinha.png",
-        "points": 10,
-        "games": 14,
-        "wins": 2,
-        "draws": 4,
-        "losses": 8,
-        "goalsFor": 11,
-        "goalsAgainst": 20
-      },
-      {
-        "name": "Maranhão",
-        "logo": "/img/Maranhão_Atlético_Clube.png",
-        "points": 31,
-        "games": 14,
-        "wins": 9,
-        "draws": 4,
-        "losses": 1,
-        "goalsFor": 27,
-        "goalsAgainst": 9
-      },
-      {
-        "name": "Moto Club",
-        "logo": "/img/Moto_Club_logo.png",
-        "points": 17,
-        "games": 14,
-        "wins": 4,
-        "draws": 5,
-        "losses": 5,
-        "goalsFor": 15,
-        "goalsAgainst": 20
-      },
-      {
-        "name": "Tuntum",
-        "logo": "/img/Escudo_Tuntum_EC.png",
-        "points": 13,
-        "games": 14,
-        "wins": 5,
-        "draws": 4,
-        "losses": 5,
-        "goalsFor": 19,
-        "goalsAgainst": 23
-      },
-      {
-        "name": "Cordino",
-        "logo": "/img/Cordino_EC_logo.png",
-        "points": 7,
-        "games": 14,
-        "wins": 1,
-        "draws": 4,
-        "losses": 9,
-        "goalsFor": 14,
-        "goalsAgainst": 28
+    "serieA": {
+      "stages": {
+        "firstStage": {
+          "groups": {
+            "groupA": [
+              {
+                "name": "IAPE",
+                "logo": "/img/iape.png",
+                "points": 3,
+                "games": 3,
+                "wins": 1,
+                "draws": 0,
+                "losses": 2,
+                "goalsFor": 2,
+                "goalsAgainst": 3
+              },
+              {
+                "name": "Sampaio Corrêa",
+                "logo": "/img/sampaio-correa-logo.svg",
+                "points": 9,
+                "games": 3,
+                "wins": 3,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 5,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Pinheiro",
+                "logo": "/img/PinheiroMA.png",
+                "points": 3,
+                "games": 3,
+                "wins": 1,
+                "draws": 0,
+                "losses": 2,
+                "goalsFor": 3,
+                "goalsAgainst": 5
+              },
+              {
+                "name": "Chapadinha",
+                "logo": "/img/Chapadinha.png",
+                "points": 3,
+                "games": 3,
+                "wins": 1,
+                "draws": 0,
+                "losses": 2,
+                "goalsFor": 4,
+                "goalsAgainst": 6
+              }
+            ],
+            "groupB": [
+              {
+                "name": "Maranhão",
+                "logo": "/img/Maranhão_Atlético_Clube.png",
+                "points": 7,
+                "games": 3,
+                "wins": 2,
+                "draws": 1,
+                "losses": 0,
+                "goalsFor": 9,
+                "goalsAgainst": 1
+              },
+              {
+                "name": "Moto Club",
+                "logo": "/img/Moto_Club_logo.png",
+                "points": 5,
+                "games": 3,
+                "wins": 1,
+                "draws": 2,
+                "losses": 0,
+                "goalsFor": 2,
+                "goalsAgainst": 1
+              },
+              {
+                "name": "Cordino",
+                "logo": "/img/Cordino_EC_logo.png",
+                "points": 4,
+                "games": 3,
+                "wins": 1,
+                "draws": 1,
+                "losses": 1,
+                "goalsFor": 5,
+                "goalsAgainst": 4
+              },
+              {
+                "name": "São José",
+                "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
+                "points": 0,
+                "games": 3,
+                "wins": 0,
+                "draws": 0,
+                "losses": 3,
+                "goalsFor": 3,
+                "goalsAgainst": 13
+              }
+            ]
+          }
+        },
+        "secondStage": {
+          "groups": {
+            "groupA": [
+              {
+                "name": "IAPE",
+                "logo": "/img/iape.png",
+                "points": 4,
+                "games": 4,
+                "wins": 1,
+                "draws": 1,
+                "losses": 2,
+                "goalsFor": 5,
+                "goalsAgainst": 7
+              },
+              {
+                "name": "Sampaio Corrêa",
+                "logo": "/img/sampaio-correa-logo.svg",
+                "points": 10,
+                "games": 4,
+                "wins": 3,
+                "draws": 1,
+                "losses": 0,
+                "goalsFor": 14,
+                "goalsAgainst": 3
+              },
+              {
+                "name": "Pinheiro",
+                "logo": "/img/PinheiroMA.png",
+                "points": 7,
+                "games": 4,
+                "wins": 2,
+                "draws": 1,
+                "losses": 1,
+                "goalsFor": 12,
+                "goalsAgainst": 4
+              },
+              {
+                "name": "Chapadinha",
+                "logo": "/img/Chapadinha.png",
+                "points": 4,
+                "games": 4,
+                "wins": 1,
+                "draws": 1,
+                "losses": 2,
+                "goalsFor": 8,
+                "goalsAgainst": 8
+              }
+            ],
+            "groupB": [
+              {
+                "name": "Maranhão",
+                "logo": "/img/Maranhão_Atlético_Clube.png",
+                "points": 8,
+                "games": 4,
+                "wins": 2,
+                "draws": 2,
+                "losses": 0,
+                "goalsFor": 7,
+                "goalsAgainst": 3
+              },
+              {
+                "name": "Moto Club",
+                "logo": "/img/Moto_Club_logo.png",
+                "points": 6,
+                "games": 4,
+                "wins": 2,
+                "draws": 0,
+                "losses": 2,
+                "goalsFor": 5,
+                "goalsAgainst": 5
+              },
+              {
+                "name": "Cordino",
+                "logo": "/img/Cordino_EC_logo.png",
+                "points": 5,
+                "games": 4,
+                "wins": 1,
+                "draws": 2,
+                "losses": 1,
+                "goalsFor": 5,
+                "goalsAgainst": 6
+              },
+              {
+                "name": "São José",
+                "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
+                "points": 0,
+                "games": 4,
+                "wins": 0,
+                "draws": 0,
+                "losses": 4,
+                "goalsFor": 4,
+                "goalsAgainst": 25
+              }
+            ]
+          }
+        }
       }
-    ],
+    },
     "serieB": {
-      "group1": [
-        {
-          "name": "Bacabal",
-          "logo": "/img/EscudoBacabal.svg",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+      "stages": {
+        "firstStage": {
+          "groups": {
+            "groupA": [
+              {
+                "name": "Bacabal",
+                "logo": "/img/EscudoBacabal.svg",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Cordino",
+                "logo": "/img/Cordino_EC_logo.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Chapadinha",
+                "logo": "/img/Chapadinha.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Expressinho",
+                "logo": "/img/ExpressinhoFC.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              }
+            ],
+            "groupB": [
+              {
+                "name": "São José",
+                "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Santa Quitéria",
+                "logo": "/img/santa_quiteria.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Timon",
+                "logo": "/img/TimonEC.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Tupan",
+                "logo": "/img/SETupan.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              }
+            ]
+          }
         },
-        {
-          "name": "Cordino",
-          "logo": "/img/Cordino_EC_logo.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "name": "Chapadinha",
-          "logo": "/img/Chapadinha.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "name": "Expressinho",
-          "logo": "/img/ExpressinhoFC.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+        "secondStage": {
+          "groups": {
+            "groupA": [
+              {
+                "name": "Bacabal",
+                "logo": "/img/EscudoBacabal.svg",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Cordino",
+                "logo": "/img/Cordino_EC_logo.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Chapadinha",
+                "logo": "/img/Chapadinha.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Expressinho",
+                "logo": "/img/ExpressinhoFC.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              }
+            ],
+            "groupB": [
+              {
+                "name": "São José",
+                "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Santa Quitéria",
+                "logo": "/img/santa_quiteria.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Timon",
+                "logo": "/img/TimonEC.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              },
+              {
+                "name": "Tupan",
+                "logo": "/img/SETupan.png",
+                "points": 0,
+                "games": 0,
+                "wins": 0,
+                "draws": 0,
+                "losses": 0,
+                "goalsFor": 0,
+                "goalsAgainst": 0
+              }
+            ]
+          }
         }
-      ],
-      "group2": [
-        {
-          "name": "São José",
-          "logo": "/img/Escudo-do-São-José-de-Ribamar.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "name": "Santa Quitéria",
-          "logo": "/img/santa_quiteria.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "name": "Timon",
-          "logo": "/img/TimonEC.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "name": "Tupan",
-          "logo": "/img/SETupan.png",
-          "points": 0,
-          "games": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        }
-      ]
+      }
     }
   }
 }

@@ -81,6 +81,84 @@
         }
       ],
       "championId": 3
+    },
+    "serieB": {
+      "semifinals": [
+        {
+          "team1": {
+            "id": 8,
+            "name": "IAPE",
+            "image": "/img/iape.png"
+          },
+          "team2": {
+            "id": 27,
+            "name": "Itz Sport",
+            "image": "/img/itz_sport.png"
+          },
+          "firstLeg": {
+            "score1": 3,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 3,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 6,
+            "team2": 1
+          },
+          "winnerId": 8
+        },
+        {
+          "team1": {
+            "id": 9,
+            "name": "Viana",
+            "image": "/img/ECViana.png"
+          },
+          "team2": {
+            "id": 15,
+            "name": "São Luís",
+            "image": "/img/EscudoSaoLuisFC.png"
+          },
+          "firstLeg": {
+            "score1": 3,
+            "score2": 1
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 0
+          },
+          "aggregate": {
+            "team1": 4,
+            "team2": 1
+          },
+          "winnerId": 9
+        }
+      ],
+      "final": [
+        {
+          "team1": {
+            "id": 8,
+            "name": "IAPE",
+            "image": "/img/iape.png"
+          },
+          "team2": {
+            "id": 9,
+            "name": "Viana",
+            "image": "/img/ECViana.png"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 0
+          },
+          "penaltys": {
+            "score1": 4,
+            "score2": 5
+          },
+          "winnerId": 9
+        }
+      ],
+      "championId": 9
     }
   },
   "2024": {
@@ -165,6 +243,322 @@
         }
       ],
       "championId": 1
+    },
+    "serieB": {
+      "semifinals": [
+        {
+          "team1": {
+            "id": 8,
+            "name": "IAPE",
+            "image": "/img/iape.png"
+          },
+          "team2": {
+            "id": 27,
+            "name": "Itz Sport",
+            "image": "/img/itz_sport.png"
+          },
+          "firstLeg": {
+            "score1": 3,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 3,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 6,
+            "team2": 1
+          },
+          "winnerId": 8
+        },
+        {
+          "team1": {
+            "id": 9,
+            "name": "Viana",
+            "image": "/img/ECViana.png"
+          },
+          "team2": {
+            "id": 15,
+            "name": "São Luís",
+            "image": "/img/EscudoSaoLuisFC.png"
+          },
+          "firstLeg": {
+            "score1": 3,
+            "score2": 1
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 0
+          },
+          "aggregate": {
+            "team1": 4,
+            "team2": 1
+          },
+          "winnerId": 9
+        }
+      ],
+      "final": [
+        {
+          "team1": {
+            "id": 8,
+            "name": "IAPE",
+            "image": "/img/iape.png"
+          },
+          "team2": {
+            "id": 9,
+            "name": "Viana",
+            "image": "/img/ECViana.png"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 0
+          },
+          "penaltys": {
+            "score1": 4,
+            "score2": 5
+          },
+          "winnerId": 9
+        }
+      ],
+      "championId": 9
+    }
+  },
+  "2023": {
+    "serieA": {
+      "stages": {
+        "firstStage": {
+          "semifinals": [
+            {
+              "team1": {
+                "id": 1,
+                "name": "Sampaio Corrêa",
+                "image": "/img/sampaio-correa-logo.svg"
+              },
+              "team2": {
+                "id": 2,
+                "name": "Moto Club",
+                "image": "/img/Moto_Club_logo.png"
+              },
+              "firstLeg": {
+                "score1": 2,
+                "score2": 0
+              },
+              "winnerId": 1
+            },
+            {
+              "team1": {
+                "id": 3,
+                "name": "Maranhão",
+                "image": "/img/Maranhão_Atlético_Clube.png"
+              },
+              "team2": {
+                "id": 8,
+                "name": "IAPE",
+                "image": "/img/iape.png"
+              },
+              "firstLeg": {
+                "score1": 3,
+                "score2": 1
+              },
+              "winnerId": 3
+            }
+          ],
+          "final": [
+            {
+              "team1": {
+                "id": 1,
+                "name": "Sampaio Corrêa",
+                "image": "/img/sampaio-correa-logo.svg"
+              },
+              "team2": {
+                "id": 3,
+                "name": "Maranhão",
+                "image": "/img/Maranhão_Atlético_Clube.png"
+              },
+              "firstLeg": {
+                "score1": 0,
+                "score2": 0
+              },
+              "penaltys": {
+                "score1": 2,
+                "score2": 4
+              },
+              "winnerId": 3
+            }
+          ],
+          "championId": 3
+        },
+        "secondStage": {
+          "semifinals": [
+            {
+              "team1": {
+                "id": 1,
+                "name": "Sampaio Corrêa",
+                "image": "/img/sampaio-correa-logo.svg"
+              },
+              "team2": {
+                "id": 2,
+                "name": "Moto Club",
+                "image": "/img/Moto_Club_logo.png"
+              },
+              "firstLeg": {
+                "score1": 0,
+                "score2": 2
+              },
+              "winnerId": 2
+            },
+            {
+              "team1": {
+                "id": 3,
+                "name": "Maranhão",
+                "image": "/img/Maranhão_Atlético_Clube.png"
+              },
+              "team2": {
+                "id": 6,
+                "name": "Pinheiro",
+                "image": "/img/PinheiroMA.png"
+              },
+              "firstLeg": {
+                "score1": 3,
+                "score2": 0
+              },
+              "winnerId": 3
+            }
+          ],
+          "final": [
+            {
+              "team1": {
+                "id": 2,
+                "name": "Moto Club",
+                "image": "/img/Moto_Club_logo.png"
+              },
+              "team2": {
+                "id": 3,
+                "name": "Maranhão",
+                "image": "/img/Maranhão_Atlético_Clube.png"
+              },
+              "firstLeg": {
+                "score1": 1,
+                "score2": 0
+              },
+              "winnerId": 2
+            }
+          ],
+          "championId": 2
+        },
+        "finalStage": {
+          "final": [
+            {
+              "team1": {
+                "id": 3,
+                "name": "Maranhão",
+                "image": "/img/Maranhão_Atlético_Clube.png"
+              },
+              "team2": {
+                "id": 2,
+                "name": "Moto Club",
+                "image": "/img/Moto_Club_logo.png"
+              },
+              "firstLeg": {
+                "score1": 1,
+                "score2": 1
+              },
+              "secondLeg": {
+                "score1": 1,
+                "score2": 1
+              },
+              "aggregate": {
+                "team1": 2,
+                "team2": 2
+              },
+              "penaltys": {
+                "score1": 5,
+                "score2": 4
+              },
+              "winnerId": 3
+            }
+          ],
+          "championId": 3
+        }
+      }
+    },
+    "serieB": {
+      "semifinals": [
+        {
+          "team1": {
+            "id": 8,
+            "name": "IAPE",
+            "image": "/img/iape.png"
+          },
+          "team2": {
+            "id": 27,
+            "name": "Itz Sport",
+            "image": "/img/itz_sport.png"
+          },
+          "firstLeg": {
+            "score1": 3,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 3,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 6,
+            "team2": 1
+          },
+          "winnerId": 8
+        },
+        {
+          "team1": {
+            "id": 9,
+            "name": "Viana",
+            "image": "/img/ECViana.png"
+          },
+          "team2": {
+            "id": 15,
+            "name": "São Luís",
+            "image": "/img/EscudoSaoLuisFC.png"
+          },
+          "firstLeg": {
+            "score1": 3,
+            "score2": 1
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 0
+          },
+          "aggregate": {
+            "team1": 4,
+            "team2": 1
+          },
+          "winnerId": 9
+        }
+      ],
+      "final": [
+        {
+          "team1": {
+            "id": 8,
+            "name": "IAPE",
+            "image": "/img/iape.png"
+          },
+          "team2": {
+            "id": 9,
+            "name": "Viana",
+            "image": "/img/ECViana.png"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 0
+          },
+          "penaltys": {
+            "score1": 4,
+            "score2": 5
+          },
+          "winnerId": 9
+        }
+      ],
+      "championId": 9
     }
   }
 }

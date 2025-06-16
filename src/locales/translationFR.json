@@ -22,12 +22,14 @@
     "team": "Équipe",
     "points": "Pts",
     "games": "J",
-    "wins": "G",
+    "wins": "V",
     "draws": "N",
-    "losses": "P",
+    "losses": "D",
     "goals": "Buts",
     "goalDifference": "DB",
-    "group": "Groupe"
+    "group": "Groupe",
+    "firstStage": "Première Phase",
+    "secondStage": "Deuxième Phase"
   },
   "knockout": {
     "title": "Phase Finale - Élimination Directe",
@@ -35,7 +37,12 @@
     "final": "Finale",
     "firstLeg": "Aller",
     "secondLeg": "Retour",
-    "champion": "Champion"
+    "champion": "Champion",
+    "firstStage": "Première Phase",
+    "secondStage": "Deuxième Phase",
+    "mainStage": "Phase Finale - Élimination Directe",
+    "finalStage": "Phase Finale",
+    "penaltys": "Tirs au but"
   },
   "serieA": {
     "h2": "Tableau du Maranhense Série A",

@@ -27,7 +27,9 @@
     "losses": "L",
     "goals": "Goals",
     "goalDifference": "GD",
-    "group": "Group"
+    "group": "Group",
+    "firstStage": "First Stage",
+    "secondStage": "Second Stage"
   },
   "knockout": {
     "title": "Knockout Stage",
@@ -35,7 +37,12 @@
     "final": "Final",
     "firstLeg": "First Leg",
     "secondLeg": "Second Leg",
-    "champion": "Champion"
+    "champion": "Champion",
+    "firstStage": "First Stage",
+    "secondStage": "Second Stage",
+    "mainStage": "Final Stage - Knockout",
+    "finalStage": "Final Stage",
+    "penaltys": "Penalties"
   },
   "serieA": {
     "h2": "Maranhão Serie A Table",

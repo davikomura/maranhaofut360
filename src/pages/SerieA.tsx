@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { KnockoutStage } from "../components/KnockoutStage";
 import { LeagueTable } from "../components/LeagueTable";
 import { useTranslation } from "react-i18next";
+import { ChevronDown } from "lucide-react";
 
 export const SerieA = () => {
   const { t } = useTranslation();
   const [selectedYear, setSelectedYear] = useState("2025");
 
-  const availableYears = ["2025", "2024"];
+  const availableYears = ["2025", "2024", "2023"];
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-black via-gray-900 to-black text-gray-100">
@@ -16,23 +16,31 @@ export const SerieA = () => {
           {t("serieA.h2")}
         </h2>
 
-        <div className="mb-8 text-center">
-          <label className="mr-4 font-semibold">{t("serieA.selectYear")}:</label>
-          <select
-            value={selectedYear}
-            onChange={(e) => setSelectedYear(e.target.value)}
-            className="bg-gray-800 text-white border border-gray-600 p-2 rounded"
-          >
-            {availableYears.map((year) => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
+        <div className="mb-12 flex justify-center">
+          <div className="relative inline-block w-48">
+            <label className="block mb-2 text-center font-semibold text-gray-300">
+              {t("serieA.selectYear")}
+            </label>
+            <div className="relative">
+              <select
+                value={selectedYear}
+                onChange={(e) => setSelectedYear(e.target.value)}
+                className="appearance-none w-full bg-gray-800 border border-gray-700 text-white py-2 px-4 pr-8 rounded-2xl shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+              >
+                {availableYears.map((year) => (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400">
+                <ChevronDown size={18} />
+              </div>
+            </div>
+          </div>
         </div>
 
         <LeagueTable league="A" year={selectedYear} />
-        <KnockoutStage league="A" year={selectedYear} />
       </main>
     </div>
   );

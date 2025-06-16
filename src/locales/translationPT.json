@@ -27,7 +27,9 @@
     "losses": "D",
     "goals": "Gols",
     "goalDifference": "SG",
-    "group": "Grupo"
+    "group": "Grupo",
+    "firstStage": "1ª Fase",
+    "secondStage": "2ª Fase"
   },
   "knockout": {
     "title": "Fase Final - Mata-Mata",
@@ -35,7 +37,12 @@
     "final": "Final",
     "firstLeg": "Ida",
     "secondLeg": "Volta",
-    "champion": "Campeão"
+    "champion": "Campeão",
+    "firstStage": "1ª Fase",
+    "secondStage": "2ª Fase",
+    "mainStage": "Fase Final - Mata-Mata",
+    "finalStage": "Fase Final",
+    "penaltys": "Pênaltis"
   },
   "serieA": {
     "h2": "Tabela do Maranhense Série A",

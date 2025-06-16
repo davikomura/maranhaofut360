@@ -361,6 +361,20 @@
         "O uniforme número um do Marília Futebol Clube é camisa azul e branco em listras verticais, calção azul e meias azuis.",
         "No ano de 2015 o time fez sua estreia em competições profissionais, na Segunda Divisão do Campeonato Maranhense sendo Vice-campeão."
       ]
+    },
+    {
+      "id": 27,
+      "name": "Itz Sport",
+      "foundationDate": "2017-06-10",
+      "city": "Imperatriz",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/itz_sport.png",
+      "history": "É um clube brasileiro de futebol da cidade de Imperatriz, no estado do Maranhão. Foi fundado em 10 de junho de 2017. [2] Tem como mascote o camaleão",
+      "curiosities": [
+        "Disputou sua primeira competição em 2018 de forma amadora, começando pelo Campeonato Imperatrizense Série B terminando na 6ª coloção sendo eliminado nas quartas de finais.",
+        "Fez sua estreia profissional na 2ª Divisão do Campeonato Maranhense de 2019, sendo eliminado na primeira fase terminando na 5ª colocação geral ( considerando a vitória por W.O sobre o Viana no jogo que definiria o rebaixado pra a 3ª divisão ), no mesmo ano disputa novamente a segunda divisão do Campeonato Imperatrizense terminando da mesma forma do ano anterior ( na 6ª coloção sendo eliminado nas quartas de finais )."
+      ]
     }
   ],
   
