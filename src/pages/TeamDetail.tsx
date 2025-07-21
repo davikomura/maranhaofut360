@@ -1,11 +1,15 @@
 import { useParams } from "react-router-dom";
-import teamsData from "../../data.json";
+// import teamsData from "../../data.json";
+import dataPT from "../../data.json";
+import dataEN from "../../dataEN.json";
 import { MapPin, Calendar } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function TeamDetail() {
   const { id } = useParams();
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const teamsData = i18n.language.startsWith("EN") ? dataEN : dataPT;
   const teamId = Number(id);
 
   const team = teamsData.Teams.find((t) => t.id === teamId);

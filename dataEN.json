@@ -1,0 +1,1317 @@
+{
+  "Teams": [
+    {
+      "id": 1,
+      "name": "Sampaio Corrêa",
+      "foundationDate": "1923-03-25",
+      "city": "São Luís",
+      "stateDivision": "A",
+      "stateNational": "D",
+      "image": "/img/sampaio-correa-logo.svg",
+      "history": "Founded in 1923, o Sampaio Corrêa is one of the biggest teams in Maranhão.",
+      "curiosities": [
+        "Won the Série B in 1972.",
+        "The name is inspired by the seaplane Sampaio Corrêa II."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Moto Club",
+      "foundationDate": "1937-09-13",
+      "city": "São Luís",
+      "stateDivision": "A",
+      "stateNational": null,
+      "image": "/img/Moto_Club_logo.png",
+      "history": "Founded in 1937, o Moto Club has a strong rivalry with Sampaio Corrêa.",
+      "curiosities": [
+        "It is known as Papão do Norte.",
+        "Won the Maranhão state championship 26 times."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "MAC (Maranhão Atlético Clube)",
+      "foundationDate": "1932-09-24",
+      "city": "São Luís",
+      "stateDivision": "A",
+      "stateNational": "D",
+      "image": "/img/Maranhão_Atlético_Clube.png",
+      "history": "Founded in 1932, Maranhão Atlético Clube is known as the Poster Destroyer.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first club from Maranhão to play in a national tournament."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sociedade Imperatriz de Desportos",
+      "foundationDate": "1962-01-04",
+      "city": "Imperatriz",
+      "stateDivision": "A",
+      "stateNational": "D",
+      "image": "/img/Imperatriz FC.svg",
+      "history": "Founded on January 4, 1962, under the name Sociedade Atlética Imperatriz. Its acronym (SAI) was the same as the local stevedores' union, which had an amateur team that served as the club's foundation.",
+      "curiosities": ["Holds 3 state titles."]
+    },
+    {
+      "id": 5,
+      "name": "Cordino Esporte Clube",
+      "foundationDate": "2010-03-08",
+      "city": "Barra do Corda",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/Cordino_EC_logo.png",
+      "history": "The team emerged from the municipal selection of Barra do Corda, which competed in the 'Copão Maranhão do Sul', an intermunicipal tournament. Encouraged, the city officials and club leaders decided to professionalize the team and entered the 2010 Maranhão Second Division as their first official competition.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Pinheiro Atlético Clube",
+      "foundationDate": "1989-04-01",
+      "city": "Pinheiro",
+      "image": "/img/PinheiroMA.png",
+      "stateDivision": "A",
+      "stateNational": null,
+      "history": "The club was founded on April 1, 1989, and played the Maranhão State Championship from 1989 to 1993, achieving its best placement in 1992, finishing 3rd. It went on hiatus in 1994 and returned in 2016, competing in the Second Division and losing the final to Americano.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Tuntum Esporte Clube",
+      "foundationDate": "2021-06-01",
+      "city": "Tuntum",
+      "stateDivision": "A",
+      "stateNational": null,
+      "image": "/img/Escudo_Tuntum_EC.png",
+      "history": "The club was founded and introduced on June 1, 2021, with support from the municipal government. The city is located 365 km from the capital, São Luís.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 8,
+      "name": "IAPE",
+      "foundationDate": "2008-08-10",
+      "city": "São Luís",
+      "stateDivision": "A",
+      "stateNational": null,
+      "image": "/img/iape.png",
+      "history": "Founded on August 10, 2008.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Esporte Clube Viana",
+      "foundationDate": "1995-07-15",
+      "city": "Viana",
+      "stateDivision": "A",
+      "stateNational": null,
+      "image": "/img/ECViana.png",
+      "history": "Viana was founded on July 15, 1995, by a group of local residents who wanted to support a team from their own city, leading to the creation of Esporte Clube Viana.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Bacabal Esporte Clube",
+      "foundationDate": "1974-05-14",
+      "city": "Bacabal",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/EscudoBacabal.svg",
+      "history": "Bacabal Esporte Clube was founded on May 14, 1974.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Expressinho Futebol Clube",
+      "foundationDate": "1975-03-13",
+      "city": "São Luís",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/ExpressinhoFC.png",
+      "history": "Inactive since 2005, the club returned in 2012 to compete in the Maranhão U-16 Championship. It currently plays in the Second Division, and although it was founded in São Luís in 1975, it represented the city of Santa Rita in 2012 before returning to São Luís in 2013.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 12,
+      "name": "São José de Ribamar Esporte Clube",
+      "foundationDate": "2007-06-14",
+      "city": "São José de Ribamar",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/Escudo-do-São-José-de-Ribamar.png",
+      "history": "In 2007, the club was promoted to the First Division of the Maranhão Championship as runner-up of the Second Division.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Sociedade Esportiva Tupan",
+      "foundationDate": "1924-12-23",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/SETupan.png",
+      "history": "Tupan Sport Club was founded on December 23, 1924. It first played in the Maranhão Championship in 1926, then again in 1930. The club won the state title in 1932, again in 1935, and a third time in 1938.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Americano Futebol Clube",
+      "foundationDate": "1978-11-15",
+      "city": "Bacabal",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/AmericanoMA.png",
+      "history": "It is a Brazilian football club from the city of Bacabal. Its colors are blue, red, and white.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 15,
+      "name": "São Luís Futebol Clube",
+      "foundationDate": "2001-08-03",
+      "city": "São Luís",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/EscudoSaoLuisFC.png",
+      "history": "São Luís Futebol Clube is a professional football team in Maranhão. Founded on August 3, 2001, as an amateur team, it spent much time competing in youth categories such as U-15, U-17, and U-19. The team won the Maranhão U-17 Championship in 2018 after defeating Cantareira 1-0, and won its second state title in 2022 in the U-15 category.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Santa Quitéria Futebol Clube",
+      "foundationDate": "2003-04-16",
+      "city": "Santa Quitéria",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/santa_quiteria.png",
+      "history": "Founded in 2003, it played its first official championship and inaugurated its stadium in 2005, when it won the Maranhão Second Division for the first time against Juventude, earning the right to compete in the 2006 Maranhão Championship.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Timon Esporte Clube",
+      "foundationDate": "2005-09-26",
+      "city": "Timon",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/TimonEC.png",
+      "history": "Made its debut in competitions in 2007, playing in the Maranhão Championship – Série B that year.",
+      "curiosities": [
+        "Holds 15 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Luso Brasileiro",
+      "foundationDate": "1917-02-24",
+      "city": "São Luís",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/SCLusoBrasileiro.png",
+      "history": "Sport Club Luso Brasileiro was a football club based in São Luís, Maranhão. Founded in 1917 by Portuguese merchant Edgar Figueira, who was also the club president until August 1919.",
+      "curiosities": [
+        "Holds 8 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Juventude Samas",
+      "foundationDate": "1979-06-14",
+      "city": "São Mateus",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/SEJuventude.png",
+      "history": "The club was founded on June 14, 1979, in the city of Caxias under the name Duque de Caxias Atlético Clube.",
+      "curiosities": [
+        "Holds 8 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Chapadinha Futebol Clube",
+      "foundationDate": "1999-02-19",
+      "city": "Chapadinha",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/Chapadinha.png",
+      "history": "Chapadinha competed in six editions of the Maranhão Championship, achieving its best position as third place in 2005. Its only participation in national competitions was in 2003, playing in Série C and being eliminated in the second phase.",
+      "curiosities": [
+        "Holds 8 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Araioses Futebol Clube",
+      "foundationDate": "1982-12-07",
+      "city": "Araioses",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/AraiosesFC.png",
+      "history": "Araioses debuted in the Maranhão Second Division Championship, where it was runner-up and earned historic promotion to the elite division of the Maranhão Championship.",
+      "curiosities": [
+        "Holds 8 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Balsas Esporte Clube",
+      "foundationDate": "1999-05-25",
+      "city": "Balsas",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/BalsasEC.png",
+      "history": "Founded in 1999 by sportsman Carmegildo Xavier, the club competed in its first official competition in 2012, winning the Maranhão Second Division Championship. It played in the Maranhão First Division Championship from 2013 to 2015.",
+      "curiosities": [
+        "Holds 8 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Sabiá Futebol Clube",
+      "foundationDate": "2007-04-23",
+      "city": "Caxias",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/SabiaFC.png",
+      "history": "The club was created in 2007 by a group of sports enthusiasts from a construction company called 'Barros Construção Empreendimentos Ltda.', who decided to found an amateur football team called 'Sabiá FC'.",
+      "curiosities": [
+        "Holds 8 state titles.",
+        "Was the first team from Maranhão to compete in a national championship."
+      ]
+    },
+    {
+      "id": 24,
+      "name": "JV Lideral Futebol Clube",
+      "foundationDate": "1994-04-30",
+      "city": "Imperatriz",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/JVLideral.png",
+      "history": "JV Lideral was founded on April 30, 1994, in Imperatriz, the second most populous city in Maranhão. Nicknamed 'Tractor of Camaçari', it started as an amateur club with the goal of becoming professional, developing players for the Brazilian and global football markets.",
+      "curiosities": [
+        "JV Lideral made its national competition debut against Ponte Preta in the 2010 Copa do Brasil at Estádio Panelão; the match ended in a 0-0 draw.",
+        "The JV Lideral Training Center is located 8 km from downtown Imperatriz-MA, 10 minutes from the local airport. It covers 19.8 hectares and includes 2 football fields, a sand court for athlete conditioning, lodging for 40 players, locker rooms, cafeteria, leisure and game areas, an intensive recovery center equipped with state-of-the-art physiotherapy equipment, a long-distance travel bus, and a small bus for shorter trips."
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Marília Futebol Clube",
+      "foundationDate": "1984-11-22",
+      "city": "Imperatriz",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/Marilia.png",
+      "history": "Marília Futebol Clube is a football club from Imperatriz, Maranhão. Founded in 1984, it only participated in youth competitions until 2015.",
+      "curiosities": [
+        "The club's primary uniform features a blue and white vertically striped shirt, blue shorts, and blue socks.",
+        "In 2015, the team debuted in professional competitions, finishing as runner-up in the Maranhão Second Division."
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Sport Club Sírio Brasileiro",
+      "foundationDate": "1927-04-08",
+      "city": "São Luís",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/Sirio.png",
+      "history": "This club from São Luís (MA) was founded on April 8, 1927, by members of the Syrian-Lebanese community in Maranhão along with dissidents from Sport Club Luso Brasileiro. The founding families included Heluy, Baueres, Duailibe, and Nazar.",
+      "curiosities": [
+        "The club's primary uniform was blue and white vertically striped shirt, blue shorts, and blue socks.",
+        "In 2015, the team debuted in professional competitions, finishing as runner-up in the Maranhão Second Division."
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Itz Sport",
+      "foundationDate": "2017-06-10",
+      "city": "Imperatriz",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/itz_sport.png",
+      "history": "Itz Sport is a Brazilian football club from Imperatriz, Maranhão, founded on June 10, 2017. Its mascot is a chameleon.",
+      "curiosities": [
+        "Played its first competition in 2018 as an amateur, starting in the Imperatriz Série B Championship and finishing 6th, being eliminated in the quarter-finals.",
+        "Made its professional debut in the 2019 Maranhão Second Division, eliminated in the first phase, finishing 5th overall (considering a walkover win against Viana in the relegation-deciding match). That same year, it again competed in the Imperatriz Second Division, finishing 6th and being eliminated in the quarter-finals."
+      ]
+    }
+  ],
+  
+  "champions": [
+    {
+      "edition": "1ª",
+      "year": "1918",
+      "champion": "Luso Brasileiro",
+      "idTeamChampion": 18,
+      "cityChampion": "São Luís",
+      "runner_up": "Fênix",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "2ª",
+      "year": "1919",
+      "champion": "Luso Brasileiro",
+      "idTeamChampion": 18,
+      "cityChampion": "São Luís",
+      "runner_up": "Fênix",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "3ª",
+      "year": "1920",
+      "champion": "Football Athletic",
+      "idTeamChampion": null,
+      "cityChampion": "São Luís",
+      "runner_up": "Anilense",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "4ª",
+      "year": "1921",
+      "champion": "Fênix",
+      "idTeamChampion": null,
+      "cityChampion": "São Luís",
+      "runner_up": "Luso Brasileiro",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "5ª",
+      "year": "1922",
+      "champion": "Luso Brasileiro",
+      "idTeamChampion": 18,
+      "cityChampion": "São Luís",
+      "runner_up": "Anilense",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "6ª",
+      "year": "1923",
+      "champion": "Luso Brasileiro",
+      "idTeamChampion": 18,
+      "cityChampion": "São Luís",
+      "runner_up": "Football Athletic",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "7ª",
+      "year": "1924",
+      "champion": "Luso Brasileiro",
+      "idTeamChampion": 18,
+      "cityChampion": "São Luís",
+      "runner_up": "Fênix",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "8ª",
+      "year": "1925",
+      "champion": "Luso Brasileiro",
+      "idTeamChampion": 18,
+      "cityChampion": "São Luís",
+      "runner_up": "Santa Cruz",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "9ª",
+      "year": "1926",
+      "champion": "Luso Brasileiro",
+      "idTeamChampion": 18,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "10ª",
+      "year": "1927",
+      "champion": "Luso Brasileiro",
+      "idTeamChampion": 18,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "11ª",
+      "year": "1928",
+      "champion": "Vasco da Gama",
+      "idTeamChampion": null,
+      "cityChampion": "São Luís",
+      "runner_up": "Luso Brasileiro",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "12ª",
+      "year": "1930",
+      "champion": "Sírio",
+      "idTeamChampion": 26,
+      "cityChampion": "São Luís",
+      "runner_up": "Anilense",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "13ª",
+      "year": "1932",
+      "champion": "Tupan",
+      "idTeamChampion": 13,
+      "cityChampion": "São Luís",
+      "runner_up": "América",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "14ª",
+      "year": "1933",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Tupan",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "15ª",
+      "year": "1934",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Tupan",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "16ª",
+      "year": "1935",
+      "champion": "Tupan",
+      "idTeamChampion": 13,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "17ª",
+      "year": "1937",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Tupan",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "18ª",
+      "year": "1938",
+      "champion": "Tupan",
+      "idTeamChampion": 13,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "19ª",
+      "year": "1940",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "20ª",
+      "year": "1941",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "21ª",
+      "year": "1942",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Football Athletic",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "22ª",
+      "year": "1943",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "23ª",
+      "year": "1944",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Botafogo",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "24ª",
+      "year": "1945",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "25ª",
+      "year": "1946",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "26ª",
+      "year": "1947",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "27ª",
+      "year": "1948",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "28ª",
+      "year": "1949",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "29ª",
+      "year": "1950",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "30ª",
+      "year": "1951",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "31ª",
+      "year": "1952",
+      "champion": "Vitória do Mar",
+      "idTeamChampion": null,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "32ª",
+      "year": "1953",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "33ª",
+      "year": "1954",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "34ª",
+      "year": "1955",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "35ª",
+      "year": "1956",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "36ª",
+      "year": "1957",
+      "champion": "Ferroviário",
+      "idTeamChampion": null,
+      "cityChampion": "São Luís",
+      "runner_up": "Vitória do Mar",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "37ª",
+      "year": "1958",
+      "champion": "Ferroviário",
+      "idTeamChampion": null,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "38ª",
+      "year": "1959",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Vitória do Mar",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "39ª",
+      "year": "1960",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "40ª",
+      "year": "1961",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "41ª",
+      "year": "1962",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "42ª",
+      "year": "1963",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "43ª",
+      "year": "1964",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "44ª",
+      "year": "1965",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "45ª",
+      "year": "1966",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "46ª",
+      "year": "1967",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Ferroviário",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "47ª",
+      "year": "1968",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "48ª",
+      "year": "1969",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Ferroviário",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "49ª",
+      "year": "1970",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "50ª",
+      "year": "1971",
+      "champion": "Ferroviário",
+      "idTeamChampion": null,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "51ª",
+      "year": "1972",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Ferroviário",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "52ª",
+      "year": "1973",
+      "champion": "Ferroviário",
+      "idTeamChampion": null,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "53ª",
+      "year": "1974",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "54ª",
+      "year": "1975",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Ferroviário",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "55ª",
+      "year": "1976",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Ferroviário",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "56ª",
+      "year": "1977",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Bacabal",
+      "cityRunnerUp": "Bacabal"
+    },
+    {
+      "edition": "57ª",
+      "year": "1978",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "58ª",
+      "year": "1979",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "59ª",
+      "year": "1980",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "60ª",
+      "year": "1981",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "61ª",
+      "year": "1982",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "62ª",
+      "year": "1983",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "63ª",
+      "year": "1984",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "64ª",
+      "year": "1985",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "65ª",
+      "year": "1986",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "66ª",
+      "year": "1987",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
+    },
+    {
+      "edition": "67ª",
+      "year": "1988",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "68ª",
+      "year": "1989",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "69ª",
+      "year": "1990",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "70ª",
+      "year": "1991",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "71ª",
+      "year": "1992",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "72ª",
+      "year": "1993",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
+    },
+    {
+      "edition": "73ª",
+      "year": "1994",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "74ª",
+      "year": "1995",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Coroatá",
+      "cityRunnerUp": "Coroatá"
+    },
+    {
+      "edition": "75ª",
+      "year": "1996",
+      "champion": "Bacabal",
+      "idTeamChampion": 10,
+      "cityChampion": "Bacabal",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "76ª",
+      "year": "1997",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "77ª",
+      "year": "1998",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "78ª",
+      "year": "1999",
+      "champion": "MAC",
+      "cityChampion": "São Luís",
+      "idTeamChampion": 1,
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "79ª",
+      "year": "2000",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "80ª",
+      "year": "2001",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "81ª",
+      "year": "2002",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Santa Inês",
+      "cityRunnerUp": "Santa Inês"
+    },
+    {
+      "edition": "82ª",
+      "year": "2003",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "83ª",
+      "year": "2004",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "84ª",
+      "year": "2005",
+      "champion": "Imperatriz",
+      "idTeamChampion": 4,
+      "cityChampion": "Imperatriz",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "85ª",
+      "year": "2006",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "86ª",
+      "year": "2007",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
+    },
+    {
+      "edition": "87ª",
+      "year": "2008",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "88ª",
+      "year": "2009",
+      "champion": "JV Lideral",
+      "idTeamChampion": 24,
+      "cityChampion": "Imperatriz",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "89ª",
+      "year": "2010",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Santa Quitéria",
+      "cityRunnerUp": "Santa Quitéria"
+    },
+    {
+      "edition": "90ª",
+      "year": "2011",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "91ª",
+      "year": "2012",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "92ª",
+      "year": "2013",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
+    },
+    {
+      "edition": "93ª",
+      "year": "2014",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "94ª",
+      "year": "2015",
+      "champion": "Imperatriz",
+      "idTeamChampion": 4,
+      "cityChampion": "Imperatriz",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "95ª",
+      "year": "2016",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Sampaio Corrêa",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "96ª",
+      "year": "2017",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Cordino",
+      "cityRunnerUp": "Barra do Corda"
+    },
+    {
+      "edition": "97ª",
+      "year": "2018",
+      "champion": "Moto Club",
+      "idTeamChampion": 2,
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
+    },
+    {
+      "edition": "98ª",
+      "year": "2019",
+      "champion": "Imperatriz",
+      "idTeamChampion": 4,
+      "cityChampion": "Imperatriz",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "99ª",
+      "year": "2020",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "100ª",
+      "year": "2021",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "101ª",
+      "year": "2022",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "Cordino",
+      "cityRunnerUp": "Barra do Corda"
+    },
+    {
+      "edition": "102ª",
+      "year": "2023",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Moto Club",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "103ª",
+      "year": "2024",
+      "champion": "Sampaio Corrêa",
+      "idTeamChampion": 1,
+      "cityChampion": "São Luís",
+      "runner_up": "MAC",
+      "cityRunnerUp": "São Luís"
+    },
+    {
+      "edition": "104ª",
+      "year": "2025",
+      "champion": "MAC",
+      "idTeamChampion": 3,
+      "cityChampion": "São Luís",
+      "runner_up": "Imperatriz",
+      "cityRunnerUp": "Imperatriz"
+    }
+  ]
+}

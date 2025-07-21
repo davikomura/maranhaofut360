@@ -9,9 +9,9 @@ interface Language {
 const languages: Language[] = [
     { code: 'PT', flagSrc: '/flags/br.png' },
     { code: 'EN', flagSrc: '/flags/us.png' },
-    { code: 'ES', flagSrc: '/flags/es.png' },
-    { code: 'FR', flagSrc: '/flags/fr.png' },
-    { code: 'DE', flagSrc: '/flags/de.png' }
+    // { code: 'ES', flagSrc: '/flags/es.png' },
+    // { code: 'FR', flagSrc: '/flags/fr.png' },
+    // { code: 'DE', flagSrc: '/flags/de.png' }
 ];
 
 export const LanguageDropdown = () => {
