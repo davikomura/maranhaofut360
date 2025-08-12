@@ -1,0 +1,220 @@
+{
+  "Teams" : [
+    {
+      "id": 1,
+      "history": "Fundado em 1923, o Sampaio Corrêa é um dos maiores times do maranhão.",
+      "curiosities": [
+        "Foi campeão da Série B em 1972.",
+        "O nome é inspirado no hidroavião Sampaio Corrêa II."
+      ]
+    },
+    {
+      "id": 2,
+      "history": "Fundado em 1937, o Moto Club tem grande rivalidade com o Sampaio Corrêa.",
+      "curiosities": [
+        "É conhecido como Papão do Norte.",
+        "Foi campeão maranhense 26 vezes."
+      ]
+    },
+    {
+      "id": 3,
+      "history": "Fundado em 1932, o Maranhão Atlético Clube é conhecido como Demolidor de Cartazes.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 4,
+      "history": "Fundada em 4 de janeiro de 1962 sob o nome de Sociedade Atlética Imperatriz, cuja sigla (SAI) era a mesma do Sindicato dos Arrumadores de Imperatriz, cujo time amador serviu de base nos primeiros anos.",
+      "curiosities": [
+        "Possui 3 títulos estaduais."
+      ]
+    },
+    {
+      "id": 5,
+      "history": "A equipe surgiu da seleção municipal de Barra do Corda, que disputava o 'Copão Maranhão do Sul', torneio intermunicipal da região. Entusiasmados, os dirigentes e a prefeitura resolveram profissionalizar a equipe, pagando todas as taxas junto à FMF e o primeiro torneio que participou foi na Segunda Divisão Maranhense de 2010.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 6,
+      "history": "O clube foi fundado no dia 1º de abril de 1989 e jogou o Campeonato Maranhense de Futebol de 1989 a 1993, obtendo sua melhor colocação em 1992, quando terminou o estadual na 3ª colocação. Licenciou-se em 1994, retornando em 2016 jogando o Campeonato Maranhense de Futebol - Segunda Divisão e perdendo a final pro Americano.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 7,
+      "history": "O clube teve sua fundação e apresentação em 1 de junho de 2021 e com o apoio da prefeitura da cidade, que fica a 365 km de distância da capital, São Luis.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 8,
+      "history": "Foi fundado em 10 de agosto de 2008.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 9,
+      "history": "O Viana foi fundado em 15 de julho de 1995 por um grupo de moradores da cidade. Eles queriam fundar um time e torcer para uma equipe local; daí deu a ideia de fundar o Esporte Clube Viana.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 10,
+      "history": "O Bacabal Esporte Clube foi fundado em 12 de março de 1974.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 11,
+      "history": "Licenciado desde 2005, voltou a disputar campeonatos em 2012, mais precisamente o Campeonato Maranhense Sub-16. Atualmente disputa a Segunda Divisão estadual, mas em vez de representar São Luís, cidade onde o clube foi fundado em 1975, representou o município de Santa Rita, más em 2013 o clube voltou a representara cidade de São Luís.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 12,
+      "history": "Em 2007 o clube subiu para a primeira divisão do maranhense como o vice campeonato da segunda.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 13,
+      "history": "O Tupan Sport Clube fundado em 23 de dezembro de 1924 começou a disputar o campeonato Maranhense em 1926, depois disputou o ano de 1930, foi campeão maranhense em 1932, bicampeão maranhense em 1935, e tri campeão maranhense em 1938",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 14,
+      "history": "É um clube brasileiro de futebol, da cidade de Bacabal. Suas cores são azul, vermelho e branco.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 15,
+      "history": "O São Luís Futebol Clube é uma equipe que atua no futebol profissional maranhense, fundo em 3 de agosto de 2001 como uma equipe amadora passou boa parte disputando competições amadoras como as categorias de base sub-15, sub-17 e sub-19 a equipe se sagrou-se campeão campeão do Campeonato maranhense Sub-17 de 2018 após vencer Cantareira por 1 a 0. e ainda venceu o seu segundo estadual em 2022 mas na categoria sub-15.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 16,
+      "history": "Fundado em 2003, disputou seu primeiro campeonato oficial e inaugurou seu estádio em 2005, quando venceu pela primeira vez o Campeonato Maranhense de Futebol Segunda Divisão,contra o Juventude, garantindo o direito de disputar o Campeonato Maranhense de 2006[4].",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 17,
+      "history": "Estreou em competições em 2007 quando disputou o Campeonato Maranhense – Série B do mesmo ano.",
+      "curiosities": [
+        "Possui 15 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 18,
+      "history": "O Sport Club Luso Brasileiro foi um clube de futebol com sede em São Luís, capital do estado do Maranhão. Sua fundação remonta a 1917, sendo estabelecido pelo comerciante português Edgar Figueira, que assumiu também a presidência até agosto de 1919.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 19,
+      "history": "O clube foi fundado em 14 de junho de 1979 na cidade de Caxias e sob o nome de Duque de Caxias Atlético Clube.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 20,
+      "history": "O Chapadinha disputou 6 edições do Campeonato Maranhense, tendo como melhor posição o terceiro lugar em 2005. A única participação do clube em competições nacionais foi em 2003, quando disputou a Série C, sendo eliminado na segunda fase.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 21,
+      "history": "O Araioses estreou no Campeonato Maranhense da Segunda Divisão, onde foi vice-campeão e conquistou o acesso inédito à elite do Campeonato Maranhense.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 22,
+      "history": "Fundado em 1999 pelo desportista Carmegildo Xavier, o clube disputou em 2012 sua primeira competição oficial, o Campeonato Maranhense da 2ª Divisão no qual conquistou o título. Disputou a o Campeonato Maranhense da 1ª Divisão de 2013 a 2015.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 23,
+      "history": "O clube surgiu em 2007 a partir da ideia de um grupo de amigos desportistas de uma construtora chamada 'Barros Construção Empreendimentos Ltda.', que resolveram fundar um time de futebol de campo amador, e assim fundaram o 'Sabiá FC'.",
+      "curiosities": [
+        "Possui 8 títulos estaduais.",
+        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+      ]
+    },
+    {
+      "id": 24,
+      "history": "O JV Lideral, fundado no dia 30 de abril de 1994 na cidade de Imperatriz, a segunda mais populosa do Maranhão, e que era conhecido carinhosamente como Trator do Camaçari, nasceu como um clube amador, porém com a missão de ser um clube de futebol profissional, revelando jogadores para o mercado do futebol brasileiro e mundial.",
+      "curiosities": [
+        "O JV Lideral estreou em competições nacionais enfrentando a Ponte Preta pela Copa do Brasil 2010, no Estádio Panelão, a partida acabou empatada em 0 a 0.",
+        "O Centro de Treinamento do JV Lideral está situado a 8 km do centro da cidade de Imperatriz-MA, a 10 minutos do aeroporto local. Possui uma área de 19,8 ha, e é composta por 2 campos de futebol, uma quadra de areia para fortalecimento dos atletas, alojamento para 40 atletas, vestiários, refeitório, área de lazer e jogos, um centro de recuperação intensivo com todos equipamentos de fisioterapia de última geração, 1 ônibus de viagem para longas distancias, 1 micro ônibus para pequenas distâncias"
+      ]
+    },
+    {
+      "id": 25,
+      "history": "É um clube de futebol da cidade de Imperatriz, no estado do Maranhão. Fundado em 1984, até 2015 o clube participava apenas de competições nas categorias de base.",
+      "curiosities": [
+        "O uniforme número um do Marília Futebol Clube é camisa azul e branco em listras verticais, calção azul e meias azuis.",
+        "No ano de 2015 o time fez sua estreia em competições profissionais, na Segunda Divisão do Campeonato Maranhense sendo Vice-campeão."
+      ]
+    },
+    {
+      "id": 26,
+      "history": "Foi uma agremiação da cidade de São Luís (MA). O Tricolor (verde, branco  vermelho) foi Fundado na sexta-feira, do dia 08 de Abril de 1927, por integrantes da Colônia Sírio-Libanesa do Maranhão juntamente com dissidentes do Sport Club Luso Brasileiro, liderados por membros das famílias Sirio-Libanesas, Heluy, Baueres, Duailibe e Nazar, residentes na capital de São Luis.",
+      "curiosities": [
+        "O uniforme número um do Marília Futebol Clube é camisa azul e branco em listras verticais, calção azul e meias azuis.",
+        "No ano de 2015 o time fez sua estreia em competições profissionais, na Segunda Divisão do Campeonato Maranhense sendo Vice-campeão."
+      ]
+    },
+    {
+      "id": 27,
+      "history": "É um clube brasileiro de futebol da cidade de Imperatriz, no estado do Maranhão. Foi fundado em 10 de junho de 2017. Tem como mascote o camaleão",
+      "curiosities": [
+        "Disputou sua primeira competição em 2018 de forma amadora, começando pelo Campeonato Imperatrizense Série B terminando na 6ª coloção sendo eliminado nas quartas de finais.",
+        "Fez sua estreia profissional na 2ª Divisão do Campeonato Maranhense de 2019, sendo eliminado na primeira fase terminando na 5ª colocação geral ( considerando a vitória por W.O sobre o Viana no jogo que definiria o rebaixado pra a 3ª divisão ), no mesmo ano disputa novamente a segunda divisão do Campeonato Imperatrizense terminando da mesma forma do ano anterior ( na 6ª coloção sendo eliminado nas quartas de finais )."
+      ]
+    }
+  ]
+}
+  

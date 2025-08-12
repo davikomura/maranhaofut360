@@ -9,7 +9,6 @@ export default function Header() {
     <header className="bg-gradient-to-r from-black via-gray-900 to-black text-white shadow-md border-b border-red-600">
       <div className="container mx-auto flex items-center justify-between px-4 md:px-8 py-4">
         
-        {/* Logo */}
         <Link to="/" title="FutMA 360 - Página inicial" className="flex items-center gap-3">
           <img
             src="/logo/futma360_2.png"
@@ -18,7 +17,6 @@ export default function Header() {
           />
         </Link>
 
-        {/* Navigation + Language Selector */}
         <div className="flex items-center gap-4 md:gap-8">
           <nav>
             <ul className="flex items-center gap-4 md:gap-6 text-sm md:text-lg font-semibold">

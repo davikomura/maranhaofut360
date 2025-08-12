@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import data from "../../data.json";
+import data from "../data/detailsTeam.json";
 import TeamCard from "./TeamCard";
 
 interface TeamListProps {
@@ -7,7 +7,7 @@ interface TeamListProps {
 }
 
 export default function TeamList({ stateDivision }: TeamListProps) {
-  const teams = data.Teams;
+  const teams = data.detailsTeam;
   const [filteredTeams, setFilteredTeams] = useState(teams);
 
   useEffect(() => {

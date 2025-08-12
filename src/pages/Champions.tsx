@@ -1,8 +1,8 @@
 import { useState } from "react";
-import data from "../../data.json";
+import championsData from "../data/champions.json";
 
 export const Champions = () => {
-  const { champions } = data;
+  const { champions } = championsData;
   const [showTable, setShowTable] = useState(false);
 
   const validChampions = champions.filter(

@@ -1,0 +1,220 @@
+{
+  "socialMedia": [
+    {
+      "id": 1,
+      "instagram": "https://instagram.com/sampaiocorrea",
+      "twitter": "https://twitter.com/sampaiocorrea",
+      "tiktok": "https://www.tiktok.com/@sampaiocorrea",
+      "facebook": "https://facebook.com/sampaiofcoficial",
+      "website": "https://www.sampaiocorreafc.com.br"
+    },
+    {
+      "id": 2,
+      "instagram": "https://instagram.com/motocluboficial",
+      "twitter": "https://twitter.com/motocluboficial",
+      "tiktok": "https://www.tiktok.com/@motocluboficial",
+      "facebook": "https://facebook.com/MotoClubSaoLuis",
+      "website": "https://motoclubdesaoluis.com.br"
+    },
+    {
+      "id": 3,
+      "instagram": "https://instagram.com/maranhaoac_oficial",
+      "twitter": "https://twitter.com/mac_maranhao",
+      "tiktok": null,
+      "facebook": "https://facebook.com/maranhaoatleticoclube",
+      "website": null
+    },
+    {
+      "id": 4,
+      "instagram": "https://instagram.com/imperatriz.oficial",
+      "twitter": "https://twitter.com/Imp_Oficial",
+      "tiktok": "https://www.tiktok.com/@imperatriz.oficial",
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 5,
+      "instagram": "https://instagram.com/cordino_oficial",
+      "twitter": "https://twitter.com/cordinoec",
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 6,
+      "instagram": "https://instagram.com/pinheiroatleticoclube",
+      "twitter": "https://twitter.com/pinheiroac1990",
+      "tiktok": "https://www.tiktok.com/@pinheiroatleticoclube",
+      "facebook": "https://facebook.com/pinheiroatleticoclubeoficial",
+      "website": null
+    },
+    {
+      "id": 7,
+      "instagram": "https://instagram.com/tuntumec",
+      "twitter": "https://twitter.com/tuntumec",
+      "tiktok": null,
+      "facebook": "https://facebook.com/tuntumec",
+      "website": null
+    },
+    {
+      "id": 8,
+      "instagram": "https://instagram.com/iapefcoficial",
+      "twitter": "https://twitter.com/IAPEFCOFICIAL",
+      "tiktok": "https://www.tiktok.com/@iapefc",
+      "facebook": "https://facebook.com/iapefutebolclube",
+      "website": null
+    },
+    {
+      "id": 9,
+      "instagram": "https://instagram.com/viana.ecv",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 10,
+      "instagram": "https://instagram.com/bacabalec",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": "https://facebook.com/becaomaravilha",
+      "website": null
+    },
+    {
+      "id": 11,
+      "instagram": "https://instagram.com/expressinhooficial2022",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 12,
+      "instagram": "https://instagram.com/saojose.oficial",
+      "twitter": "https://twitter.com/saojoseoficial_",
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 13,
+      "instagram": "https://instagram.com/sociedadeesportivatupan",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": "https://facebook.com/sociedadeesportivatupan",
+      "website": null
+    },
+    {
+      "id": 14,
+      "instagram": "https://instagram.com/americano_fc_slz",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 15,
+      "instagram": "https://instagram.com/saoluisfc",
+      "twitter": null,
+      "tiktok": "https://www.tiktok.com/@saoluisfc",
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 16,
+      "instagram": "https://instagram.com/santaquiteriaoficial",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 17,
+      "instagram": "https://instagram.com/timonesporteclube",
+      "twitter": "https://twitter.com/timonesportecl2",
+      "tiktok": null,
+      "facebook": "https://facebook.com/timonesporteclube",
+      "website": null
+    },
+    {
+      "id": 18,
+      "instagram": null,
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 19,
+      "instagram": "https://instagram.com/juventudesamas",
+      "twitter": "https://twitter.com/juventudesamas",
+      "tiktok": "https://www.tiktok.com/@juventudesamas",
+      "facebook": "https://facebook.com/juventudesamas",
+      "website": null
+    },
+    {
+      "id": 20,
+      "instagram": "https://instagram.com/chapadinhafc.oficial",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 21,
+      "instagram": null,
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 22,
+      "instagram": "https://instagram.com/balsas.fc",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 23,
+      "instagram": "https://instagram.com/sabiafc",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 24,
+      "instagram": null,
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 25,
+      "instagram": "https://instagram.com/mariliafutebolclube",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 26,
+      "instagram": null,
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    },
+    {
+      "id": 27,
+      "instagram": "https://instagram.com/itz.sport",
+      "twitter": null,
+      "tiktok": null,
+      "facebook": null,
+      "website": null
+    }
+  ]
+}

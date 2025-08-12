@@ -1,0 +1,246 @@
+{
+  "detailsTeam": [
+    {
+      "id": 1,
+      "name": "Sampaio Corrêa",
+      "foundationDate": "1923-03-25",
+      "city": "São Luís",
+      "stateDivision": "A",
+      "stateNational": "D",
+      "image": "/img/sampaio-correa-logo.svg"
+    },
+    {
+      "id": 2,
+      "name": "Moto Club",
+      "foundationDate": "1937-09-13",
+      "city": "São Luís",
+      "stateDivision": "A",
+      "stateNational": null,
+      "image": "/img/Moto_Club_logo.png"
+    },
+    {
+      "id": 3,
+      "name": "MAC (Maranhão Atlético Clube)",
+      "foundationDate": "1932-09-24",
+      "city": "São Luís",
+      "stateDivision": "A",
+      "stateNational": "D",
+      "image": "/img/Maranhão_Atlético_Clube.png"
+    },
+    {
+      "id": 4,
+      "name": "Sociedade Imperatriz de Desportos",
+      "foundationDate": "1962-01-04",
+      "city": "Imperatriz",
+      "stateDivision": "A",
+      "stateNational": "D",
+      "image": "/img/Imperatriz FC.svg"
+    },
+    {
+      "id": 5,
+      "name": "Cordino Esporte Clube",
+      "foundationDate": "2010-03-08",
+      "city": "Barra do Corda",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/Cordino_EC_logo.png"
+    },
+    {
+      "id": 6,
+      "name": "Pinheiro Atlético Clube",
+      "foundationDate": "1989-04-01",
+      "city": "Pinheiro",
+      "image": "/img/PinheiroMA.png",
+      "stateDivision": "A",
+      "stateNational": null
+    },
+    {
+      "id": 7,
+      "name": "Tuntum Esporte Clube",
+      "foundationDate": "2021-06-01",
+      "city": "Tuntum",
+      "stateDivision": "A",
+      "stateNational": null,
+      "image": "/img/Escudo_Tuntum_EC.png"
+    },
+    {
+      "id": 8,
+      "name": "IAPE",
+      "foundationDate": "2008-08-10",
+      "city": "São Luís",
+      "stateDivision": "A",
+      "stateNational": null,
+      "image": "/img/iape.png"
+    },
+    {
+      "id": 9,
+      "name": "Esporte Clube Viana",
+      "foundationDate": "1995-07-15",
+      "city": "Viana",
+      "stateDivision": "A",
+      "stateNational": null,
+      "image": "/img/ECViana.png"
+    },
+    {
+      "id": 10,
+      "name": "Bacabal Esporte Clube",
+      "foundationDate": "1974-05-14",
+      "city": "Bacabal",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/EscudoBacabal.svg"
+    },
+    {
+      "id": 11,
+      "name": "Expressinho Futebol Clube",
+      "foundationDate": "1975-03-13",
+      "city": "São Luís",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/ExpressinhoFC.png"
+    },
+    {
+      "id": 12,
+      "name": "São José de Ribamar Esporte Clube",
+      "foundationDate": "2007-06-14",
+      "city": "São José de Ribamar",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/Escudo-do-São-José-de-Ribamar.png"
+    },
+    {
+      "id": 13,
+      "name": "Sociedade Esportiva Tupan",
+      "foundationDate": "1924-12-23",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/SETupan.png"
+    },
+    {
+      "id": 14,
+      "name": "Americano Futebol Clube",
+      "foundationDate": "1978-11-15",
+      "city": "Bacabal",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/AmericanoMA.png"
+    },
+    {
+      "id": 15,
+      "name": "São Luís Futebol Clube",
+      "foundationDate": "2001-08-03",
+      "city": "São Luís",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/EscudoSaoLuisFC.png"
+    },
+    {
+      "id": 16,
+      "name": "Santa Quitéria Futebol Clube",
+      "foundationDate": "2003-04-16",
+      "city": "Santa Quitéria",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/santa_quiteria.png"
+    },
+    {
+      "id": 17,
+      "name": "Timon Esporte Clube",
+      "foundationDate": "2005-09-26",
+      "city": "Timon",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/TimonEC.png"
+    },
+    {
+      "id": 18,
+      "name": "Luso Brasileiro",
+      "foundationDate": "1917-02-24",
+      "city": "São Luís",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/SCLusoBrasileiro.png"
+    },
+    {
+      "id": 19,
+      "name": "Juventude Samas",
+      "foundationDate": "1979-06-14",
+      "city": "São Mateus",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/SEJuventude.png"
+    },
+    {
+      "id": 20,
+      "name": "Chapadinha Futebol Clube",
+      "foundationDate": "1999-02-19",
+      "city": "Chapadinha",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/Chapadinha.png"
+    },
+    {
+      "id": 21,
+      "name": "Araioses Futebol Clube",
+      "foundationDate": "1982-12-07",
+      "city": "Araioses",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/AraiosesFC.png"
+    },
+    {
+      "id": 22,
+      "name": "Balsas Esporte Clube",
+      "foundationDate": "1999-05-25",
+      "city": "Balsas",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/BalsasEC.png"
+    },
+    {
+      "id": 23,
+      "name": "Sabiá Futebol Clube",
+      "foundationDate": "2007-04-23",
+      "city": "Caxias",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/SabiaFC.png"
+    },
+    {
+      "id": 24,
+      "name": "JV Lideral Futebol Clube",
+      "foundationDate": "1994-04-30",
+      "city": "Imperatriz",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/JVLideral.png"
+    },
+    {
+      "id": 25,
+      "name": "Marília Futebol Clube",
+      "foundationDate": "1984-11-22",
+      "city": "Imperatriz",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/Marilia.png"
+    },
+    {
+      "id": 26,
+      "name": "Sport Club Sírio Brasileiro",
+      "foundationDate": "1927-04-08",
+      "city": "São Luís",
+      "stateDivision": null,
+      "stateNational": null,
+      "image": "/img/Sirio.png"
+    },
+    {
+      "id": 27,
+      "name": "Itz Sport",
+      "foundationDate": "2017-06-10",
+      "city": "Imperatriz",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/itz_sport.png"
+    }
+  ]
+}
