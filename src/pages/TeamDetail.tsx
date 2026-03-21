@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SocialLinks, Champion, TeamHistory } from "../types/teamTypes";
+import { fixDisplayText } from "../utils/text";
 
 export default function TeamDetail() {
   const { id } = useParams();
@@ -77,13 +78,13 @@ export default function TeamDetail() {
         {/* Lado esquerdo */}
         <div className="w-full md:w-1/3 flex flex-col items-center md:self-start">
           <h1 className="text-3xl font-extrabold text-blue-400 mb-4 text-center md:hidden">
-            {fixedData.name}
+            {fixDisplayText(fixedData.name)}
           </h1>
 
           <div className="w-full border border-gray-700 rounded-2xl bg-gray-950 p-6 shadow-lg flex justify-center items-center h-[300px]">
             <img
               src={fixedData.image}
-              alt={`Escudo do ${fixedData.name}`}
+              alt={`Escudo do ${fixDisplayText(fixedData.name)}`}
               className="max-h-64 object-contain drop-shadow-xl"
             />
           </div>
@@ -114,7 +115,7 @@ export default function TeamDetail() {
         {/* Lado direito */}
         <div className="flex-1 space-y-6">
           <h1 className="text-4xl font-extrabold text-blue-400 hidden md:block">
-            {fixedData.name}
+            {fixDisplayText(fixedData.name)}
           </h1>
 
           <div className="flex flex-wrap items-center gap-3 text-sm font-medium">
@@ -124,7 +125,7 @@ export default function TeamDetail() {
 
             {fixedData.city && (
               <span className="flex items-center gap-2 px-3 py-1 rounded-full bg-gray-800 text-gray-300">
-                <MapPin size={16} /> {fixedData.city}
+                <MapPin size={16} /> {fixDisplayText(fixedData.city)}
               </span>
             )}
 
@@ -139,7 +140,7 @@ export default function TeamDetail() {
           </div>
 
           <p className="text-gray-300 text-base md:text-lg leading-relaxed border-l-4 border-blue-500 pl-4">
-            {translatedInfo.history}
+            {fixDisplayText(translatedInfo.history)}
           </p>
 
           {maranhenseTitles.length > 0 && (
@@ -162,7 +163,7 @@ export default function TeamDetail() {
                     key={index}
                     className="bg-gray-800 border border-gray-700 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow"
                   >
-                    {fact}
+                    {fixDisplayText(fact)}
                   </li>
                 ))}
               </ul>

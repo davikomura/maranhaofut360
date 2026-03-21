@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import App from './App.tsx';
 import HomePage from './pages/HomePage.tsx';
 import Teams from './pages/Teams.tsx';
@@ -20,7 +20,7 @@ const routes = [
           element: <HomePage />,
         },
         {
-          path: "/Teams",
+          path: "/teams",
           element: <Teams />,
         },
         {
@@ -28,7 +28,7 @@ const routes = [
           element: <TeamDetail />,
         },
         {
-          path: "/About",
+          path: "/about",
           element: <About />,
         },
         {
@@ -36,16 +36,36 @@ const routes = [
           element: <ContactPage />,
         },
         {
-          path: "/Serie-A",
+          path: "/serie-a",
           element: <SerieA />,
         },
         {
-          path: "/Serie-B",
+          path: "/serie-b",
           element: <SerieB />,
         },
         {
-          path: "/Lista-de-campeoes",
+          path: "/campeoes",
           element: <Champions />,
+        },
+        {
+          path: "/Teams",
+          element: <Navigate to="/teams" replace />,
+        },
+        {
+          path: "/About",
+          element: <Navigate to="/about" replace />,
+        },
+        {
+          path: "/Serie-A",
+          element: <Navigate to="/serie-a" replace />,
+        },
+        {
+          path: "/Serie-B",
+          element: <Navigate to="/serie-b" replace />,
+        },
+        {
+          path: "/Lista-de-campeoes",
+          element: <Navigate to="/campeoes" replace />,
         },
       ],
     }

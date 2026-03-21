@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import data from "../data/detailsTeam.json";
 import TeamCard from "./TeamCard";
 
@@ -8,16 +7,9 @@ interface TeamListProps {
 
 export default function TeamList({ stateDivision }: TeamListProps) {
   const teams = data.detailsTeam;
-  const [filteredTeams, setFilteredTeams] = useState(teams);
-
-  useEffect(() => {
-    if (!stateDivision) {
-      setFilteredTeams(teams);
-    } else {
-      const filtered = teams.filter((team) => team.stateDivision === stateDivision);
-      setFilteredTeams(filtered);
-    }
-  }, [stateDivision, teams]);
+  const filteredTeams = stateDivision
+    ? teams.filter((team) => team.stateDivision === stateDivision)
+    : teams;
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-2 md:px-4">

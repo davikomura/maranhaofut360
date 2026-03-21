@@ -1,0 +1,46 @@
+{
+  "campaignTeam": [
+    {
+      "id": 1,
+
+      "competicoes": {
+        "serieA": {
+          "estreia": 1962,
+          "ultimaParticipacao": 1986,
+          "melhorColocacao": 13,
+          "titulos": 0
+        },
+        "serieB": {
+          "estreia": 1971,
+          "ultimaParticipacao": 2023,
+          "melhorColocacao": "Campeão",
+          "titulos": 1
+        },
+        "serieC": {
+          "estreia": 1992,
+          "ultimaParticipacao": 2024,
+          "melhorColocacao": "Campeão",
+          "titulos": 1
+        },
+        "serieD": {
+          "estreia": 2010,
+          "ultimaParticipacao": 2025,
+          "melhorColocacao": "Campeão",
+          "titulos": 1
+        },
+        "copaDoBrasil": {
+          "estreia": 1989,
+          "ultimaParticipacao": 2025,
+          "melhorColocacao": "Oitavas",
+          "titulos": 0
+        },
+        "copaDoNordeste": {
+          "estreia": 2015,
+          "ultimaParticipacao": 2025,
+          "melhorColocacao": "Campeão",
+          "titulos": 1
+        }
+      }
+    }
+  ]
+}

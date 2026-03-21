@@ -8,14 +8,15 @@
     "h1": "Futebol Maranhense em Destaque",
     "p1": "Acompanhe as divisões e campeões do estado que vive a paixão pelo futebol!",
     "span1": "Série A",
-    "p2": "Primeira Divisão do Futebol Maranhense",
+    "p2": "Primeira divisão do futebol maranhense",
     "span2": "Série B",
-    "p3": "Segunda Divisão do Futebol Maranhense",
+    "p3": "Segunda divisão do futebol maranhense",
     "span3": "Campeões",
     "p4": "Lista de todos os campeões maranhenses"
   },
   "footer": {
-    "p1": "Todos os direitos reservados."
+    "p1": "Todos os direitos reservados.",
+    "contact": "Contato"
   },
   "leagueTable": {
     "position": "Pos",
@@ -32,7 +33,7 @@
     "secondStage": "2ª Fase"
   },
   "knockout": {
-    "title": "Fase Final - Mata-Mata",
+    "title": "Fase final",
     "semifinal": "Semifinal",
     "final": "Final",
     "firstLeg": "Ida",
@@ -40,9 +41,11 @@
     "champion": "Campeão",
     "firstStage": "1ª Fase",
     "secondStage": "2ª Fase",
-    "mainStage": "Fase Final - Mata-Mata",
-    "finalStage": "Fase Final",
-    "penaltys": "Pênaltis"
+    "mainStage": "Fase final",
+    "finalStage": "Fase final",
+    "penaltys": "Pênaltis",
+    "noData": "Não há dados do mata-mata para {{year}}.",
+    "noStageData": "Não há dados para a fase {{stageName}}."
   },
   "serieA": {
     "h2": "Tabela do Maranhense Série A",
@@ -56,7 +59,7 @@
     "h2": "Lista de Times",
     "p": "Clique em um time para explorar sua história e curiosidades.",
     "teamCard": {
-      "link": "Ver Mais"
+      "link": "Ver mais"
     }
   },
   "teamDetail": {
@@ -71,19 +74,36 @@
     "series": "Série",
     "titlesCount": " título do Campeonato Maranhense",
     "titlesCount_plural": " títulos do Campeonato Maranhense",
-    "socialMedia": "Redes Sociais"
+    "socialMedia": "Redes sociais",
+    "unknown": "Desconhecido"
   },
   "about": {
     "title": "Sobre o Projeto",
-    "description": "Este projeto tem como objetivo divulgar e organizar informações sobre o Campeonato Maranhense, permitindo que torcedores acompanhem a classificação dos times, conheçam mais sobre as equipes, e fiquem por dentro de curiosidades e estatísticas do torneio."
+    "description": "Este projeto tem como objetivo divulgar e organizar informações sobre o Campeonato Maranhense, permitindo que torcedores acompanhem a classificação dos times, conheçam mais sobre as equipes e fiquem por dentro de curiosidades e estatísticas do torneio."
   },
   "contact": {
     "title": "Fale Conosco",
     "name": "Seu nome",
-    "email": "Seu email",
+    "email": "Seu e-mail",
     "message": "Sua mensagem",
-    "send": "Enviar Mensagem",
-    "success": "Mensagem enviada com sucesso!",
-    "info": "Informações"
+    "send": "Abrir e-mail",
+    "success": "Seu aplicativo de e-mail foi aberto com a mensagem preenchida.",
+    "info": "Informações",
+    "helper": "Ao enviar, abriremos seu aplicativo de e-mail padrão com a mensagem pronta."
+  },
+  "champions": {
+    "title": "Campeões Maranhenses",
+    "showTable": "Mostrar tabela",
+    "hideTable": "Ocultar tabela",
+    "year": "Ano",
+    "champion": "Campeão",
+    "runnerUp": "Vice",
+    "city": "Cidade",
+    "biggestChampion": "Maior campeão",
+    "topCity": "Cidade com mais títulos",
+    "titlesByTeam": "Títulos por equipe",
+    "finalsByTeam": "Finais disputadas por equipe",
+    "cityDistribution": "Títulos por cidade",
+    "titles": "títulos"
   }
 }

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import knockoutDataJson from "./data/knockoutStage.json";
+import { fixDisplayText } from "../utils/text";
 
 interface KnockoutStageData {
   [year: string]: {
@@ -88,10 +89,10 @@ export const KnockoutStage = ({
         <td className="flex items-center gap-2 pl-2">
           <img
             src={team.image}
-            alt={team.name}
+            alt={fixDisplayText(team.name)}
             className="w-6 h-6 object-contain"
           />
-          <span>{team.name}</span>
+          <span>{fixDisplayText(team.name)}</span>
         </td>
         <td className="text-center font-mono">{score1}</td>
         {showSecondLeg && <td className="text-center font-mono">{score2}</td>}
@@ -163,14 +164,16 @@ export const KnockoutStage = ({
         <div className="text-center mt-12">
           <h3 className="text-xl font-semibold text-green-400">
             {t("knockout.champion")}:{" "}
-            <span className="font-bold text-yellow-300">{championTeam}</span>
+            <span className="font-bold text-yellow-300">{fixDisplayText(championTeam)}</span>
           </h3>
         </div>
       </div>
     );
   };
 
-  const isMultiStage = (data: any): data is MultiStage => "stages" in data;
+  const isMultiStage = (
+    data: LeagueStage | MultiStage
+  ): data is MultiStage => "stages" in data;
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white py-12 px-4">

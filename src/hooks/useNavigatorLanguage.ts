@@ -1,17 +1,23 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { supportedLanguages } from "../i18n";
 
 export const useNavigatorLanguage = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    const browserLanguage = navigator.language.slice(0, 2).toLocaleUpperCase();
-    const availableLanguages = ["EN", "PT", "ES", "FR", "DE"];
-
-    if (availableLanguages.includes(browserLanguage)) {
-      i18n.changeLanguage(browserLanguage);
-    } else {
-      i18n.changeLanguage("EN");
+    const savedLanguage = window.localStorage.getItem("language");
+    if (savedLanguage && supportedLanguages.includes(savedLanguage as "PT" | "EN")) {
+      void i18n.changeLanguage(savedLanguage);
+      return;
     }
+
+    const browserLanguage = navigator.language.slice(0, 2).toUpperCase();
+    const nextLanguage = supportedLanguages.includes(browserLanguage as "PT" | "EN")
+      ? browserLanguage
+      : "PT";
+
+    window.localStorage.setItem("language", nextLanguage);
+    void i18n.changeLanguage(nextLanguage);
   }, [i18n]);
 };

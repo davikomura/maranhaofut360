@@ -5,9 +5,9 @@ import { ChevronDown } from "lucide-react";
 
 export const SerieA = () => {
   const { t } = useTranslation();
-  const [selectedYear, setSelectedYear] = useState("2025");
+  const [selectedYear, setSelectedYear] = useState("2026");
 
-  const availableYears = ["2025", "2024", "2023"];
+  const availableYears = ["2026", "2025", "2024", "2023"];
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-black via-gray-900 to-black text-gray-100">

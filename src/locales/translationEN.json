@@ -8,14 +8,15 @@
     "h1": "Maranhão Football in Focus",
     "p1": "Follow the divisions and champions of the state that lives and breathes football!",
     "span1": "Serie A",
-    "p2": "First Division of Maranhão Football",
+    "p2": "First division of Maranhão football",
     "span2": "Serie B",
-    "p3": "Second Division of Maranhão Football",
+    "p3": "Second division of Maranhão football",
     "span3": "Champions",
     "p4": "List of all Maranhão champions"
   },
   "footer": {
-    "p1": "All rights reserved."
+    "p1": "All rights reserved.",
+    "contact": "Contact"
   },
   "leagueTable": {
     "position": "Pos",
@@ -32,58 +33,77 @@
     "secondStage": "Second Stage"
   },
   "knockout": {
-    "title": "Knockout Stage",
+    "title": "Knockout stage",
     "semifinal": "Semifinal",
     "final": "Final",
-    "firstLeg": "First Leg",
-    "secondLeg": "Second Leg",
+    "firstLeg": "First leg",
+    "secondLeg": "Second leg",
     "champion": "Champion",
     "firstStage": "First Stage",
     "secondStage": "Second Stage",
-    "mainStage": "Final Stage - Knockout",
-    "finalStage": "Final Stage",
-    "penaltys": "Penalties"
+    "mainStage": "Final stage",
+    "finalStage": "Final stage",
+    "penaltys": "Penalties",
+    "noData": "There is no knockout data for {{year}}.",
+    "noStageData": "There is no data for the {{stageName}} stage."
   },
   "serieA": {
     "h2": "Maranhão Serie A Table",
-    "selectYear": "Select Year"
+    "selectYear": "Select year"
   },
   "serieB": {
     "h2": "Maranhão Serie B Table",
-    "selectYear": "Select Year"
+    "selectYear": "Select year"
   },
   "teamList": {
     "h2": "Team List",
-    "p": "Click on a team to explore its history and curiosities.",
+    "p": "Click a team to explore its history and curiosities.",
     "teamCard": {
-      "link": "See More"
+      "link": "See more"
     }
   },
   "teamDetail": {
     "h1": "Team not found",
     "founded": "Founded in",
     "noDivision": "No division",
-    "firstTitle": "First Maranhense title",
-    "lastTitle": "Last Maranhense title",
+    "firstTitle": "First Maranhão title",
+    "lastTitle": "Latest Maranhão title",
     "curiosities": "Curiosities",
     "divisionNational": "National",
     "divisionState": "State",
     "series": "Division",
     "titlesCount": " Maranhão State Championship title",
     "titlesCount_plural": " Maranhão State Championship titles",
-    "socialMedia": "Social Media"
+    "socialMedia": "Social media",
+    "unknown": "Unknown"
   },
   "about": {
     "title": "About the Project",
-    "description": "This project aims to promote and organize information about the Maranhão Championship, allowing fans to follow team standings, learn more about the clubs, and discover curiosities and tournament statistics."
+    "description": "This project aims to promote and organize information about the Maranhão Championship, allowing fans to follow team standings, learn more about the clubs and discover tournament facts and statistics."
   },
   "contact": {
     "title": "Contact Us",
     "name": "Your name",
     "email": "Your email",
     "message": "Your message",
-    "send": "Send Message",
-    "success": "Message sent successfully!",
-    "info": "Information"
+    "send": "Open email",
+    "success": "Your email app was opened with the message prefilled.",
+    "info": "Information",
+    "helper": "When you submit, we will open your default email app with your message ready."
+  },
+  "champions": {
+    "title": "Maranhão Champions",
+    "showTable": "Show table",
+    "hideTable": "Hide table",
+    "year": "Year",
+    "champion": "Champion",
+    "runnerUp": "Runner-up",
+    "city": "City",
+    "biggestChampion": "Most successful club",
+    "topCity": "City with most titles",
+    "titlesByTeam": "Titles by team",
+    "finalsByTeam": "Final appearances by team",
+    "cityDistribution": "Titles by city",
+    "titles": "titles"
   }
 }

@@ -1,17 +1,16 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { supportedLanguages } from '../i18n';
 
 interface Language {
   code: string;
   flagSrc: string;
+  label: string;
 }
 
 const languages: Language[] = [
-    { code: 'PT', flagSrc: '/flags/br.png' },
-    { code: 'EN', flagSrc: '/flags/us.png' },
-    // { code: 'ES', flagSrc: '/flags/es.png' },
-    // { code: 'FR', flagSrc: '/flags/fr.png' },
-    // { code: 'DE', flagSrc: '/flags/de.png' }
+    { code: 'PT', flagSrc: '/flags/br.png', label: 'Português' },
+    { code: 'EN', flagSrc: '/flags/us.png', label: 'English' }
 ];
 
 export const LanguageDropdown = () => {
@@ -21,7 +20,8 @@ export const LanguageDropdown = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleLanguageChange = (lang: Language) => {
-    i18n.changeLanguage(lang.code);
+    window.localStorage.setItem('language', lang.code);
+    void i18n.changeLanguage(lang.code);
     setIsOpen(false);
   };
 
@@ -37,7 +37,10 @@ export const LanguageDropdown = () => {
     };
   }, []);
 
-  const currentLang = languages.find(lang => lang.code === i18n.language) || languages[0];
+  const currentCode = supportedLanguages.includes(i18n.language as 'PT' | 'EN')
+    ? i18n.language
+    : 'PT';
+  const currentLang = languages.find(lang => lang.code === currentCode) || languages[0];
 
   return (
     <div className="relative ml-4" ref={dropdownRef}>
@@ -45,9 +48,11 @@ export const LanguageDropdown = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center rounded-md p-2 hover:bg-gray-700 transition"
         aria-label="Select language"
+        aria-expanded={isOpen}
       >
         <img
           src={currentLang.flagSrc}
+          alt={currentLang.label}
           className="w-5 h-5 rounded-sm"
         />
       </button>
@@ -58,9 +63,11 @@ export const LanguageDropdown = () => {
               <button
                 onClick={() => handleLanguageChange(lang)}
                 className="w-full flex items-center justify-center px-2 py-2 hover:bg-gray-700 transition"
+                aria-label={lang.label}
               >
                 <img
                   src={lang.flagSrc}
+                  alt={lang.label}
                   className="w-5 h-5 rounded-sm"
                 />
               </button>

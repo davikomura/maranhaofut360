@@ -1,6 +1,7 @@
 import teamsData from "./data/groupStage.json";
 import { useTranslation } from "react-i18next";
 import { KnockoutStage } from "./KnockoutStage";
+import { fixDisplayText } from "../utils/text";
 
 interface Team {
   name: string;
@@ -88,10 +89,10 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
           <td className="p-2 flex items-center gap-3 text-left">
             <img
               src={team.logo}
-              alt={team.name}
+              alt={fixDisplayText(team.name)}
               className="w-6 h-6 sm:w-7 sm:h-7 rounded-full ring-1 ring-gray-500"
             />
-            <span className="truncate font-medium">{team.name}</span>
+            <span className="truncate font-medium">{fixDisplayText(team.name)}</span>
           </td>
           <td className="p-2 font-bold">{team.points}</td>
           <td className="p-2 hidden md:table-cell">{team.games}</td>

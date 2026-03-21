@@ -1,5 +1,5 @@
 {
-  "Teams" : [
+  "Teams": [
     {
       "id": 1,
       "history": "Fundado em 1923, o Sampaio Corrêa é um dos maiores times do maranhão.",
@@ -27,16 +27,14 @@
     {
       "id": 4,
       "history": "Fundada em 4 de janeiro de 1962 sob o nome de Sociedade Atlética Imperatriz, cuja sigla (SAI) era a mesma do Sindicato dos Arrumadores de Imperatriz, cujo time amador serviu de base nos primeiros anos.",
-      "curiosities": [
-        "Possui 3 títulos estaduais."
-      ]
+      "curiosities": ["Possui 3 títulos estaduais."]
     },
     {
       "id": 5,
       "history": "A equipe surgiu da seleção municipal de Barra do Corda, que disputava o 'Copão Maranhão do Sul', torneio intermunicipal da região. Entusiasmados, os dirigentes e a prefeitura resolveram profissionalizar a equipe, pagando todas as taxas junto à FMF e o primeiro torneio que participou foi na Segunda Divisão Maranhense de 2010.",
       "curiosities": [
-        "Possui 15 títulos estaduais.",
-        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+        "Vice campeão maranhense 2022.",
+        "Campeão Maranhense do Segundo Turno 2022."
       ]
     },
     {
@@ -49,18 +47,21 @@
     },
     {
       "id": 7,
-      "history": "O clube teve sua fundação e apresentação em 1 de junho de 2021 e com o apoio da prefeitura da cidade, que fica a 365 km de distância da capital, São Luis.",
+      "history": "Ingressou no futebol profissional em 2021 ao assumir o registro e a vaga do Atlético Babaçu. Logo na temporada de estreia, conquistou o acesso à Primeira Divisão do Maranhense e foi vice-campeão da Série B. No mesmo ano venceu a Copa FMF, escolhendo a vaga para a Copa do Brasil de 2022. Ganhou projeção nacional ao eliminar o Volta Redonda na Copa do Brasil antes de enfrentar o Cruzeiro na segunda fase. Em 2022 acabou rebaixado para a Série B do Maranhense de 2023.",
       "curiosities": [
-        "Possui 15 títulos estaduais.",
-        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+        "Absorveu o Clube Atlético Babaçu, herdando seu CNPJ e vaga em competições.",
+        "Conquistou seu primeiro título profissional ao vencer a Copa FMF de 2021."
       ]
     },
     {
       "id": 8,
-      "history": "Foi fundado em 10 de agosto de 2008.",
+      "history": "Ganhou projeção ao enfrentar o Atlético Mineiro na Copa do Brasil de 2011, marcando dois gols no primeiro jogo. Após reestruturação em 2020 com o DFG Sports, foi campeão da Segunda Divisão Maranhense. Caiu em 2023, mas retornou à elite no ano seguinte com o vice-campeonato da Série B em 2024. Em 2026, disputará a Série D pela primeira vez.",
       "curiosities": [
-        "Possui 15 títulos estaduais.",
-        "Foi o primeiro time maranhense a disputar um campeonato nacional."
+        "Mandante tradicional do Estádio Nhozinho Santos.",
+        "Marcou dois gols no Atlético Mineiro na Copa do Brasil de 2011.",
+        "Foi campeão da Segunda Divisão Maranhense em 2020.",
+        "Retornou à elite estadual em 2024 com o vice da Série B.",
+        "Estreará em competições nacionais de liga na Série D de 2026."
       ]
     },
     {
@@ -217,12 +218,11 @@
     },
     {
       "id": 28,
-      "history": "É um clube brasileiro de futebol da cidade de Imperatriz, no estado do Maranhão. Foi fundado em 10 de junho de 2017. Tem como mascote o camaleão",
+      "history": "Fundado por Linaldo da Silva, empresário da região, que, além de ser um grande apaixonado pelo futebol é também muito grato a tudo que a cidade lhe proporcionou, e toda essa gratidão, foi convertida em homenagem ao município através da denominação do Clube com o adjetivo gentilico do povo de Paço do Lumiar.",
       "curiosities": [
-        "Disputou sua primeira competição em 2018 de forma amadora, começando pelo Campeonato Imperatrizense Série B terminando na 6ª coloção sendo eliminado nas quartas de finais.",
-        "Fez sua estreia profissional na 2ª Divisão do Campeonato Maranhense de 2019, sendo eliminado na primeira fase terminando na 5ª colocação geral ( considerando a vitória por W.O sobre o Viana no jogo que definiria o rebaixado pra a 3ª divisão ), no mesmo ano disputa novamente a segunda divisão do Campeonato Imperatrizense terminando da mesma forma do ano anterior ( na 6ª coloção sendo eliminado nas quartas de finais )."
+        "Os primeiro passos do Luminense foi como time amador de society (Fut.7).",
+        "Em seu primeiro ano de atuação conquistou o titulo de campeão da Champions Luminense 2021, competição realizada em Paço do Lumiar."
       ]
     }
   ]
 }
-  

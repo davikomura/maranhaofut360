@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { Trophy, Shield, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useNavigatorLanguage } from "../hooks/useNavigatorLanguage";
 
 export default function HomePage() {
-  useNavigatorLanguage();
   const { t } = useTranslation();
 
   return (
@@ -19,7 +17,7 @@ export default function HomePage() {
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-6xl">
           <Link
-            to="/Serie-A"
+            to="/serie-a"
             className="group bg-black border-2 border-red-600 hover:bg-red-600 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
           >
             <div className="flex flex-col items-center">
@@ -32,7 +30,7 @@ export default function HomePage() {
           </Link>
 
           <Link
-            to="/Serie-B"
+            to="/serie-b"
             className="group bg-black border-2 border-blue-600 hover:bg-blue-600 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
           >
             <div className="flex flex-col items-center">
@@ -45,7 +43,7 @@ export default function HomePage() {
           </Link>
 
           <Link
-            to="/Lista-de-campeoes"
+            to="/campeoes"
             className="group bg-black border-2 border-yellow-500 hover:bg-yellow-500 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
           >
             <div className="flex flex-col items-center">

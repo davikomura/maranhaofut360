@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { fixDisplayText } from "../utils/text";
 
 type Team = {
   id: number;
@@ -16,12 +17,12 @@ export default function TeamCard({ team }: { team: Team }) {
       <div className="w-full aspect-square overflow-hidden rounded-lg mb-3 border border-gray-700">
         <img
           src={team.image}
-          alt={team.name}
+          alt={fixDisplayText(team.name)}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
       </div>
       <h2 className="text-base font-semibold text-gray-200 text-center">
-        {team.name}
+        {fixDisplayText(team.name)}
       </h2>
       <Link
         to={`/team/${team.id}`}
