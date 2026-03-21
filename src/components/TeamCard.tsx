@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import type { TeamCardData } from "../types/football";
 import { fixDisplayText } from "../utils/text";
 
-type Team = {
-  id: number;
-  name: string;
-  image: string;
-};
-
-export default function TeamCard({ team }: { team: Team }) {
+export default function TeamCard({ team }: { team: TeamCardData }) {
 
   const { t } = useTranslation();
   

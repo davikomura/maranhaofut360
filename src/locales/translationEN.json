@@ -1,8 +1,14 @@
 {
+  "common": {
+    "back": "Back",
+    "loading": "Updating the view..."
+  },
   "nav": {
     "home": "Home",
     "teams": "Teams",
-    "about": "About"
+    "about": "About",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "homePage": {
     "h1": "Maranhão Football in Focus",
@@ -30,7 +36,10 @@
     "goalDifference": "GD",
     "group": "Group",
     "firstStage": "First Stage",
-    "secondStage": "Second Stage"
+    "secondStage": "Second Stage",
+    "desktopHint": "On desktop, the full standings table stays available with every stat.",
+    "emptyTitle": "Standings unavailable",
+    "emptyDescription": "We could not find season data for {{year}} yet."
   },
   "knockout": {
     "title": "Knockout stage",
@@ -44,26 +53,33 @@
     "mainStage": "Final stage",
     "finalStage": "Final stage",
     "penaltys": "Penalties",
+    "club": "Club",
+    "emptyTitle": "Knockout unavailable",
     "noData": "There is no knockout data for {{year}}.",
     "noStageData": "There is no data for the {{stageName}} stage."
   },
   "serieA": {
     "h2": "Maranhão Serie A Table",
-    "selectYear": "Select year"
+    "selectYear": "Select year",
+    "description": "Check the full standings and follow the final bracket in a mobile-friendly and desktop-friendly layout."
   },
   "serieB": {
     "h2": "Maranhão Serie B Table",
-    "selectYear": "Select year"
+    "selectYear": "Select year",
+    "description": "Follow the Serie B campaign with a mobile-first layout and quick access to each group."
   },
   "teamList": {
     "h2": "Team List",
     "p": "Click a team to explore its history and curiosities.",
+    "emptyTitle": "No teams found",
+    "emptyDescription": "There are no clubs registered for this filter right now.",
     "teamCard": {
       "link": "See more"
     }
   },
   "teamDetail": {
     "h1": "Team not found",
+    "notFoundDescription": "This club could not be found in the current project dataset.",
     "founded": "Founded in",
     "noDivision": "No division",
     "firstTitle": "First Maranhão title",
@@ -75,7 +91,13 @@
     "titlesCount": " Maranhão State Championship title",
     "titlesCount_plural": " Maranhão State Championship titles",
     "socialMedia": "Social media",
-    "unknown": "Unknown"
+    "unknown": "Unknown",
+    "noTitlesTitle": "No titles registered",
+    "noTitlesDescription": "There are no Maranhão titles linked to this club yet.",
+    "noCuriositiesTitle": "Curiosities coming soon",
+    "noCuriositiesDescription": "We are still organizing interesting facts about this team.",
+    "noSocialTitle": "No social links available",
+    "noSocialDescription": "Official links have not been added for this club yet."
   },
   "about": {
     "title": "About the Project",
@@ -93,6 +115,7 @@
   },
   "champions": {
     "title": "Maranhão Champions",
+    "description": "Explore the state league history with rankings, highlights and title distribution by club and city.",
     "showTable": "Show table",
     "hideTable": "Hide table",
     "year": "Year",

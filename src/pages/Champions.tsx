@@ -1,47 +1,16 @@
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import championsData from "../data/champions.json";
+import { getChampionStats } from "../lib/champions";
 import { fixDisplayText } from "../utils/text";
 
 export const Champions = () => {
   const { t } = useTranslation();
-  const { champions } = championsData;
   const [showTable, setShowTable] = useState(false);
 
-  const validChampions = useMemo(
-    () =>
-      champions.filter(({ champion }) => {
-        const championName = fixDisplayText(champion);
-        return (
-          championName !== "N\u00E3o houve campeonato" &&
-          championName !== "Campeonato n\u00E3o conclu\u00EDdo"
-        );
-      }),
-    [champions]
+  const { validChampions, titleCounts, cityTitleCounts, finalAppearances } = useMemo(
+    () => getChampionStats(),
+    []
   );
-
-  const titleCounts: Record<string, number> = {};
-  const viceCounts: Record<string, number> = {};
-  const cityTitleCounts: Record<string, number> = {};
-
-  validChampions.forEach(({ champion, runner_up, cityChampion }) => {
-    const championName = fixDisplayText(champion);
-    const runnerUpName = fixDisplayText(runner_up);
-    const championCity = fixDisplayText(cityChampion);
-
-    titleCounts[championName] = (titleCounts[championName] || 0) + 1;
-    if (runnerUpName) {
-      viceCounts[runnerUpName] = (viceCounts[runnerUpName] || 0) + 1;
-    }
-    if (championCity) {
-      cityTitleCounts[championCity] = (cityTitleCounts[championCity] || 0) + 1;
-    }
-  });
-
-  const finalAppearances: Record<string, number> = {};
-  Object.keys({ ...titleCounts, ...viceCounts }).forEach((team) => {
-    finalAppearances[team] = (titleCounts[team] || 0) + (viceCounts[team] || 0);
-  });
 
   const maxTitles = Math.max(...Object.values(titleCounts));
   const maxFinals = Math.max(...Object.values(finalAppearances));
@@ -51,24 +20,27 @@ export const Champions = () => {
   const topCity = Object.entries(cityTitleCounts).reduce((a, b) => (b[1] > a[1] ? b : a));
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-black via-gray-900 to-black text-white py-10 px-4">
-      <div className="max-w-6xl w-full mx-auto">
-        <h1 className="text-5xl font-black text-center mb-10 tracking-tight drop-shadow-lg">
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black px-4 py-10 text-white">
+      <div className="mx-auto w-full max-w-6xl">
+        <h1 className="mb-4 text-center text-4xl font-black tracking-tight drop-shadow-lg md:text-5xl">
           {t("champions.title")}
         </h1>
+        <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-gray-400 md:text-base">
+          {t("champions.description")}
+        </p>
 
-        <div className="text-center mb-6">
+        <div className="mb-6 text-center">
           <button
             onClick={() => setShowTable(!showTable)}
-            className="px-6 py-3 bg-red-600 hover:bg-red-500 transition rounded-full text-lg font-semibold shadow-lg focus:outline-none focus:ring-2 focus:ring-red-400"
+            className="rounded-full bg-red-600 px-6 py-3 text-lg font-semibold shadow-lg transition hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"
           >
             {showTable ? t("champions.hideTable") : t("champions.showTable")}
           </button>
         </div>
 
         {showTable && (
-          <div className="overflow-x-auto transition-all duration-500">
-            <table className="w-full text-sm sm:text-base border border-gray-700 rounded-xl bg-black/40 backdrop-blur-md shadow-md overflow-hidden">
+          <div className="overflow-x-auto rounded-2xl border border-gray-700 bg-black/40 shadow-md">
+            <table className="w-full min-w-[640px] text-sm sm:text-base">
               <thead>
                 <tr className="bg-red-700 text-white">
                   <th className="px-4 py-3 text-left">{t("champions.year")}</th>
@@ -81,7 +53,7 @@ export const Champions = () => {
                 {validChampions.map((item) => (
                   <tr
                     key={`${item.year}-${item.champion}`}
-                    className="border-t border-gray-700 even:bg-gray-800/30 hover:bg-gray-700/40 transition-colors"
+                    className="border-t border-gray-700 even:bg-gray-800/30 hover:bg-gray-700/40"
                   >
                     <td className="px-4 py-3">{item.year}</td>
                     <td className="px-4 py-3 font-semibold text-blue-400">
@@ -97,89 +69,94 @@ export const Champions = () => {
         )}
 
         <div className="mt-14 space-y-10">
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="bg-gray-900/60 border border-gray-700 rounded-xl p-6 shadow-xl ring-1 ring-white/5">
-              <h2 className="text-xl font-bold text-white mb-2">{t("champions.biggestChampion")}</h2>
-              <p className="text-lg text-yellow-400 font-medium">
-                {topChampion[0]} ({topChampion[1]} {t("champions.titles")})
-              </p>
-            </div>
-
-            <div className="bg-gray-900/60 border border-gray-700 rounded-xl p-6 shadow-xl ring-1 ring-white/5">
-              <h2 className="text-xl font-bold text-white mb-2">{t("champions.topCity")}</h2>
-              <p className="text-lg text-green-400 font-medium">
-                {topCity[0]} ({topCity[1]} {t("champions.titles")})
-              </p>
-            </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <SummaryCard
+              title={t("champions.biggestChampion")}
+              value={`${topChampion[0]} (${topChampion[1]} ${t("champions.titles")})`}
+              tone="text-yellow-400"
+            />
+            <SummaryCard
+              title={t("champions.topCity")}
+              value={`${topCity[0]} (${topCity[1]} ${t("champions.titles")})`}
+              tone="text-green-400"
+            />
           </div>
 
-          <div className="bg-gray-900/60 border border-gray-700 rounded-xl p-6 shadow-xl ring-1 ring-white/5">
-            <h3 className="text-xl font-bold text-white mb-4">{t("champions.titlesByTeam")}</h3>
-            <ul className="space-y-3">
-              {Object.entries(titleCounts)
-                .sort((a, b) => b[1] - a[1])
-                .map(([team, count]) => (
-                  <li key={team}>
-                    <div className="flex justify-between font-medium">
-                      <span>{team}</span>
-                      <span>{count}</span>
-                    </div>
-                    <div className="w-full bg-gray-700 h-2 rounded-full mt-1">
-                      <div
-                        className="h-2 rounded-full bg-blue-500 transition-all"
-                        style={{ width: `${(count / maxTitles) * 100}%` }}
-                      />
-                    </div>
-                  </li>
-                ))}
-            </ul>
-          </div>
+          <StatsBlock
+            title={t("champions.titlesByTeam")}
+            entries={Object.entries(titleCounts)}
+            maxValue={maxTitles}
+            barClass="bg-blue-500"
+          />
 
-          <div className="bg-gray-900/60 border border-gray-700 rounded-xl p-6 shadow-xl ring-1 ring-white/5">
-            <h3 className="text-xl font-bold text-white mb-4">{t("champions.finalsByTeam")}</h3>
-            <ul className="space-y-3">
-              {Object.entries(finalAppearances)
-                .sort((a, b) => b[1] - a[1])
-                .map(([team, count]) => (
-                  <li key={team}>
-                    <div className="flex justify-between font-medium">
-                      <span>{team}</span>
-                      <span>{count}</span>
-                    </div>
-                    <div className="w-full bg-gray-700 h-2 rounded-full mt-1">
-                      <div
-                        className="h-2 rounded-full bg-pink-400 transition-all"
-                        style={{ width: `${(count / maxFinals) * 100}%` }}
-                      />
-                    </div>
-                  </li>
-                ))}
-            </ul>
-          </div>
+          <StatsBlock
+            title={t("champions.finalsByTeam")}
+            entries={Object.entries(finalAppearances)}
+            maxValue={maxFinals}
+            barClass="bg-pink-400"
+          />
 
-          <div className="bg-gray-900/60 border border-gray-700 rounded-xl p-6 shadow-xl ring-1 ring-white/5">
-            <h3 className="text-xl font-bold text-white mb-4">{t("champions.cityDistribution")}</h3>
-            <ul className="space-y-3">
-              {Object.entries(cityTitleCounts)
-                .sort((a, b) => b[1] - a[1])
-                .map(([city, count]) => (
-                  <li key={city}>
-                    <div className="flex justify-between font-medium">
-                      <span>{city}</span>
-                      <span>{count}</span>
-                    </div>
-                    <div className="w-full bg-gray-700 h-2 rounded-full mt-1">
-                      <div
-                        className="h-2 rounded-full bg-green-400 transition-all"
-                        style={{ width: `${(count / maxCityTitles) * 100}%` }}
-                      />
-                    </div>
-                  </li>
-                ))}
-            </ul>
-          </div>
+          <StatsBlock
+            title={t("champions.cityDistribution")}
+            entries={Object.entries(cityTitleCounts)}
+            maxValue={maxCityTitles}
+            barClass="bg-green-400"
+          />
         </div>
       </div>
     </div>
   );
 };
+
+function SummaryCard({
+  title,
+  value,
+  tone,
+}: {
+  title: string;
+  value: string;
+  tone: string;
+}) {
+  return (
+    <div className="rounded-xl border border-gray-700 bg-gray-900/60 p-6 shadow-xl ring-1 ring-white/5">
+      <h2 className="mb-2 text-xl font-bold text-white">{title}</h2>
+      <p className={`text-lg font-medium ${tone}`}>{value}</p>
+    </div>
+  );
+}
+
+function StatsBlock({
+  title,
+  entries,
+  maxValue,
+  barClass,
+}: {
+  title: string;
+  entries: [string, number][];
+  maxValue: number;
+  barClass: string;
+}) {
+  return (
+    <div className="rounded-xl border border-gray-700 bg-gray-900/60 p-6 shadow-xl ring-1 ring-white/5">
+      <h3 className="mb-4 text-xl font-bold text-white">{title}</h3>
+      <ul className="space-y-3">
+        {entries
+          .sort((a, b) => b[1] - a[1])
+          .map(([label, count]) => (
+            <li key={label}>
+              <div className="flex justify-between font-medium">
+                <span>{label}</span>
+                <span>{count}</span>
+              </div>
+              <div className="mt-1 h-2 w-full rounded-full bg-gray-700">
+                <div
+                  className={`h-2 rounded-full transition-all ${barClass}`}
+                  style={{ width: `${(count / maxValue) * 100}%` }}
+                />
+              </div>
+            </li>
+          ))}
+      </ul>
+    </div>
+  );
+}

@@ -1,41 +1,13 @@
 import { useTranslation } from "react-i18next";
-import knockoutDataJson from "./data/knockoutStage.json";
+import { knockoutSeasons } from "../lib/footballData";
 import { fixDisplayText } from "../utils/text";
-
-interface KnockoutStageData {
-  [year: string]: {
-    serieA: LeagueStage | MultiStage;
-    serieB: LeagueStage | MultiStage;
-  };
-}
-
-interface Team {
-  id: number;
-  name: string;
-  image: string;
-}
-
-interface Match {
-  team1: Team;
-  team2: Team;
-  firstLeg: { score1: number; score2: number };
-  secondLeg?: { score1: number; score2: number };
-  penaltys?: { score1: number; score2: number };
-  aggregate?: { team1: number; team2: number };
-  winnerId: number;
-}
-
-interface LeagueStage {
-  semifinals?: Match[];
-  final: Match[];
-  championId: number;
-}
-
-interface MultiStage {
-  stages: {
-    [stageName: string]: LeagueStage;
-  };
-}
+import type {
+  KnockoutLeagueStage,
+  KnockoutMatch,
+  KnockoutMultiStage,
+  MatchTeam,
+} from "../types/football";
+import { EmptyState } from "./ui/EmptyState";
 
 interface KnockoutProps {
   league?: string;
@@ -43,29 +15,27 @@ interface KnockoutProps {
   stageName?: string;
 }
 
-const knockoutData = knockoutDataJson as KnockoutStageData;
-
 export const KnockoutStage = ({
   league = "A",
   year,
   stageName,
 }: KnockoutProps) => {
   const { t } = useTranslation();
-  const leagueKey =
-    `serie${league.toUpperCase()}` as keyof (typeof knockoutData)[string];
-  const yearData = knockoutData[year]?.[leagueKey];
+  const leagueKey = `serie${league.toUpperCase()}` as "serieA" | "serieB";
+  const yearData = knockoutSeasons[year]?.[leagueKey];
 
   if (!yearData) {
     return (
-      <div className="text-center text-yellow-400 mt-10">
-        {t("knockout.noData", { year })}
-      </div>
+      <EmptyState
+        title={t("knockout.emptyTitle")}
+        description={t("knockout.noData", { year })}
+      />
     );
   }
 
   const renderMatchRow = (
-    team: Team,
-    match: Match,
+    team: MatchTeam,
+    match: KnockoutMatch,
     index: number,
     showSecondLeg: boolean
   ) => {
@@ -82,17 +52,17 @@ export const KnockoutStage = ({
     return (
       <tr
         key={team.id}
-        className={`rounded-xl ${
-          isWinner ? "text-green-400 font-semibold" : "text-gray-300"
-        }`}
+        className={isWinner ? "text-green-400 font-semibold" : "text-gray-300"}
       >
-        <td className="flex items-center gap-2 pl-2">
-          <img
-            src={team.image}
-            alt={fixDisplayText(team.name)}
-            className="w-6 h-6 object-contain"
-          />
-          <span>{fixDisplayText(team.name)}</span>
+        <td className="pl-2">
+          <div className="flex items-center gap-2">
+            <img
+              src={team.image}
+              alt={fixDisplayText(team.name)}
+              className="h-6 w-6 object-contain"
+            />
+            <span className="truncate">{fixDisplayText(team.name)}</span>
+          </div>
         </td>
         <td className="text-center font-mono">{score1}</td>
         {showSecondLeg && <td className="text-center font-mono">{score2}</td>}
@@ -105,29 +75,29 @@ export const KnockoutStage = ({
     );
   };
 
-  const MatchCard = ({ match, stage }: { match: Match; stage: string }) => {
+  const MatchCard = ({ match, stage }: { match: KnockoutMatch; stage: string }) => {
     const showSecondLeg = !!match.secondLeg;
 
     return (
-      <div className="bg-gray-950 border border-gray-800 rounded-2xl p-5 shadow-xl space-y-4 w-full">
-        <div className="text-sm font-bold text-blue-400 uppercase tracking-wide">
+      <div className="w-full space-y-4 rounded-2xl border border-gray-800 bg-gray-950 p-5 shadow-xl">
+        <div className="text-sm font-bold uppercase tracking-wide text-blue-400">
           {t(`knockout.${stage}`)}
         </div>
-        <div className="w-full overflow-auto">
-          <table className="w-full text-sm text-left border-separate border-spacing-y-2">
+        <div className="overflow-auto">
+          <table className="w-full min-w-[280px] text-left text-sm">
             <thead>
               <tr className="text-gray-400">
-                <th className="pl-2"></th>
-                <th className="text-center">{t("knockout.firstLeg")}</th>
+                <th className="pb-2 pl-2">{t("knockout.club")}</th>
+                <th className="pb-2 text-center">{t("knockout.firstLeg")}</th>
                 {showSecondLeg && (
-                  <th className="text-center">{t("knockout.secondLeg")}</th>
+                  <th className="pb-2 text-center">{t("knockout.secondLeg")}</th>
                 )}
                 {match.penaltys && (
-                  <th className="text-center">{t("knockout.penaltys")}</th>
+                  <th className="pb-2 text-center">{t("knockout.penaltys")}</th>
                 )}
               </tr>
             </thead>
-            <tbody>
+            <tbody className="space-y-2">
               {[match.team1, match.team2].map((team, index) =>
                 renderMatchRow(team, match, index, showSecondLeg)
               )}
@@ -138,7 +108,7 @@ export const KnockoutStage = ({
     );
   };
 
-  const renderStage = (stageName: string, stageData: LeagueStage) => {
+  const renderStage = (currentStageName: string, stageData: KnockoutLeagueStage) => {
     const championMatch = stageData.final[0];
     const championTeam =
       championMatch.team1.id === stageData.championId
@@ -146,23 +116,25 @@ export const KnockoutStage = ({
         : championMatch.team2.name;
 
     return (
-      <div key={stageName} className="space-y-10">
-        <h2 className="text-2xl font-bold text-center text-red-500 uppercase">
-          {t(`knockout.${stageName}`)}
+      <div key={currentStageName} className="space-y-8">
+        <h2 className="text-center text-xl font-bold uppercase text-red-500 md:text-2xl">
+          {t(`knockout.${currentStageName}`)}
         </h2>
 
-        <div className="grid gap-10 md:grid-cols-2">
-          {stageData.semifinals?.map((match, index) => (
-            <MatchCard key={index} match={match} stage="semifinal" />
-          ))}
-        </div>
+        {stageData.semifinals?.length ? (
+          <div className="grid gap-6 md:grid-cols-2 md:gap-10">
+            {stageData.semifinals.map((match, index) => (
+              <MatchCard key={index} match={match} stage="semifinal" />
+            ))}
+          </div>
+        ) : null}
 
-        <div className="max-w-md mx-auto mt-14">
+        <div className="mx-auto max-w-md">
           <MatchCard match={championMatch} stage="final" />
         </div>
 
-        <div className="text-center mt-12">
-          <h3 className="text-xl font-semibold text-green-400">
+        <div className="text-center">
+          <h3 className="text-lg font-semibold text-green-400 md:text-xl">
             {t("knockout.champion")}:{" "}
             <span className="font-bold text-yellow-300">{fixDisplayText(championTeam)}</span>
           </h3>
@@ -172,30 +144,29 @@ export const KnockoutStage = ({
   };
 
   const isMultiStage = (
-    data: LeagueStage | MultiStage
-  ): data is MultiStage => "stages" in data;
+    data: KnockoutLeagueStage | KnockoutMultiStage
+  ): data is KnockoutMultiStage => "stages" in data;
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white py-12 px-4">
-      <div className="max-w-5xl mx-auto space-y-16">
-        {isMultiStage(yearData) ? (
-          stageName ? (
-            yearData.stages[stageName] ? (
-              renderStage(stageName, yearData.stages[stageName])
-            ) : (
-              <div className="text-center text-yellow-400 mt-10">
-                {t("knockout.noStageData", { stageName })}
-              </div>
-            )
+    <section className="space-y-10 rounded-[2rem] border border-gray-800 bg-black/30 px-4 py-8 md:px-6 md:py-12">
+      {isMultiStage(yearData) ? (
+        stageName ? (
+          yearData.stages[stageName] ? (
+            renderStage(stageName, yearData.stages[stageName])
           ) : (
-            Object.entries(yearData.stages).map(([stage, stageData]) =>
-              renderStage(stage, stageData)
-            )
+            <EmptyState
+              title={t("knockout.emptyTitle")}
+              description={t("knockout.noStageData", { stageName })}
+            />
           )
         ) : (
-          renderStage("mainStage", yearData)
-        )}
-      </div>
-    </div>
+          Object.entries(yearData.stages).map(([stage, stageData]) =>
+            renderStage(stage, stageData)
+          )
+        )
+      ) : (
+        renderStage("mainStage", yearData)
+      )}
+    </section>
   );
 };

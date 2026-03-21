@@ -1,8 +1,14 @@
 {
+  "common": {
+    "back": "Voltar",
+    "loading": "Atualizando a tela..."
+  },
   "nav": {
     "home": "Início",
     "teams": "Times",
-    "about": "Sobre"
+    "about": "Sobre",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
   },
   "homePage": {
     "h1": "Futebol Maranhense em Destaque",
@@ -30,7 +36,10 @@
     "goalDifference": "SG",
     "group": "Grupo",
     "firstStage": "1ª Fase",
-    "secondStage": "2ª Fase"
+    "secondStage": "2ª Fase",
+    "desktopHint": "No desktop, a tabela completa fica disponível com todos os números.",
+    "emptyTitle": "Tabela indisponível",
+    "emptyDescription": "Ainda não encontramos os dados da temporada {{year}}."
   },
   "knockout": {
     "title": "Fase final",
@@ -44,26 +53,33 @@
     "mainStage": "Fase final",
     "finalStage": "Fase final",
     "penaltys": "Pênaltis",
+    "club": "Clube",
+    "emptyTitle": "Mata-mata indisponível",
     "noData": "Não há dados do mata-mata para {{year}}.",
     "noStageData": "Não há dados para a fase {{stageName}}."
   },
   "serieA": {
     "h2": "Tabela do Maranhense Série A",
-    "selectYear": "Selecione o ano"
+    "selectYear": "Selecione o ano",
+    "description": "Veja a classificação completa e acompanhe o chaveamento final em uma versão otimizada para celular e desktop."
   },
   "serieB": {
     "h2": "Tabela do Maranhense Série B",
-    "selectYear": "Selecione o ano"
+    "selectYear": "Selecione o ano",
+    "description": "Acompanhe a campanha da Série B com leitura mais confortável no celular e acesso rápido aos grupos."
   },
   "teamList": {
     "h2": "Lista de Times",
     "p": "Clique em um time para explorar sua história e curiosidades.",
+    "emptyTitle": "Nenhum time encontrado",
+    "emptyDescription": "Não há clubes cadastrados para esse filtro no momento.",
     "teamCard": {
       "link": "Ver mais"
     }
   },
   "teamDetail": {
     "h1": "Time não encontrado",
+    "notFoundDescription": "Esse clube não foi localizado na base atual do projeto.",
     "founded": "Fundado em",
     "noDivision": "Sem divisão",
     "firstTitle": "Primeiro título maranhense",
@@ -75,7 +91,13 @@
     "titlesCount": " título do Campeonato Maranhense",
     "titlesCount_plural": " títulos do Campeonato Maranhense",
     "socialMedia": "Redes sociais",
-    "unknown": "Desconhecido"
+    "unknown": "Desconhecido",
+    "noTitlesTitle": "Sem títulos registrados",
+    "noTitlesDescription": "Ainda não há títulos maranhenses associados a este clube.",
+    "noCuriositiesTitle": "Curiosidades em atualização",
+    "noCuriositiesDescription": "Ainda estamos organizando fatos curiosos sobre esse time.",
+    "noSocialTitle": "Sem redes cadastradas",
+    "noSocialDescription": "Ainda não foram adicionados links oficiais para esse clube."
   },
   "about": {
     "title": "Sobre o Projeto",
@@ -93,6 +115,7 @@
   },
   "champions": {
     "title": "Campeões Maranhenses",
+    "description": "Explore o histórico do estadual com rankings, destaques e distribuição de títulos por clube e cidade.",
     "showTable": "Mostrar tabela",
     "hideTable": "Ocultar tabela",
     "year": "Ano",
