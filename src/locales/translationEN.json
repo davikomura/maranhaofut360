@@ -140,6 +140,21 @@
     "titlesByTeam": "Titles by team",
     "finalsByTeam": "Final appearances by team",
     "cityDistribution": "Titles by city",
-    "titles": "titles"
+    "titles": "titles",
+    "heroEyebrow": "History panel",
+    "latestChampion": "Latest champion",
+    "mostFinals": "Most finals",
+    "finalsLabel": "finals",
+    "rankingEyebrow": "Dominance radar",
+    "rankingEyebrowTitles": "See which clubs lifted the trophy the most.",
+    "rankingEyebrowFinals": "Compare who reached the Maranh\u00E3o finals most often.",
+    "rankingEyebrowCities": "Discover which cities dominated the championship.",
+    "trendEyebrow": "Quick read",
+    "archiveEyebrow": "Full archive",
+    "archiveTitle": "Champions archive",
+    "entriesLabel": "entries",
+    "modeTitles": "Titles",
+    "modeFinals": "Finals",
+    "modeCities": "Cities"
   }
 }

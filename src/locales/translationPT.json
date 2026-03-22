@@ -140,6 +140,21 @@
     "titlesByTeam": "Títulos por equipe",
     "finalsByTeam": "Finais disputadas por equipe",
     "cityDistribution": "Títulos por cidade",
-    "titles": "títulos"
+    "titles": "títulos",
+    "heroEyebrow": "Painel Hist\u00F3rico",
+    "latestChampion": "Campe\u00E3o mais recente",
+    "mostFinals": "Mais finais",
+    "finalsLabel": "finais",
+    "rankingEyebrow": "Radar de domina\u00E7\u00E3o",
+    "rankingEyebrowTitles": "Veja quem mais levantou a ta\u00E7a do estadual.",
+    "rankingEyebrowFinals": "Compare quem mais chegou nas decis\u00F5es do Maranhense.",
+    "rankingEyebrowCities": "Descubra quais cidades mais conquistaram o campeonato.",
+    "trendEyebrow": "Leitura r\u00E1pida",
+    "archiveEyebrow": "Arquivo completo",
+    "archiveTitle": "Hist\u00F3rico de campe\u00F5es",
+    "entriesLabel": "entradas",
+    "modeTitles": "T\u00EDtulos",
+    "modeFinals": "Finais",
+    "modeCities": "Cidades"
   }
 }
