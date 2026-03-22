@@ -27,7 +27,9 @@
     {
       "id": 4,
       "history": "Fundada em 4 de janeiro de 1962 sob o nome de Sociedade Atlética Imperatriz, cuja sigla (SAI) era a mesma do Sindicato dos Arrumadores de Imperatriz, cujo time amador serviu de base nos primeiros anos.",
-      "curiosities": ["Possui 3 títulos estaduais."]
+      "curiosities": [
+        "Possui 3 títulos estaduais."
+      ]
     },
     {
       "id": 5,
@@ -222,6 +224,14 @@
       "curiosities": [
         "Os primeiro passos do Luminense foi como time amador de society (Fut.7).",
         "Em seu primeiro ano de atuação conquistou o titulo de campeão da Champions Luminense 2021, competição realizada em Paço do Lumiar."
+      ]
+    },
+    {
+      "id": 29,
+      "history": "O Lago Verde Esporte Clube disputa a Segunda Divis\u00e3o Maranhense e representa o munic\u00edpio de Lago Verde. At\u00e9 2025, o clube era ligado a S\u00e3o Lu\u00eds e atuava como Esporte Clube Boa Vontade, antes de adotar nova identidade e nova sede em definitivo.",
+      "curiosities": [
+        "O clube foi anteriormente conhecido como Esporte Clube Boa Vontade.",
+        "A mudan\u00e7a de identidade e sede foi consolidada em 2025."
       ]
     }
   ]

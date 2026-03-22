@@ -250,6 +250,15 @@
       "stateDivision": "A",
       "stateNational": null,
       "image": "/img/luminense.png"
+    },
+    {
+      "id": 29,
+      "name": "Lago Verde",
+      "foundationDate": "1957-06-01",
+      "city": "Lago Verde",
+      "stateDivision": "B",
+      "stateNational": null,
+      "image": "/img/LagoVerdeECLogo.png"
     }
   ]
 }

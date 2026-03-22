@@ -27,7 +27,9 @@
     {
       "id": 4,
       "history": "Founded on January 4, 1962, under the name Sociedade Atlética Imperatriz. Its acronym (SAI) was the same as the local stevedores' union, which had an amateur team that served as the club's foundation.",
-      "curiosities": ["Holds 3 state titles."]
+      "curiosities": [
+        "Holds 3 state titles."
+      ]
     },
     {
       "id": 5,
@@ -222,6 +224,14 @@
       "curiosities": [
         "Luminense's first steps were as an amateur seven-a-side (Fut7) team.",
         "In its first year of activity, it won the title of champion of the 2021 Champions Luminense, a competition held in Paço do Lumiar."
+      ]
+    },
+    {
+      "id": 29,
+      "history": "Lago Verde Esporte Clube plays in the Maranhense Second Division and represents the city of Lago Verde. Until 2025, the club was linked to S\u00e3o Lu\u00eds and operated as Esporte Clube Boa Vontade before permanently adopting a new identity and home city.",
+      "curiosities": [
+        "The club was previously known as Esporte Clube Boa Vontade.",
+        "Its rebrand and relocation were finalized in 2025."
       ]
     }
   ]
