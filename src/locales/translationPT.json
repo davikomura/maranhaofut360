@@ -52,6 +52,7 @@
   },
   "knockout": {
     "title": "Fase final",
+    "quarterfinal": "Quartas de final",
     "semifinal": "Semifinal",
     "final": "Final",
     "firstLeg": "Ida",

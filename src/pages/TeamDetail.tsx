@@ -2,7 +2,7 @@ import { Calendar, Globe, MapPin } from "lucide-react";
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { BackButton } from "../components/ui/BackButton";
 import { EmptyState } from "../components/ui/EmptyState";
@@ -213,6 +213,11 @@ function SocialSection({ socialLinks }: { socialLinks?: SocialLinks }) {
         {socialLinks.facebook && (
           <SocialIcon href={socialLinks.facebook} className="bg-blue-600">
             <FaFacebook size={24} />
+          </SocialIcon>
+        )}
+        {socialLinks.youtube && (
+          <SocialIcon href={socialLinks.youtube} className="bg-red-600">
+            <FaYoutube size={24} />
           </SocialIcon>
         )}
         {socialLinks.website && (

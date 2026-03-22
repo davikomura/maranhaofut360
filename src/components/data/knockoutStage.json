@@ -486,9 +486,65 @@
       "semifinals": [
         {
           "team1": {
-            "id": 8,
-            "name": "IAPE",
-            "image": "/img/iape.png"
+            "id": 15,
+            "name": "São Luís",
+            "image": "/img/EscudoSaoLuisFC.png"
+          },
+          "team2": {
+            "id": 28,
+            "name": "Luminense",
+            "image": "/img/luminense.png"
+          },
+          "firstLeg": {
+            "score1": 1,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 0
+          },
+          "aggregate": {
+            "team1": 1,
+            "team2": 1
+          },
+          "penaltys": {
+            "score1": 3,
+            "score2": 4
+          },
+          "winnerId": 28
+        },
+        {
+          "team1": {
+            "id": 27,
+            "name": "Itz Sport",
+            "image": "/img/itz_sport.png"
+          },
+          "team2": {
+            "id": 29,
+            "name": "Lago Verde",
+            "image": "/img/LagoVerdeECLogo.png"
+          },
+          "firstLeg": {
+            "score1": 2,
+            "score2": 1
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 3,
+            "team2": 2
+          },
+          "winnerId": 27
+        }
+      ],
+      "final": [
+        {
+          "team1": {
+            "id": 28,
+            "name": "Luminense",
+            "image": "/img/luminense.png"
           },
           "team2": {
             "id": 27,
@@ -496,24 +552,23 @@
             "image": "/img/itz_sport.png"
           },
           "firstLeg": {
-            "score1": 3,
+            "score1": 0,
             "score2": 0
           },
-          "secondLeg": {
+          "penaltys": {
             "score1": 3,
-            "score2": 1
+            "score2": 2
           },
-          "aggregate": {
-            "team1": 6,
-            "team2": 1
-          },
-          "winnerId": 8
-        },
+          "winnerId": 28
+        }
+      ],
+      "championId": 28,
+      "quarterfinals": [
         {
           "team1": {
-            "id": 9,
-            "name": "Viana",
-            "image": "/img/ECViana.png"
+            "id": 5,
+            "name": "Cordino",
+            "image": "/img/Cordino_EC_logo.png"
           },
           "team2": {
             "id": 15,
@@ -521,44 +576,99 @@
             "image": "/img/EscudoSaoLuisFC.png"
           },
           "firstLeg": {
-            "score1": 3,
-            "score2": 1
-          },
-          "secondLeg": {
             "score1": 1,
             "score2": 0
           },
-          "aggregate": {
-            "team1": 4,
-            "team2": 1
+          "secondLeg": {
+            "score1": 2,
+            "score2": 1
           },
-          "winnerId": 9
-        }
-      ],
-      "final": [
+          "aggregate": {
+            "team1": 2,
+            "team2": 2
+          },
+          "winnerId": 15
+        },
         {
           "team1": {
-            "id": 8,
-            "name": "IAPE",
-            "image": "/img/iape.png"
+            "id": 28,
+            "name": "Luminense",
+            "image": "/img/luminense.png"
           },
           "team2": {
-            "id": 9,
-            "name": "Viana",
-            "image": "/img/ECViana.png"
+            "id": 17,
+            "name": "Timon",
+            "image": "/img/TimonEC.png"
           },
           "firstLeg": {
             "score1": 0,
             "score2": 0
           },
+          "secondLeg": {
+            "score1": 0,
+            "score2": 0
+          },
           "penaltys": {
             "score1": 4,
-            "score2": 5
+            "score2": 3
           },
-          "winnerId": 9
+          "aggregate": {
+            "team1": 0,
+            "team2": 0
+          },
+          "winnerId": 28
+        },
+        {
+          "team1": {
+            "id": 14,
+            "name": "Americano",
+            "image": "/img/AmericanoMA.png"
+          },
+          "team2": {
+            "id": 27,
+            "name": "Itz Sport",
+            "image": "/img/itz_sport.png"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 4,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 1,
+            "team2": 4
+          },
+          "winnerId": 27
+        },
+        {
+          "team1": {
+            "id": 13,
+            "name": "Tupan",
+            "image": "/img/SETupan.png"
+          },
+          "team2": {
+            "id": 29,
+            "name": "Lago Verde",
+            "image": "/img/LagoVerdeECLogo.png"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 3
+          },
+          "secondLeg": {
+            "score1": 3,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 1,
+            "team2": 6
+          },
+          "winnerId": 29
         }
-      ],
-      "championId": 9
+      ]
     }
   },
   "2026": {
@@ -619,12 +729,12 @@
         {
           "team1": {
             "id": 1,
-            "name": "Sampaio CorrÃªa",
+            "name": "Sampaio Corrêa",
             "image": "/img/sampaio-correa-logo.svg"
           },
           "team2": {
             "id": 3,
-            "name": "MaranhÃ£o",
+            "name": "Maranhão",
             "image": "/img/Maranhão_Atlético_Clube.png"
           },
           "firstLeg": {
@@ -646,7 +756,7 @@
         {
           "team1": {
             "id": 3,
-            "name": "MaranhÃ£o",
+            "name": "Maranhão",
             "image": "/img/Maranhão_Atlético_Clube.png"
           },
           "team2": {

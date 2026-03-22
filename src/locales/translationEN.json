@@ -52,6 +52,7 @@
   },
   "knockout": {
     "title": "Knockout stage",
+    "quarterfinal": "Quarterfinal",
     "semifinal": "Semifinal",
     "final": "Final",
     "firstLeg": "First leg",

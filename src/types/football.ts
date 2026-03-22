@@ -10,6 +10,7 @@ export interface SocialLinks {
   twitter?: string | null;
   tiktok?: string | null;
   facebook?: string | null;
+  youtube?: string | null;
   website?: string | null;
 }
 
@@ -70,6 +71,7 @@ export interface KnockoutMatch {
 
 export interface KnockoutLeagueStage {
   playoff?: KnockoutMatch[];
+  quarterfinals?: KnockoutMatch[];
   semifinals?: KnockoutMatch[];
   final: KnockoutMatch[];
   championId: number;

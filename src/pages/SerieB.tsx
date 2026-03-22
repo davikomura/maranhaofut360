@@ -1,7 +1,7 @@
 import { useDeferredValue, useState, useTransition } from "react";
-import { ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LeagueTable } from "../components/LeagueTable";
+import { YearTabs } from "../components/ui/YearTabs";
 
 export const SerieB = () => {
   const { t } = useTranslation();
@@ -21,32 +21,14 @@ export const SerieB = () => {
           {t("serieB.description")}
         </p>
 
-        <div className="mb-10 flex justify-center">
-          <div className="w-full max-w-xs rounded-3xl border border-gray-800 bg-gray-950/80 p-4 shadow-xl">
-            <label className="mb-2 block text-center font-semibold text-gray-300">
-              {t("serieB.selectYear")}
-            </label>
-            <div className="relative">
-              <select
-                value={selectedYear}
-                onChange={(e) => startTransition(() => setSelectedYear(e.target.value))}
-                className="w-full appearance-none rounded-2xl border border-gray-700 bg-gray-800 py-3 px-4 pr-9 text-white shadow-md transition focus:outline-none focus:ring-2 focus:ring-red-500"
-              >
-                {availableYears.map((year) => (
-                  <option key={year} value={year}>
-                    {year}
-                  </option>
-                ))}
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400">
-                <ChevronDown size={18} />
-              </div>
-            </div>
-            {(isPending || deferredYear !== selectedYear) && (
-              <p className="mt-3 text-center text-xs text-gray-400">{t("common.loading")}</p>
-            )}
-          </div>
-        </div>
+        <YearTabs
+          label={t("serieB.selectYear")}
+          years={availableYears}
+          selectedYear={selectedYear}
+          onChange={(year) => startTransition(() => setSelectedYear(year))}
+          isLoading={isPending || deferredYear !== selectedYear}
+          loadingLabel={t("common.loading")}
+        />
 
         <LeagueTable league="B" year={deferredYear} />
       </main>

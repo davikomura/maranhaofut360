@@ -138,7 +138,13 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
             teams,
             `${t("leagueTable.group")} ${groupName.replace(/^group/i, "").toUpperCase()}`,
             t("leagueTable.groupDescription", { group: groupName.replace(/^group/i, "").toUpperCase() }),
-            2,
+            getQualifiedSpots({
+              league: seriesKey,
+              year,
+              stageName,
+              groupName,
+              totalTeams: teams.length,
+            }),
             0
           )
         )}
@@ -366,6 +372,8 @@ function getTableZones({
     ];
   }
 
+  const effectiveBottom = league === "serieB" ? 0 : bottom;
+
   return [
     {
       key: "top",
@@ -378,8 +386,8 @@ function getTableZones({
       label: t("leagueTable.legendBottom"),
       tone: "red" as const,
       indices:
-        bottom > 0
-          ? Array.from({ length: bottom }, (_, index) => total - bottom + index)
+        effectiveBottom > 0
+          ? Array.from({ length: effectiveBottom }, (_, index) => total - effectiveBottom + index)
           : [],
     },
     {
@@ -387,8 +395,34 @@ function getTableZones({
       label: t("leagueTable.legendMiddle"),
       tone: "neutral" as const,
       indices: Array.from({ length: total }, (_, index) => index).filter(
-        (index) => index >= top && index < total - bottom
+        (index) => index >= top && index < total - effectiveBottom
       ),
     },
   ];
+}
+
+function getQualifiedSpots({
+  league,
+  year,
+  stageName,
+  groupName,
+  totalTeams,
+}: {
+  league: SeriesKey;
+  year: string;
+  stageName: string;
+  groupName: string;
+  totalTeams: number;
+}) {
+  if (league === "serieB" && year === "2025" && stageName === "firstStage") {
+    if (groupName === "groupA") {
+      return 4;
+    }
+
+    if (groupName === "groupB" || groupName === "groupC") {
+      return 2;
+    }
+  }
+
+  return Math.min(2, totalTeams);
 }
