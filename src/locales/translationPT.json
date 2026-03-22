@@ -39,7 +39,16 @@
     "secondStage": "2ª Fase",
     "desktopHint": "No desktop, a tabela completa fica disponível com todos os números.",
     "emptyTitle": "Tabela indisponível",
-    "emptyDescription": "Ainda não encontramos os dados da temporada {{year}}."
+    "emptyDescription": "Ainda não encontramos os dados da temporada {{year}}.",
+    "legendTop": "Zona de destaque",
+    "legendBottom": "Parte inferior",
+    "legendPlayoff": "Playoff de rebaixamento",
+    "legendRelegated": "Rebaixado",
+    "legendMiddle": "Demais posições",
+    "stageLabel": "Fase",
+    "groupDescription": "Visão organizada do Grupo {{group}}.",
+    "overallTable": "Classificação geral",
+    "overallDescription": "Tabela consolidada da temporada selecionada."
   },
   "knockout": {
     "title": "Fase final",
@@ -54,6 +63,10 @@
     "finalStage": "Fase final",
     "penaltys": "Pênaltis",
     "club": "Clube",
+    "stageLabel": "Mata-mata",
+    "playoff": "Playoff de rebaixamento",
+    "playoffDescription": "Os dois times imediatamente acima do rebaixado direto disputam o playoff de rebaixamento.",
+    "vs": "Confronto",
     "emptyTitle": "Mata-mata indisponível",
     "noData": "Não há dados do mata-mata para {{year}}.",
     "noStageData": "Não há dados para a fase {{stageName}}."

@@ -242,7 +242,7 @@
       "semifinals": [
         {
           "team1": {
-            "id": 3,
+            "id": 2,
             "name": "Maranhão",
             "image": "/img/Maranhão_Atlético_Clube.png"
           },
@@ -414,8 +414,8 @@
             "image": "/img/Maranhão_Atlético_Clube.png"
           },
           "firstLeg": {
-            "score1": 0,
-            "score2": 4
+            "score1": 2,
+            "score2": 1
           },
           "secondLeg": {
             "score1": 1,
@@ -563,6 +563,33 @@
   },
   "2026": {
     "serieA": {
+      "playoff": [
+        {
+          "team1": {
+            "id": 4,
+            "name": "Imperatriz",
+            "image": "/img/Imperatriz FC.svg"
+          },
+          "team2": {
+            "id": 7,
+            "name": "Tuntum",
+            "image": "/img/Escudo_Tuntum_EC.png"
+          },
+          "firstLeg": {
+            "score1": 2,
+            "score2": 2
+          },
+          "secondLeg": {
+            "score1": 2,
+            "score2": 2
+          },
+          "aggregate": {
+            "team1": 4,
+            "team2": 3
+          },
+          "winnerId": 4
+        }
+      ],
       "semifinals": [
         {
           "team1": {
@@ -571,65 +598,38 @@
             "image": "/img/iape.png"
           },
           "team2": {
-            "id": 3,
-            "name": "Maranhão",
-            "image": "/img/Maranhão_Atlético_Clube.png"
-          },
-          "firstLeg": {
-            "score1": 0,
-            "score2": 4
-          },
-          "secondLeg": {
-            "score1": 1,
-            "score2": 0
-          },
-          "aggregate": {
-            "team1": 1,
-            "team2": 4
-          },
-          "winnerId": 3
-        },
-        {
-          "team1": {
-            "id": 1,
-            "name": "Sampaio Corrêa",
-            "image": "/img/sampaio-correa-logo.svg"
-          },
-          "team2": {
-            "id": 4,
-            "name": "Imperatriz",
-            "image": "/img/Imperatriz FC.svg"
+            "id": 2,
+            "name": "Moto Club",
+            "image": "/img/Moto_Club_logo.png"
           },
           "firstLeg": {
             "score1": 2,
             "score2": 1
           },
           "secondLeg": {
-            "score1": 0,
-            "score2": 2
+            "score1": 2,
+            "score2": 0
           },
           "aggregate": {
-            "team1": 2,
-            "team2": 3
+            "team1": 4,
+            "team2": 1
           },
-          "winnerId": 4
-        }
-      ],
-      "final": [
+          "winnerId": 8
+        },
         {
           "team1": {
-            "id": 3,
-            "name": "Maranhão",
-            "image": "/img/Maranhão_Atlético_Clube.png"
+            "id": 1,
+            "name": "Sampaio CorrÃªa",
+            "image": "/img/sampaio-correa-logo.svg"
           },
           "team2": {
-            "id": 4,
-            "name": "Imperatriz",
-            "image": "/img/Imperatriz FC.svg"
+            "id": 3,
+            "name": "MaranhÃ£o",
+            "image": "/img/Maranhão_Atlético_Clube.png"
           },
           "firstLeg": {
             "score1": 0,
-            "score2": 0
+            "score2": 3
           },
           "secondLeg": {
             "score1": 2,
@@ -637,12 +637,39 @@
           },
           "aggregate": {
             "team1": 2,
-            "team2": 0
+            "team2": 3
           },
           "winnerId": 3
         }
       ],
-      "championId": 3
+      "final": [
+        {
+          "team1": {
+            "id": 3,
+            "name": "MaranhÃ£o",
+            "image": "/img/Maranhão_Atlético_Clube.png"
+          },
+          "team2": {
+            "id": 8,
+            "name": "IAPE",
+            "image": "/img/iape.png"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 0,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 0,
+            "team2": 1
+          },
+          "winnerId": 8
+        }
+      ],
+      "championId": 8
     },
     "serieB": {
       "semifinals": [

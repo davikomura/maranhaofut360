@@ -935,6 +935,15 @@
       "cityChampion": "São Luís",
       "runner_up": "Imperatriz",
       "cityRunnerUp": "Imperatriz"
+    },
+    {
+      "edition": "105Âª",
+      "year": "2026",
+      "champion": "IAPE",
+      "idTeamChampion": 8,
+      "cityChampion": "SÃ£o LuÃ­s",
+      "runner_up": "MaranhÃ£o",
+      "cityRunnerUp": "SÃ£o LuÃ­s"
     }
   ]
 }

@@ -69,6 +69,7 @@ export interface KnockoutMatch {
 }
 
 export interface KnockoutLeagueStage {
+  playoff?: KnockoutMatch[];
   semifinals?: KnockoutMatch[];
   final: KnockoutMatch[];
   championId: number;

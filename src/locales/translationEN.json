@@ -39,7 +39,16 @@
     "secondStage": "Second Stage",
     "desktopHint": "On desktop, the full standings table stays available with every stat.",
     "emptyTitle": "Standings unavailable",
-    "emptyDescription": "We could not find season data for {{year}} yet."
+    "emptyDescription": "We could not find season data for {{year}} yet.",
+    "legendTop": "Highlighted spots",
+    "legendBottom": "Bottom spots",
+    "legendPlayoff": "Relegation playoff",
+    "legendRelegated": "Relegated",
+    "legendMiddle": "Remaining spots",
+    "stageLabel": "Stage",
+    "groupDescription": "Organized view of Group {{group}}.",
+    "overallTable": "Overall standings",
+    "overallDescription": "Consolidated table for the selected season."
   },
   "knockout": {
     "title": "Knockout stage",
@@ -54,6 +63,10 @@
     "finalStage": "Final stage",
     "penaltys": "Penalties",
     "club": "Club",
+    "stageLabel": "Knockout",
+    "playoff": "Relegation playoff",
+    "playoffDescription": "The two teams immediately above the directly relegated side play the relegation playoff.",
+    "vs": "Matchup",
     "emptyTitle": "Knockout unavailable",
     "noData": "There is no knockout data for {{year}}.",
     "noStageData": "There is no data for the {{stageName}} stage."
