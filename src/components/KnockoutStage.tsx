@@ -46,7 +46,8 @@ export const KnockoutStage = ({
     team: MatchTeam,
     match: KnockoutMatch,
     index: number,
-    showSecondLeg: boolean
+    showSecondLeg: boolean,
+    mobileCompact = false
   ) => {
     const isTeam1 = index === 0;
     const firstLegScore = isTeam1 ? match.firstLeg.score1 : match.firstLeg.score2;
@@ -65,9 +66,9 @@ export const KnockoutStage = ({
             <img
               src={team.image}
               alt={fixDisplayText(team.name)}
-              className="h-6 w-6 shrink-0 object-contain"
+              className={`${mobileCompact ? "h-5 w-5" : "h-6 w-6"} shrink-0 object-contain`}
             />
-            <span className="whitespace-normal break-words leading-snug">
+            <span className={`whitespace-normal break-words ${mobileCompact ? "leading-5" : "leading-snug"}`}>
               {fixDisplayText(team.name)}
             </span>
           </div>
@@ -89,31 +90,34 @@ export const KnockoutStage = ({
     match,
     stage,
     compact = false,
+    mobileCompact = false,
   }: {
     match: KnockoutMatch;
     stage: string;
     compact?: boolean;
+    mobileCompact?: boolean;
   }) => {
     const showSecondLeg = !!match.secondLeg;
+    const condensed = compact || mobileCompact;
 
     return (
       <article
         className={`overflow-hidden border border-gray-800 bg-gray-950 shadow-xl ${
-          compact ? "rounded-2xl" : "rounded-[1.75rem]"
+          condensed ? "rounded-2xl" : "rounded-[1.75rem]"
         }`}
       >
         <div
           className={`border-b border-gray-800 bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 ${
-            compact ? "px-3 py-3" : "px-4 py-4"
+            condensed ? "px-3 py-3" : "px-4 py-4"
           }`}
         >
-          <div className="text-sm font-bold uppercase tracking-wide text-blue-400">
+          <div className={`${mobileCompact ? "text-xs" : "text-sm"} font-bold uppercase tracking-wide text-blue-400`}>
             {t(`knockout.${stage}`)}
           </div>
         </div>
 
-        <div className={compact ? "p-3" : "p-4"}>
-          <table className="w-full table-fixed text-left text-sm">
+        <div className={condensed ? "p-3" : "p-4"}>
+          <table className={`w-full table-fixed text-left ${mobileCompact ? "text-xs" : "text-sm"}`}>
             <colgroup>
               <col className="w-[48%]" />
               <col className="w-[17%]" />
@@ -134,7 +138,7 @@ export const KnockoutStage = ({
             </thead>
             <tbody className="divide-y divide-gray-800">
               {[match.team1, match.team2].map((team, index) =>
-                renderMatchRow(team, match, index, showSecondLeg)
+                renderMatchRow(team, match, index, showSecondLeg, mobileCompact)
               )}
             </tbody>
           </table>
@@ -150,18 +154,33 @@ export const KnockoutStage = ({
 
     return (
       <>
-        <div className="space-y-6 xl:hidden">
-          {rounds.map((round) => (
-            <div
-              key={`mobile-${round.key}`}
-              className={
-                round.key === "final" ? "mx-auto max-w-2xl" : "grid gap-6 md:grid-cols-2 md:gap-8"
-              }
-            >
-              {round.matches.map((match, index) => (
-                <MatchCard key={`${round.key}-${index}`} match={match} stage={round.stage} />
-              ))}
-            </div>
+        <div className="space-y-2 overflow-hidden xl:hidden">
+          {rounds.map((round, index) => (
+            <section key={`mobile-${round.key}`} className="space-y-2">
+              <div className="py-1 text-center text-[11px] font-semibold uppercase tracking-[0.24em] text-gray-500">
+                {round.title}
+              </div>
+
+              <div
+                className="grid gap-2"
+                style={{ gridTemplateColumns: `repeat(${round.matches.length}, minmax(0, 1fr))` }}
+              >
+                {round.matches.map((match, matchIndex) => (
+                  <MobileBracketNode
+                    key={`${round.key}-${matchIndex}`}
+                    match={match}
+                    highlightWinner={round.key === "final"}
+                  />
+                ))}
+              </div>
+
+              {index < rounds.length - 1 ? (
+                <MobileRoundConnector
+                  fromCount={round.matches.length}
+                  toCount={rounds[index + 1].matches.length}
+                />
+              ) : null}
+            </section>
           ))}
         </div>
 
@@ -357,6 +376,98 @@ function getBracketRounds(
   });
 
   return rounds;
+}
+
+function MobileBracketNode({
+  match,
+  highlightWinner = false,
+}: {
+  match: KnockoutMatch;
+  highlightWinner?: boolean;
+}) {
+  const teams = [match.team1, match.team2];
+
+  return (
+    <article
+      className={`rounded-2xl border p-2 shadow-lg ${
+        highlightWinner
+          ? "border-yellow-500/30 bg-yellow-500/5"
+          : "border-gray-800 bg-gray-950/90"
+      }`}
+    >
+      <div className="space-y-2">
+        {teams.map((team, index) => {
+          const isWinner = match.winnerId === team.id;
+          const firstLegScore = index === 0 ? match.firstLeg.score1 : match.firstLeg.score2;
+          const secondLegScore = match.secondLeg
+            ? index === 0
+              ? match.secondLeg.score1
+              : match.secondLeg.score2
+            : null;
+          const penaltyScore = match.penaltys
+            ? index === 0
+              ? match.penaltys.score1
+              : match.penaltys.score2
+            : null;
+
+          return (
+            <div
+              key={`${team.id}-${index}`}
+              className={`rounded-xl px-2 py-2 ${isWinner ? "bg-green-500/10 text-green-300" : "bg-black/30 text-gray-200"}`}
+            >
+              <div className="flex items-center gap-2">
+                <img
+                  src={team.image}
+                  alt={fixDisplayText(team.name)}
+                  className="h-4 w-4 shrink-0 object-contain"
+                />
+                <span className="min-w-0 flex-1 break-words text-[11px] font-medium leading-4">
+                  {fixDisplayText(team.name)}
+                </span>
+              </div>
+              <div className="mt-1 text-right text-[10px] font-mono text-gray-400">
+                {firstLegScore}
+                {secondLegScore !== null ? ` | ${secondLegScore}` : ""}
+                {penaltyScore !== null ? ` | p ${penaltyScore}` : ""}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </article>
+  );
+}
+
+function MobileRoundConnector({
+  fromCount,
+  toCount,
+}: {
+  fromCount: number;
+  toCount: number;
+}) {
+  const width = 100;
+  const height = 34;
+  const fromPoints = Array.from({ length: fromCount }, (_, index) => ((index + 0.5) / fromCount) * width);
+  const toPoints = Array.from({ length: toCount }, (_, index) => ((index + 0.5) / toCount) * width);
+
+  return (
+    <div className="px-2">
+      <svg viewBox={`0 0 ${width} ${height}`} className="h-9 w-full overflow-visible">
+        {toPoints.map((toX, index) => {
+          const fromA = fromPoints[index * 2];
+          const fromB = fromPoints[index * 2 + 1] ?? fromPoints[index * 2];
+          const mergeY = 18;
+
+          return (
+            <g key={`${toX}-${index}`} stroke="rgba(96,165,250,0.65)" strokeWidth="1.6" fill="none" strokeLinecap="round">
+              <path d={`M ${fromA} 2 V ${mergeY} H ${toX} V ${height - 2}`} />
+              {fromB !== fromA ? <path d={`M ${fromB} 2 V ${mergeY} H ${toX}`} /> : null}
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+  );
 }
 
 function RoundFragment({ children }: { children: ReactNode }) {
