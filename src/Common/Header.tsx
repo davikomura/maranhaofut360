@@ -3,15 +3,22 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LanguageDropdown } from "../components/LanguageDropdown";
-import { fixDisplayText } from "../utils/text";
 
 export default function Header() {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [
+  const desktopNavItems = [
     { to: "/", label: t("nav.home"), accentClass: "border-red-500 text-red-400" },
     { to: "/teams", label: t("nav.teams"), accentClass: "border-blue-500 text-blue-400" },
+    { to: "/campeoes", label: t("nav.champions"), accentClass: "border-yellow-400 text-yellow-300" },
+    { to: "/contact", label: t("nav.contact"), accentClass: "border-emerald-500 text-emerald-300" },
+  ];
+
+  const mobileNavItems = [
+    ...desktopNavItems,
+    { to: "/serie-a", label: t("nav.serieA"), accentClass: "border-red-500 text-red-400" },
+    { to: "/serie-b", label: t("nav.serieB"), accentClass: "border-sky-500 text-sky-400" },
     { to: "/about", label: t("nav.about"), accentClass: "border-yellow-400 text-yellow-300" },
   ];
 
@@ -19,7 +26,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-red-600 bg-gradient-to-r from-black/95 via-gray-900/95 to-black/95 text-white shadow-md backdrop-blur">
       <div className="container mx-auto px-4 py-4 md:px-8">
         <div className="flex items-center justify-between gap-4">
-          <Link to="/" title={"FutMA 360 - P\u00E1gina inicial"} className="flex items-center gap-3">
+          <Link to="/" title="FutMA 360 - Pagina inicial" className="flex items-center gap-3">
             <img
               src="/logo/futma360_2.png"
               alt="FutMA 360 Logo"
@@ -27,10 +34,10 @@ export default function Header() {
             />
           </Link>
 
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-4 md:flex">
             <nav>
-              <ul className="flex items-center gap-6 text-lg font-semibold">
-                {navItems.map((item) => (
+              <ul className="flex items-center gap-4 text-sm font-semibold lg:gap-6 lg:text-base">
+                {desktopNavItems.map((item) => (
                   <NavItem key={item.to} {...item} onNavigate={() => setIsMenuOpen(false)} />
                 ))}
               </ul>
@@ -55,7 +62,7 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="mt-4 rounded-2xl border border-gray-800 bg-black/90 p-4 md:hidden">
             <ul className="space-y-3 text-base font-semibold">
-              {navItems.map((item) => (
+              {mobileNavItems.map((item) => (
                 <NavItem key={item.to} {...item} mobile onNavigate={() => setIsMenuOpen(false)} />
               ))}
             </ul>
@@ -82,9 +89,7 @@ function NavItem({ to, label, accentClass, mobile = false, onNavigate }: NavItem
         onClick={onNavigate}
         className={({ isActive }) =>
           [
-            mobile
-              ? "block rounded-xl border px-4 py-3"
-              : "border-b-2 transition duration-300",
+            mobile ? "block rounded-xl border px-4 py-3" : "border-b-2 transition duration-300",
             isActive
               ? accentClass
               : mobile
@@ -93,7 +98,7 @@ function NavItem({ to, label, accentClass, mobile = false, onNavigate }: NavItem
           ].join(" ")
         }
       >
-        {fixDisplayText(label)}
+        {label}
       </NavLink>
     </li>
   );
