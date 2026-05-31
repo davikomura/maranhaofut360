@@ -2,6 +2,7 @@ import { useDeferredValue, useState, useTransition } from "react";
 import { useTranslation } from "react-i18next";
 import { LeagueTable } from "../components/LeagueTable";
 import { YearTabs } from "../components/ui/YearTabs";
+import { useSEO } from "../hooks/useSEO";
 
 export const SerieB = () => {
   const { t } = useTranslation();
@@ -11,26 +12,38 @@ export const SerieB = () => {
 
   const availableYears = ["2025", "2024"];
 
+  // Strong dynamic page-level SEO based on selected season
+  useSEO({
+    title: `${t("serieB.h2")} ${selectedYear}`,
+    description: `${t("serieB.description")} - Temporada ${selectedYear}`,
+  });
+
   return (
-    <div className="min-h-screen bg-gradient-to-r from-black via-gray-900 to-black text-gray-100">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(239,68,68,0.04),_transparent_28%)] transition-theme">
       <main className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <h2 className="mb-6 text-center text-3xl font-extrabold tracking-tight text-red-500 drop-shadow-sm sm:text-4xl md:text-5xl">
-          {t("serieB.h2")}
-        </h2>
-        <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-gray-400 md:text-base">
-          {t("serieB.description")}
-        </p>
+        <div className="mb-10 text-center space-y-4">
+          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white md:text-5xl font-heading">
+            {t("serieB.h2")}
+          </h1>
+          <p className="mx-auto max-w-2xl text-base text-slate-500 dark:text-zinc-400">
+            {t("serieB.description")}
+          </p>
+        </div>
 
-        <YearTabs
-          label={t("serieB.selectYear")}
-          years={availableYears}
-          selectedYear={selectedYear}
-          onChange={(year) => startTransition(() => setSelectedYear(year))}
-          isLoading={isPending || deferredYear !== selectedYear}
-          loadingLabel={t("common.loading")}
-        />
+        <div className="mb-8 flex justify-center">
+          <YearTabs
+            label={t("serieB.selectYear")}
+            years={availableYears}
+            selectedYear={selectedYear}
+            onChange={(year) => startTransition(() => setSelectedYear(year))}
+            isLoading={isPending || deferredYear !== selectedYear}
+            loadingLabel={t("common.loading")}
+          />
+        </div>
 
-        <LeagueTable league="B" year={deferredYear} />
+        <div className="transition-all duration-300">
+          <LeagueTable league="B" year={deferredYear} />
+        </div>
       </main>
     </div>
   );

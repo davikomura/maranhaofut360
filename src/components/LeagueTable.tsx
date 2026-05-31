@@ -54,22 +54,23 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
     });
 
     return (
-      <section className="mb-8 overflow-hidden rounded-[2rem] border border-gray-800 bg-gray-950/80 shadow-2xl">
-        <div className="border-b border-gray-800 bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 px-4 py-4 md:px-6">
-          {title && <h4 className="text-lg font-bold tracking-wide text-white md:text-xl">{title}</h4>}
-          {subtitle && <p className="mt-1 text-sm text-gray-400">{subtitle}</p>}
+      <section className="mb-10 py-2">
+        {/* Typographic Header (No borders, cardless) */}
+        <div className="pb-4 mb-4 border-b border-slate-200/60 dark:border-zinc-900/60">
+          {title && <h4 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">{title}</h4>}
+          {subtitle && <p className="mt-1 text-xs text-slate-400 dark:text-zinc-550 font-semibold">{subtitle}</p>}
         </div>
 
-        <div className="border-b border-gray-800 bg-black/20 px-4 py-3 md:px-6">
-          <div className="flex flex-wrap gap-2 text-xs text-gray-300">
-            {zones.map((zone) => (
-              <LegendPill key={zone.key} tone={zone.tone} label={zone.label} />
-            ))}
-          </div>
+        {/* Legend pills directly floating */}
+        <div className="mb-6 flex flex-wrap gap-2 text-xs">
+          {zones.map((zone) => (
+            <LegendPill key={zone.key} tone={zone.tone} label={zone.label} />
+          ))}
         </div>
 
-        <div className="p-4 md:hidden">
-          <div className="space-y-3">
+        {/* Mobile (Cardless vertical list rows) */}
+        <div className="md:hidden">
+          <div className="divide-y divide-slate-200/50 dark:divide-zinc-900/60">
             {sortedTeams.map((team, index) => (
               <MobileTeamCard
                 key={`${team.name}-${index}`}
@@ -81,26 +82,27 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
           </div>
         </div>
 
+        {/* Desktop (Clean borderless table) */}
         <div className="hidden md:block">
-          <div className="flex justify-end px-6 pt-3 text-xs text-gray-400">
+          <div className="flex justify-end text-[10px] font-bold text-slate-400 dark:text-zinc-500 uppercase tracking-wide">
             {t("leagueTable.desktopHint")}
           </div>
-          <div className="overflow-x-auto px-4 pb-4 md:px-6">
-            <table className="mt-3 w-full min-w-[760px] table-auto overflow-hidden rounded-2xl text-gray-200">
-              <thead className="text-xs uppercase tracking-wide text-gray-300 md:text-sm">
-                <tr className="bg-gray-900">
-                  <th className="rounded-l-2xl px-3 py-4">{t("leagueTable.position")}</th>
-                  <th className="px-3 py-4 text-left">{t("leagueTable.team")}</th>
-                  <th className="px-3 py-4">{t("leagueTable.points")}</th>
-                  <th className="px-3 py-4">{t("leagueTable.games")}</th>
-                  <th className="px-3 py-4">{t("leagueTable.wins")}</th>
-                  <th className="px-3 py-4">{t("leagueTable.draws")}</th>
-                  <th className="px-3 py-4">{t("leagueTable.losses")}</th>
-                  <th className="px-3 py-4">{t("leagueTable.goals")}</th>
-                  <th className="rounded-r-2xl px-3 py-4">{t("leagueTable.goalDifference")}</th>
+          <div className="overflow-x-auto">
+            <table className="mt-2.5 w-full min-w-[760px] table-auto text-left text-sm text-slate-700 dark:text-zinc-300">
+              <thead>
+                <tr className="border-b border-slate-200/60 text-xs font-bold uppercase tracking-wider text-slate-400 dark:border-zinc-900/60 dark:text-zinc-550">
+                  <th className="px-3 py-3 text-center">{t("leagueTable.position")}</th>
+                  <th className="px-3 py-3">{t("leagueTable.team")}</th>
+                  <th className="px-3 py-3 text-center">{t("leagueTable.points")}</th>
+                  <th className="px-3 py-3 text-center">{t("leagueTable.games")}</th>
+                  <th className="px-3 py-3 text-center">{t("leagueTable.wins")}</th>
+                  <th className="px-3 py-3 text-center">{t("leagueTable.draws")}</th>
+                  <th className="px-3 py-3 text-center">{t("leagueTable.losses")}</th>
+                  <th className="px-3 py-3 text-center">{t("leagueTable.goals")}</th>
+                  <th className="px-3 py-3 text-center">{t("leagueTable.goalDifference")}</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-800">
+              <tbody className="divide-y divide-slate-200/50 dark:divide-zinc-900/60">
                 {sortedTeams.map((team, index) => (
                   <DesktopTeamRow
                     key={`${team.name}-${index}`}
@@ -122,17 +124,17 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
     groups: Record<string, Omit<LeagueTeam, "goalDifference">[]>,
     knockout?: ReactNode
   ) => (
-    <section className="mb-14 rounded-[2rem] border border-gray-800 bg-black/25 p-4 md:p-6">
-      <div className="mb-6 flex flex-col gap-2 border-b border-gray-800 pb-4 md:mb-8">
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">
+    <section className="mb-14 py-2">
+      <div className="mb-8 flex flex-col gap-1 border-b border-slate-200/60 pb-3 dark:border-zinc-900/60">
+        <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-550">
           {t("leagueTable.stageLabel")}
         </span>
-        <h3 className="text-2xl font-bold text-white md:text-3xl">
+        <h3 className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white md:text-3xl font-heading">
           {t(`leagueTable.${stageName}`)}
         </h3>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-12">
         {Object.entries(groups).map(([groupName, teams]) =>
           renderTable(
             teams,
@@ -157,7 +159,7 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
   if (seriesKey === "serieA") {
     if ("group" in data.serieA) {
       return (
-        <div className="w-full space-y-8">
+        <div className="w-full space-y-12">
           {renderTable(
             data.serieA.teams,
             t("leagueTable.overallTable"),
@@ -207,26 +209,26 @@ function MobileTeamCard({
   const tone = getZoneStyles(zone.tone);
 
   return (
-    <article className={`rounded-2xl border p-4 shadow-lg ${tone.card}`}>
-      <div className="flex items-start gap-3">
-        <div className={`rounded-full px-2.5 py-1 text-xs font-semibold ${tone.badge}`}>
-          #{index + 1}
+    <article className="flex flex-col py-4 first:pt-0 last:pb-0">
+      <div className="flex items-center gap-3">
+        <div className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${tone.badge}`}>
+          {index + 1}
         </div>
         <img
           src={team.logo}
           alt={fixDisplayText(team.name)}
-          className="h-11 w-11 rounded-full object-contain ring-1 ring-gray-600"
+          className="h-8 w-8 shrink-0 rounded-full object-contain bg-slate-50 dark:bg-zinc-900 p-0.5 border border-slate-200/40 dark:border-zinc-800"
         />
         <div className="min-w-0 flex-1">
-          <h4 className="truncate font-semibold text-white">{fixDisplayText(team.name)}</h4>
-          <p className="mt-1 text-xs text-gray-400">
-            {t("leagueTable.points")}: {team.points} | {t("leagueTable.goalDifference")}:{" "}
-            {team.goalDifference}
+          <h4 className="truncate text-sm font-bold text-[#2C2927] dark:text-white">{fixDisplayText(team.name)}</h4>
+          <p className="text-xs text-slate-400 dark:text-zinc-500 mt-0.5 font-semibold">
+            {t("leagueTable.points")}: <span className="font-extrabold text-slate-700 dark:text-zinc-300">{team.points}</span> | {t("leagueTable.goalDifference")}:{" "}
+            <span className="font-extrabold text-slate-700 dark:text-zinc-300">{team.goalDifference}</span>
           </p>
         </div>
       </div>
 
-      <dl className="mt-4 grid grid-cols-3 gap-2 text-center text-xs text-gray-300">
+      <dl className="mt-3.5 grid grid-cols-6 gap-1.5 text-center text-[10px] font-bold text-slate-500 dark:text-zinc-400">
         <Stat label={t("leagueTable.games")} value={team.games} />
         <Stat label={t("leagueTable.wins")} value={team.wins} />
         <Stat label={t("leagueTable.draws")} value={team.draws} />
@@ -250,47 +252,47 @@ function DesktopTeamRow({
   const tone = getZoneStyles(zone.tone);
 
   return (
-    <tr className={`text-center text-sm transition duration-200 md:text-base ${tone.row}`}>
-      <td className="px-3 py-4 font-semibold">{index + 1}</td>
-      <td className="px-3 py-4 text-left">
+    <tr className={`text-center transition-colors duration-200 ${tone.row}`}>
+      <td className={`px-3 py-3.5 font-bold ${tone.badgeText}`}>{index + 1}</td>
+      <td className="px-3 py-3.5 text-left">
         <div className="flex items-center gap-3">
           <img
             src={team.logo}
             alt={fixDisplayText(team.name)}
-            className="h-8 w-8 rounded-full ring-1 ring-gray-500"
+            className="h-7 w-7 rounded-full bg-slate-50 dark:bg-zinc-900 p-0.5 border border-slate-200/50 dark:border-zinc-800"
           />
-          <span className="truncate font-medium">{fixDisplayText(team.name)}</span>
+          <span className="font-bold text-[#2C2927] dark:text-zinc-200">{fixDisplayText(team.name)}</span>
         </div>
       </td>
-      <td className="px-3 py-4 font-bold">{team.points}</td>
-      <td className="px-3 py-4">{team.games}</td>
-      <td className="px-3 py-4">{team.wins}</td>
-      <td className="px-3 py-4">{team.draws}</td>
-      <td className="px-3 py-4">{team.losses}</td>
-      <td className="px-3 py-4">
+      <td className="px-3 py-3.5 font-black text-slate-950 dark:text-white">{team.points}</td>
+      <td className="px-3 py-3.5">{team.games}</td>
+      <td className="px-3 py-3.5">{team.wins}</td>
+      <td className="px-3 py-3.5">{team.draws}</td>
+      <td className="px-3 py-3.5">{team.losses}</td>
+      <td className="px-3 py-3.5 text-slate-400 dark:text-zinc-550 font-semibold">
         {team.goalsFor}:{team.goalsAgainst}
       </td>
-      <td className="px-3 py-4">{team.goalDifference}</td>
+      <td className="px-3 py-3.5 font-bold">{team.goalDifference}</td>
     </tr>
   );
 }
 
 function LegendPill({ label, tone }: { label: string; tone: ZoneTone }) {
   const styles = {
-    green: "border-green-500/40 bg-green-500/10 text-green-300",
-    yellow: "border-yellow-500/40 bg-yellow-500/10 text-yellow-300",
-    red: "border-red-500/40 bg-red-500/10 text-red-300",
-    neutral: "border-gray-700 bg-gray-900 text-gray-300",
+    green: "border-emerald-500/20 bg-emerald-100 text-emerald-800 dark:text-emerald-400 dark:bg-emerald-500/15 dark:border-emerald-500/10",
+    yellow: "border-amber-500/20 bg-amber-100 text-amber-800 dark:text-amber-400 dark:bg-amber-500/15 dark:border-amber-500/10",
+    red: "border-red-500/20 bg-red-100 text-red-800 dark:text-red-400 dark:bg-red-500/15 dark:border-red-500/10",
+    neutral: "border-slate-200/60 bg-[#F5F2EC]/80 text-slate-600 dark:border-zinc-900/60 dark:bg-zinc-900/60 dark:text-zinc-400",
   };
 
-  return <span className={`rounded-full border px-3 py-1 ${styles[tone]}`}>{label}</span>;
+  return <span className={`rounded-full border px-3 py-1 text-xs font-semibold ${styles[tone]}`}>{label}</span>;
 }
 
 function Stat({ label, value }: { label: string; value: string | number }) {
   return (
-    <div className="rounded-xl bg-black/40 px-2 py-2">
-      <dt className="text-[11px] uppercase tracking-wide text-gray-500">{label}</dt>
-      <dd className="mt-1 text-sm font-semibold text-white">{value}</dd>
+    <div className="rounded-lg bg-[#F5F2EC]/80 py-1.5 dark:bg-zinc-900/50">
+      <dt className="text-[9px] uppercase tracking-wider text-slate-400 dark:text-zinc-550">{label}</dt>
+      <dd className="mt-0.5 font-bold text-slate-800 dark:text-zinc-200">{value}</dd>
     </div>
   );
 }
@@ -298,24 +300,28 @@ function Stat({ label, value }: { label: string; value: string | number }) {
 function getZoneStyles(tone: ZoneTone) {
   const styles = {
     green: {
-      card: "border-green-600/40 bg-green-600/10",
-      badge: "bg-green-500/15 text-green-300",
-      row: "bg-green-600/10 hover:bg-green-600/20",
+      rowMobile: "",
+      badge: "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-400",
+      row: "bg-emerald-50/40 hover:bg-emerald-100/50 dark:bg-emerald-500/[0.01] dark:hover:bg-emerald-500/[0.03]",
+      badgeText: "text-emerald-700 dark:text-emerald-400",
     },
     yellow: {
-      card: "border-yellow-500/40 bg-yellow-500/10",
-      badge: "bg-yellow-500/15 text-yellow-300",
-      row: "bg-yellow-500/10 hover:bg-yellow-500/20",
+      rowMobile: "",
+      badge: "bg-amber-100 text-amber-800 dark:bg-amber-50/40 dark:text-amber-400",
+      row: "bg-amber-50/40 hover:bg-amber-100/50 dark:bg-amber-500/[0.01] dark:hover:bg-amber-500/[0.03]",
+      badgeText: "text-amber-700 dark:text-amber-400",
     },
     red: {
-      card: "border-red-600/40 bg-red-600/10",
-      badge: "bg-red-500/15 text-red-300",
-      row: "bg-red-600/10 hover:bg-red-600/20",
+      rowMobile: "",
+      badge: "bg-red-100 text-red-800 dark:bg-red-500/15 dark:text-red-400",
+      row: "bg-red-50/40 hover:bg-red-100/50 dark:bg-red-500/[0.01] dark:hover:bg-red-500/[0.03]",
+      badgeText: "text-red-700 dark:text-red-400",
     },
     neutral: {
-      card: "border-gray-800 bg-gray-950/90",
-      badge: "bg-black/50 text-gray-300",
-      row: "hover:bg-gray-700/30",
+      rowMobile: "",
+      badge: "bg-[#F5F2EC] text-slate-500 dark:bg-zinc-900 dark:text-zinc-400",
+      row: "hover:bg-[#F5F2EC]/30 dark:hover:bg-zinc-900/20",
+      badgeText: "text-slate-500 dark:text-zinc-500",
     },
   };
 
@@ -326,6 +332,7 @@ function getZoneForIndex(index: number, zones: TableZone[]) {
   return zones.find((zone) => zone.indices.includes(index)) ?? zones[zones.length - 1];
 }
 
+/* Rest of code unchanged */
 function getTableZones({
   league,
   year,

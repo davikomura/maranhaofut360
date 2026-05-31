@@ -10,10 +10,11 @@ export function BackButton() {
     <button
       type="button"
       onClick={() => navigate(-1)}
-      className="inline-flex items-center gap-2 rounded-full border border-gray-700 bg-gray-900/80 px-4 py-2 text-sm font-medium text-gray-200 transition hover:border-blue-500 hover:text-white"
+      className="inline-flex items-center gap-2 rounded-full border border-slate-200/50 bg-[#F5F2EC]/80 px-4 py-2 text-xs font-bold text-slate-700 transition hover:bg-[#F5F2EC] hover:text-red-650 dark:border-zinc-800/60 dark:bg-zinc-900/60 dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-red-400"
     >
-      <ArrowLeft size={16} />
+      <ArrowLeft size={14} />
       {t("common.back")}
     </button>
   );
 }
+export default BackButton;

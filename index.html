@@ -22,6 +22,23 @@
     <meta property="og:site_name" content="FutMA360" />
 
     <link rel="icon" type="image/png" href="/logo/futma360_2.png" />
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;950&display=swap" rel="stylesheet">
+
+    <!-- Immediate Theme Application (Prevents White Flash / FOUC) -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
   </head>
 
   <body>

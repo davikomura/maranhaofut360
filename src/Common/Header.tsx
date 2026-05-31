@@ -1,67 +1,96 @@
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LanguageDropdown } from "../components/LanguageDropdown";
+import { useTheme } from "../hooks/useTheme";
 
 export default function Header() {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const desktopNavItems = [
-    { to: "/", label: t("nav.home"), accentClass: "border-red-500 text-red-400" },
-    { to: "/teams", label: t("nav.teams"), accentClass: "border-blue-500 text-blue-400" },
-    { to: "/campeoes", label: t("nav.champions"), accentClass: "border-yellow-400 text-yellow-300" },
-    { to: "/contact", label: t("nav.contact"), accentClass: "border-emerald-500 text-emerald-300" },
+    { to: "/", label: t("nav.home"), activeClass: "text-red-650 dark:text-red-400", hoverClass: "hover:text-red-600 dark:hover:text-red-400" },
+    { to: "/teams", label: t("nav.teams"), activeClass: "text-blue-600 dark:text-blue-400", hoverClass: "hover:text-blue-600 dark:hover:text-blue-400" },
+    { to: "/campeoes", label: t("nav.champions"), activeClass: "text-amber-600 dark:text-amber-400", hoverClass: "hover:text-amber-600 dark:hover:text-amber-400" },
+    { to: "/contact", label: t("nav.contact"), activeClass: "text-emerald-600 dark:text-emerald-400", hoverClass: "hover:text-emerald-600 dark:hover:text-emerald-400" },
   ];
 
   const mobileNavItems = [
     ...desktopNavItems,
-    { to: "/serie-a", label: t("nav.serieA"), accentClass: "border-red-500 text-red-400" },
-    { to: "/serie-b", label: t("nav.serieB"), accentClass: "border-sky-500 text-sky-400" },
-    { to: "/about", label: t("nav.about"), accentClass: "border-yellow-400 text-yellow-300" },
+    { to: "/serie-a", label: t("nav.serieA"), activeClass: "text-red-650 dark:text-red-400", hoverClass: "hover:text-red-600 dark:hover:text-red-400" },
+    { to: "/serie-b", label: t("nav.serieB"), activeClass: "text-blue-600 dark:text-blue-400", hoverClass: "hover:text-blue-600 dark:hover:text-blue-400" },
+    { to: "/about", label: t("nav.about"), activeClass: "text-amber-600 dark:text-amber-400", hoverClass: "hover:text-amber-600 dark:hover:text-amber-400" },
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-red-600 bg-gradient-to-r from-black/95 via-gray-900/95 to-black/95 text-white shadow-md backdrop-blur">
-      <div className="container mx-auto px-4 py-4 md:px-8">
+    <header className="sticky top-0 z-40 glass-header shadow-sm transition-theme">
+      <div className="container mx-auto px-4 py-3.5 md:px-8">
         <div className="flex items-center justify-between gap-4">
           <Link to="/" title="FutMA 360 - Pagina inicial" className="flex items-center gap-3">
             <img
               src="/logo/futma360_2.png"
               alt="FutMA 360 Logo"
-              className="h-12 object-contain drop-shadow transition-transform duration-300 hover:scale-105 md:h-16"
+              className="h-10 object-contain drop-shadow-sm transition-transform duration-300 hover:scale-105 md:h-11 dark:brightness-100 brightness-95"
             />
           </Link>
 
-          <div className="hidden items-center gap-4 md:flex">
+          <div className="hidden items-center gap-6 md:flex">
             <nav>
-              <ul className="flex items-center gap-4 text-sm font-semibold lg:gap-6 lg:text-base">
+              <ul className="flex items-center gap-6 text-sm font-semibold tracking-wide lg:gap-8">
                 {desktopNavItems.map((item) => (
                   <NavItem key={item.to} {...item} onNavigate={() => setIsMenuOpen(false)} />
                 ))}
               </ul>
             </nav>
-            <LanguageDropdown />
+
+            <div className="flex items-center gap-2 border-l border-slate-200/50 pl-4 dark:border-zinc-900/60">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="flex items-center justify-center rounded-xl p-2 text-slate-500 transition-colors hover:bg-[#F5F2EC]/80 hover:text-slate-800 dark:text-zinc-400 dark:hover:bg-zinc-900/60 dark:hover:text-zinc-100"
+                aria-label={theme === "dark" ? t("Ativar tema claro") : t("Ativar tema escuro")}
+              >
+                {theme === "dark" ? (
+                  <Sun size={19} className="text-amber-400 transition-transform duration-500 rotate-0 hover:rotate-45" />
+                ) : (
+                  <Moon size={19} className="text-slate-700 transition-transform duration-500 rotate-0 hover:-rotate-12" />
+                )}
+              </button>
+              <LanguageDropdown />
+            </div>
           </div>
 
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="flex items-center justify-center rounded-xl p-2 text-slate-500 transition-colors hover:bg-[#F5F2EC]/85 dark:text-zinc-400 dark:hover:bg-zinc-900/60"
+              aria-label={theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"}
+            >
+              {theme === "dark" ? (
+                <Sun size={18} className="text-amber-400" />
+              ) : (
+                <Moon size={18} className="text-slate-700" />
+              )}
+            </button>
             <LanguageDropdown />
             <button
               type="button"
               onClick={() => setIsMenuOpen((current) => !current)}
               aria-label={isMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
               aria-expanded={isMenuOpen}
-              className="rounded-xl border border-gray-700 bg-gray-900/80 p-2 text-white transition hover:border-red-500"
+              className="rounded-xl border border-slate-200/80 bg-[#F5F2EC]/60 p-2 text-slate-700 transition-colors hover:bg-[#F5F2EC] dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-200 dark:hover:bg-zinc-900"
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
 
         {isMenuOpen && (
-          <nav className="mt-4 rounded-2xl border border-gray-800 bg-black/90 p-4 md:hidden">
-            <ul className="space-y-3 text-base font-semibold">
+          <nav className="mt-3 rounded-2xl border border-slate-200/50 bg-[#FAF8F5]/98 p-3 shadow-xl backdrop-blur-md dark:border-zinc-900/80 dark:bg-[#07070A]/98 md:hidden">
+            <ul className="space-y-1 text-sm font-semibold">
               {mobileNavItems.map((item) => (
                 <NavItem key={item.to} {...item} mobile onNavigate={() => setIsMenuOpen(false)} />
               ))}
@@ -76,12 +105,13 @@ export default function Header() {
 type NavItemProps = {
   to: string;
   label: string;
-  accentClass: string;
+  activeClass: string;
+  hoverClass: string;
   mobile?: boolean;
   onNavigate: () => void;
 };
 
-function NavItem({ to, label, accentClass, mobile = false, onNavigate }: NavItemProps) {
+function NavItem({ to, label, activeClass, hoverClass, mobile = false, onNavigate }: NavItemProps) {
   return (
     <li>
       <NavLink
@@ -89,16 +119,28 @@ function NavItem({ to, label, accentClass, mobile = false, onNavigate }: NavItem
         onClick={onNavigate}
         className={({ isActive }) =>
           [
-            mobile ? "block rounded-xl border px-4 py-3" : "border-b-2 transition duration-300",
+            "transition-colors duration-200",
+            mobile
+              ? "block rounded-xl px-4 py-2 border border-transparent"
+              : "relative py-1 text-slate-600 dark:text-zinc-400 font-semibold tracking-wide",
             isActive
-              ? accentClass
+              ? mobile
+                ? "bg-[#F5F2EC] text-[#2C2927] dark:bg-zinc-900/60 dark:text-zinc-100 font-bold border-slate-200/30"
+                : `${activeClass} font-bold`
               : mobile
-              ? "border-gray-800 bg-gray-950 text-white hover:border-gray-600"
-              : "border-transparent text-white hover:border-current hover:text-white/80",
+              ? "text-slate-600 dark:text-zinc-400 hover:bg-[#F5F2EC]/50 dark:hover:bg-zinc-900/40"
+              : `text-slate-600 dark:text-zinc-400 ${hoverClass}`,
           ].join(" ")
         }
       >
-        {label}
+        {({ isActive }) => (
+          <>
+            {label}
+            {!mobile && isActive && (
+              <span className="absolute bottom-0 left-0 h-[2px] w-full rounded-full bg-current" />
+            )}
+          </>
+        )}
       </NavLink>
     </li>
   );

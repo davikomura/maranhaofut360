@@ -16,41 +16,42 @@ export function YearTabs({
   isLoading = false,
 }: YearTabsProps) {
   return (
-    <section className="mb-10 rounded-[2rem] border border-gray-800 bg-gray-950/80 p-4 shadow-xl md:p-5">
-      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <div>
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-gray-500 md:text-left">
-            {label}
-          </p>
-        </div>
-
-        <div className="-mx-1 overflow-x-auto pb-1">
-          <div className="flex min-w-max gap-2 px-1">
-            {years.map((year) => {
-              const active = year === selectedYear;
-
-              return (
-                <button
-                  key={year}
-                  type="button"
-                  onClick={() => onChange(year)}
-                  className={`rounded-full px-4 py-2.5 text-sm font-semibold transition md:px-5 ${
-                    active
-                      ? "bg-red-500 text-white shadow-lg shadow-red-900/30"
-                      : "border border-gray-700 bg-gray-900 text-gray-300 hover:border-gray-500 hover:bg-gray-800"
-                  }`}
-                >
-                  {year}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+    <div className="mb-10 py-1 transition-theme w-full flex flex-col gap-4 md:flex-row md:items-center md:justify-between border-b border-slate-200/60 dark:border-zinc-900/60 pb-5">
+      <div className="flex items-center gap-4">
+        <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-500">
+          {label}
+        </p>
+        
+        {isLoading && loadingLabel ? (
+          <span className="text-[10px] font-bold text-red-600 dark:text-red-400 animate-pulse">
+            {loadingLabel}
+          </span>
+        ) : null}
       </div>
 
-      {isLoading && loadingLabel ? (
-        <p className="mt-3 text-center text-xs text-gray-400 md:text-left">{loadingLabel}</p>
-      ) : null}
-    </section>
+      <div className="-mx-1 overflow-x-auto">
+        <div className="flex min-w-max gap-2 px-1">
+          {years.map((year) => {
+            const active = year === selectedYear;
+
+            return (
+              <button
+                key={year}
+                type="button"
+                onClick={() => onChange(year)}
+                className={`rounded-full px-4 py-1.5 text-xs font-bold transition-all duration-200 ${
+                  active
+                    ? "bg-slate-900 text-white shadow-sm dark:bg-white dark:text-slate-900"
+                    : "border border-slate-300 dark:border-zinc-800 bg-[#FAF8F5]/40 text-slate-600 hover:bg-[#F5F2EC] dark:bg-zinc-950/20 dark:text-zinc-400 dark:hover:bg-zinc-900"
+                }`}
+              >
+                {year}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </div>
   );
 }
+export default YearTabs;

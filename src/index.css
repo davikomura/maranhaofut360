@@ -1,1 +1,80 @@
 @import "tailwindcss";
+
+/* Configure manual class-based Dark Mode in Tailwind CSS v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    /* Sophisticated Linen Warm Ivory background for Light Mode, Deep Obsidian for Dark Mode */
+    @apply bg-[#FAF8F5] text-[#2C2927] transition-colors duration-300 ease-in-out dark:bg-[#07070A] dark:text-zinc-200;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply tracking-tight font-extrabold text-slate-900 dark:text-white;
+  }
+
+  /* Custom subtle premium scrollbar matching warm/dark modes */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #FAF8F5;
+  }
+  :global(.dark) ::-webkit-scrollbar-track,
+  .dark ::-webkit-scrollbar-track {
+    background-color: #07070a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: #e2dcd5; /* Cozy Warm Sand */
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #cbd5e1;
+  }
+  :global(.dark) ::-webkit-scrollbar-thumb,
+  .dark ::-webkit-scrollbar-thumb {
+    background-color: #1f1f23;
+  }
+  :global(.dark) ::-webkit-scrollbar-thumb:hover,
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background-color: #27272a;
+  }
+}
+
+/* Premium micro-animations & custom classes */
+.transition-theme {
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, text-color 0.3s ease-in-out, fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+/* Glassmorphism utility matching warm linen */
+.glass-header {
+  @apply backdrop-blur-md bg-[#FAF8F5]/80 border-b border-slate-200/50 dark:bg-[#07070A]/85 dark:border-zinc-900/60;
+}
+
+/* Modern thin grid lines to avoid card overuse */
+.editorial-grid {
+  @apply divide-y divide-slate-200/60 dark:divide-zinc-900/60;
+}
+
+/* Custom premium colored highlights for Light Mode to make it vibrant and alive */
+.light-mode-accent-glow {
+  background: radial-gradient(circle at 10% 20%, rgba(239, 68, 68, 0.09) 0%, transparent 45%),
+              radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 50% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 45%);
+}
