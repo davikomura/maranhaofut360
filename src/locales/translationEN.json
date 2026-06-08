@@ -213,6 +213,11 @@
     "viewDetails": "View details",
     "founded": "Founded in",
     "noTeamsFound": "No clubs matching the filters were found on the map.",
-    "zoomToCity": "Focus city on map"
+    "zoomToCity": "Focus city on map",
+    "noDivision": "No Division",
+    "view": "View",
+    "divisionFilter": "Division Filter",
+    "multipleClubs": "Multiple Clubs",
+    "singleClub": "Single Club"
   }
 }

@@ -213,6 +213,11 @@
     "viewDetails": "Ver detalhes",
     "founded": "Fundado em",
     "noTeamsFound": "Nenhum clube correspondente aos filtros foi encontrado no mapa.",
-    "zoomToCity": "Focar cidade no mapa"
+    "zoomToCity": "Focar cidade no mapa",
+    "noDivision": "Sem Divisão",
+    "view": "Ver",
+    "divisionFilter": "Filtro de Divisão",
+    "multipleClubs": "Múltiplos Clubes",
+    "singleClub": "Clube Único"
   }
 }

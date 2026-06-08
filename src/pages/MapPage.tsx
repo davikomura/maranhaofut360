@@ -194,13 +194,13 @@ export default function MapPage() {
       // Inner HTML styling
       if (multipleTeams) {
         markerEl.innerHTML = `
-          <div class="map-team-marker map-team-marker--count" aria-label="${city}: ${teams.length} clubes">
+          <div class="map-team-marker map-team-marker--count" aria-label="${city}: ${t("mapPage.cityTeamsCount", { count: teams.length })}">
             ${teams.length}
           </div>
         `;
       } else {
         markerEl.innerHTML = `
-          <div class="map-team-marker map-team-marker--single" aria-label="${city}: 1 clube"></div>
+          <div class="map-team-marker map-team-marker--single" aria-label="${city}: ${t("mapPage.cityTeamsCount", { count: 1 })}"></div>
         `;
       }
 
@@ -208,7 +208,6 @@ export default function MapPage() {
       const popupNode = document.createElement("div");
       const root = createRoot(popupNode);
 
-      // Render Popup Content (uses standard HTML tags for compatibility)
       root.render(
         <div className="w-64 max-w-sm rounded-2xl border border-slate-200/60 bg-[#FAF8F5]/98 p-4 shadow-xl backdrop-blur-md dark:border-zinc-900/60 dark:bg-[#07070A]/98 text-slate-800 dark:text-zinc-200">
           <h3 className="font-heading font-black text-sm border-b border-slate-200/50 dark:border-zinc-900/60 pb-2 mb-2 flex items-center gap-1.5">
@@ -216,32 +215,32 @@ export default function MapPage() {
             {city}
           </h3>
           <div className="space-y-2.5 max-h-56 overflow-y-auto pr-1">
-            {teams.map((t) => (
+            {teams.map((team) => (
               <div
-                key={t.id}
+                key={team.id}
                 className="flex items-center justify-between gap-3 border-b border-slate-200/30 dark:border-zinc-900/40 last:border-0 pb-2 last:pb-0"
               >
                 <div className="flex items-center gap-2 min-w-0">
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sky-500 text-[10px] font-black text-white shadow-sm ring-2 ring-sky-100 dark:ring-zinc-800">
-                    {getTeamInitials(t.name)}
+                    {getTeamInitials(team.name)}
                   </div>
                   <div className="min-w-0">
                     <h4 className="font-heading font-bold text-xs text-slate-900 dark:text-white truncate">
-                      {t.name}
+                      {team.name}
                     </h4>
                     <p className="text-[10px] text-slate-400 dark:text-zinc-550 font-semibold">
-                      {t.stateDivision ? `Série ${t.stateDivision}` : "Sem Divisão"}
+                      {team.stateDivision ? t(`mapPage.serie${team.stateDivision}`) : t("mapPage.noDivision")}
                     </p>
                   </div>
                 </div>
                 <button
                   onClick={() => {
                     popup.remove();
-                    navigate(`/team/${t.id}`);
+                    navigate(`/team/${team.id}`);
                   }}
                   className="shrink-0 text-[9px] bg-[#FAF8F5] border border-slate-300 dark:border-zinc-800 hover:bg-[#F5F2EC] dark:bg-zinc-950/40 dark:hover:bg-zinc-900 font-bold px-2 py-1 rounded-lg text-slate-700 dark:text-zinc-300 transition-colors cursor-pointer"
                 >
-                  Ver
+                  {t("mapPage.view")}
                 </button>
               </div>
             ))}
@@ -249,7 +248,6 @@ export default function MapPage() {
         </div>
       );
 
-      // Setup Popup
       const popup = new maplibregl.Popup({
         offset: 15,
         closeButton: false,
@@ -257,7 +255,6 @@ export default function MapPage() {
       }).setDOMContent(popupNode);
 
       popup.on("close", () => {
-        // Unmount React component when popup closes to avoid leaks
         setTimeout(() => {
           root.unmount();
         }, 150);
@@ -272,11 +269,10 @@ export default function MapPage() {
       // Add to ref
       markersRef.current.push(marker);
     });
-  }, [filteredTeams]);
+  }, [filteredTeams, t, navigate]);
 
   return (
     <div className="min-h-screen bg-stadium-dots bg-mesh-gradient-rich transition-theme">
-      {/* Styles to remove default MapLibre popup background & layout */}
       <style>{`
         .custom-maplibre-popup .maplibregl-popup-content {
           background: transparent !important;
@@ -382,7 +378,7 @@ export default function MapPage() {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-xs font-bold text-slate-400 dark:text-zinc-550">
                 <SlidersHorizontal size={12} />
-                <span>Filtro de Divisão</span>
+                <span>{t("mapPage.divisionFilter")}</span>
               </div>
               <div className="grid grid-cols-2 gap-2 text-xs font-bold">
                 <button
@@ -437,11 +433,11 @@ export default function MapPage() {
             <div className="absolute bottom-4 left-4 bg-[#FAF8F5]/90 dark:bg-zinc-950/90 backdrop-blur-md px-3 py-2 rounded-xl border border-slate-200/50 dark:border-zinc-900/60 shadow-lg text-[10px] font-bold text-slate-500 dark:text-zinc-400 space-y-1.5 pointer-events-none z-10">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-sky-500 border border-white dark:border-zinc-900 inline-block shrink-0" />
-                <span>Múltiplos Clubes</span>
+                <span>{t("mapPage.multipleClubs")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-slate-400 dark:bg-zinc-500 border border-white dark:border-zinc-900 inline-block shrink-0" />
-                <span>Clube Único</span>
+                <span>{t("mapPage.singleClub")}</span>
               </div>
             </div>
           </div>
