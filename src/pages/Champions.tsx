@@ -35,7 +35,7 @@ export const Champions = () => {
       icon: Trophy,
       entries: Object.entries(titleCounts),
       accent: "from-amber-600 via-yellow-500 to-orange-500",
-      totalValue: Object.values(titleCounts).reduce((total, count) => total + count, 0),
+      totalValue: validChampions.length,
     },
     finals: {
       title: t("champions.finalsByTeam"),
@@ -43,7 +43,7 @@ export const Champions = () => {
       icon: BarChart3,
       entries: Object.entries(finalAppearances),
       accent: "from-blue-600 via-sky-400 to-blue-500",
-      totalValue: Object.values(finalAppearances).reduce((total, count) => total + count, 0),
+      totalValue: validChampions.length,
     },
     cities: {
       title: t("champions.cityDistribution"),
@@ -51,19 +51,18 @@ export const Champions = () => {
       icon: MapPinned,
       entries: Object.entries(cityTitleCounts),
       accent: "from-emerald-600 via-teal-400 to-green-500",
-      totalValue: Object.values(cityTitleCounts).reduce((total, count) => total + count, 0),
+      totalValue: validChampions.length,
     },
   } as const;
 
   const currentRanking = rankingConfig[rankingMode];
   const RankingIcon = currentRanking.icon;
-  const topThree = [...currentRanking.entries].sort((a, b) => b[1] - a[1]).slice(0, 3);
+  const topFive = [...currentRanking.entries].sort((a, b) => b[1] - a[1]).slice(0, 5);
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_50%_0%,_rgba(251,191,36,0.05),_transparent_28%)] px-4 py-12 md:py-20 transition-theme">
       <div className="mx-auto w-full max-w-6xl space-y-16">
         
-        {/* Floating Editorial Header Banner */}
         <section className="relative py-4">
           <div className="grid gap-12 lg:grid-cols-[1.5fr_0.9fr]">
             <div className="space-y-6">
@@ -177,7 +176,7 @@ export const Champions = () => {
 
             {/* Podium elements directly floating */}
             <div className="mt-8 space-y-6">
-              {topThree.map(([label, value], index) => (
+              {topFive.map(([label, value], index) => (
                 <PodiumCard
                   key={`${rankingMode}-${label}`}
                   place={index + 1}
@@ -341,7 +340,6 @@ function PodiumCard({
           </div>
           <div>
             <p className="text-sm font-bold text-slate-800 dark:text-zinc-200 leading-none">{label}</p>
-            <p className="text-xs text-slate-400 dark:text-zinc-550 mt-1 font-semibold">{value}</p>
           </div>
         </div>
         <div className="text-right text-xs font-extrabold text-slate-400 dark:text-zinc-500">
