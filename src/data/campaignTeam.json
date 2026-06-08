@@ -2,29 +2,233 @@
   "campaignTeam": [
     {
       "id": 1,
-
       "competicoes": {
-        "serieA": {
+        "serieA_BR": {
           "estreia": 1962,
           "ultimaParticipacao": 1986,
           "melhorColocacao": 13,
           "titulos": 0
         },
-        "serieB": {
+        "serieB_BR": {
           "estreia": 1971,
           "ultimaParticipacao": 2023,
           "melhorColocacao": "Campeão",
           "titulos": 1
         },
-        "serieC": {
+        "serieC_BR": {
           "estreia": 1992,
           "ultimaParticipacao": 2024,
           "melhorColocacao": "Campeão",
           "titulos": 1
         },
-        "serieD": {
+        "serieD_BR": {
           "estreia": 2010,
+          "ultimaParticipacao": 2026,
+          "melhorColocacao": "Campeão",
+          "titulos": 1
+        },
+        "copaDoBrasil": {
+          "estreia": 1989,
           "ultimaParticipacao": 2025,
+          "melhorColocacao": "Oitavas",
+          "titulos": 0
+        },
+        "copaDoNordeste": {
+          "estreia": 2015,
+          "ultimaParticipacao": 2025,
+          "melhorColocacao": "Campeão",
+          "titulos": 1
+        }
+      }
+    },
+    {
+      "id": 2,
+      "competicoes": {
+        "serieA_BR": {
+          "estreia": 1960,
+          "ultimaParticipacao": 1984,
+          "melhorColocacao": 8,
+          "titulos": 0
+        },
+        "serieB_BR": {
+          "estreia": 1972,
+          "ultimaParticipacao": 1997,
+          "melhorColocacao": 8,
+          "titulos": 0
+        },
+        "serieC_BR": {
+          "estreia": 1981,
+          "ultimaParticipacao": 2017,
+          "melhorColocacao": 8,
+          "titulos": 0
+        },
+        "serieD_BR": {
+          "estreia": 2009,
+          "ultimaParticipacao": 2026,
+          "melhorColocacao": 4,
+          "titulos": 0
+        },
+        "copaDoBrasil": {
+          "estreia": 1990,
+          "ultimaParticipacao": 2024,
+          "melhorColocacao": "2ª Fase",
+          "titulos": 0
+        },
+        "copaDoNordeste": {
+          "estreia": 2015,
+          "ultimaParticipacao": 2025,
+          "melhorColocacao": "Fase de Grupos",
+          "titulos": 0
+        }
+      }
+    },
+    {
+      "id": 3,
+      "competicoes": {
+        "serieA_BR": {
+          "estreia": 1964,
+          "ultimaParticipacao": 1980,
+          "melhorColocacao": 14,
+          "titulos": 0
+        },
+        "serieB_BR": {
+          "estreia": 1971,
+          "ultimaParticipacao": 1991,
+          "melhorColocacao": 7,
+          "titulos": 0
+        },
+        "serieC_BR": {
+          "estreia": 1990,
+          "ultimaParticipacao": 2026,
+          "melhorColocacao": 12,
+          "titulos": 0
+        },
+        "serieD_BR": {
+          "estreia": 2013,
+          "ultimaParticipacao": 2025,
+          "melhorColocacao": 4,
+          "titulos": 0
+        },
+        "copaDoBrasil": {
+          "estreia": 1994,
+          "ultimaParticipacao": 2026,
+          "melhorColocacao": "3ª Fase",
+          "titulos": 0
+        },
+        "copaDoNordeste": {
+          "estreia": 2024,
+          "ultimaParticipacao": 2026,
+          "melhorColocacao": "Fase de Grupos",
+          "titulos": 0
+        }
+      }
+    },
+    {
+      "id": 4,
+      "competicoes": {
+        "serieA_BR": {
+          "estreia": null,
+          "ultimaParticipacao": null,
+          "melhorColocacao": null,
+          "titulos": 0
+        },
+        "serieB_BR": {
+          "estreia": 1987,
+          "ultimaParticipacao": 1987,
+          "melhorColocacao": 20,
+          "titulos": 0
+        },
+        "serieC_BR": {
+          "estreia": 1995,
+          "ultimaParticipacao": 2020,
+          "melhorColocacao": 6,
+          "titulos": 0
+        },
+        "serieD_BR": {
+          "estreia": 2015,
+          "ultimaParticipacao": 2026,
+          "melhorColocacao": 4,
+          "titulos": 0
+        },
+        "copaDoBrasil": {
+          "estreia": 2006,
+          "ultimaParticipacao": 2026,
+          "melhorColocacao": "2ª Fase",
+          "titulos": 0
+        },
+        "copaDoNordeste": {
+          "estreia": 2016,
+          "ultimaParticipacao": 2026,
+          "melhorColocacao": "Fase de Grupos",
+          "titulos": 0
+        }
+      }
+    },
+    {
+      "id": 5,
+      "competicoes": {
+        "serieA_BR": {
+          "estreia": null,
+          "ultimaParticipacao": null,
+          "melhorColocacao": null,
+          "titulos": 0
+        },
+        "serieB_BR": {
+          "estreia": null,
+          "ultimaParticipacao": null,
+          "melhorColocacao": null,
+          "titulos": 0
+        },
+        "serieC_BR": {
+          "estreia": null,
+          "ultimaParticipacao": null,
+          "melhorColocacao": null,
+          "titulos": 0
+        },
+        "serieD_BR": {
+          "estreia": 2017,
+          "ultimaParticipacao": 2023,
+          "melhorColocacao": 30,
+          "titulos": 0
+        },
+        "copaDoBrasil": {
+          "estreia": 2023,
+          "ultimaParticipacao": 2023,
+          "melhorColocacao": "1ª Fase",
+          "titulos": 0
+        },
+        "copaDoNordeste": {
+          "estreia": 2018,
+          "ultimaParticipacao": 2023,
+          "melhorColocacao": "1ª Fase",
+          "titulos": 0
+        }
+      }
+    },
+    {
+      "id": 6,
+      "competicoes": {
+        "serieA_BR": {
+          "estreia": 1962,
+          "ultimaParticipacao": 1986,
+          "melhorColocacao": 13,
+          "titulos": 0
+        },
+        "serieB_BR": {
+          "estreia": 1971,
+          "ultimaParticipacao": 2023,
+          "melhorColocacao": "Campeão",
+          "titulos": 1
+        },
+        "serieC_BR": {
+          "estreia": 1992,
+          "ultimaParticipacao": 2024,
+          "melhorColocacao": "Campeão",
+          "titulos": 1
+        },
+        "serieD_BR": {
+          "estreia": 2010,
+          "ultimaParticipacao": 2026,
           "melhorColocacao": "Campeão",
           "titulos": 1
         },
