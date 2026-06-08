@@ -11,6 +11,7 @@
     "champions": "Campeões",
     "about": "Sobre",
     "contact": "Contato",
+    "map": "Mapa",
     "openMenu": "Abrir menu",
     "closeMenu": "Fechar menu"
   },
@@ -197,5 +198,21 @@
     "modeTitles": "Títulos",
     "modeFinals": "Finais",
     "modeCities": "Cidades"
+  },
+  "mapPage": {
+    "title": "Mapa do Futebol Maranhense",
+    "description": "Visualize geograficamente a origem dos clubes maranhenses. Explore onde se localizam as principais forças do nosso futebol.",
+    "searchPlaceholder": "Buscar time ou cidade...",
+    "allDivisions": "Todas as divisões",
+    "serieA": "Série A",
+    "serieB": "Série B",
+    "otherDivisions": "Outros / Sem Divisão",
+    "sidebarTitle": "Clubes por Cidade",
+    "cityTeamsCount": "{{count}} clube",
+    "cityTeamsCount_plural": "{{count}} clubes",
+    "viewDetails": "Ver detalhes",
+    "founded": "Fundado em",
+    "noTeamsFound": "Nenhum clube correspondente aos filtros foi encontrado no mapa.",
+    "zoomToCity": "Focar cidade no mapa"
   }
 }

@@ -13,6 +13,7 @@ export default function Header() {
   const desktopNavItems = [
     { to: "/", label: t("nav.home"), activeClass: "text-red-650 dark:text-red-400", hoverClass: "hover:text-red-600 dark:hover:text-red-400" },
     { to: "/teams", label: t("nav.teams"), activeClass: "text-blue-600 dark:text-blue-400", hoverClass: "hover:text-blue-600 dark:hover:text-blue-400" },
+    { to: "/mapa", label: t("nav.map"), activeClass: "text-sky-600 dark:text-sky-400", hoverClass: "hover:text-sky-600 dark:hover:text-sky-400" },
     { to: "/campeoes", label: t("nav.champions"), activeClass: "text-amber-600 dark:text-amber-400", hoverClass: "hover:text-amber-600 dark:hover:text-amber-400" },
     { to: "/contact", label: t("nav.contact"), activeClass: "text-emerald-600 dark:text-emerald-400", hoverClass: "hover:text-emerald-600 dark:hover:text-emerald-400" },
   ];

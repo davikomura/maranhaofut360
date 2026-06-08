@@ -35,7 +35,7 @@ export const Champions = () => {
       icon: Trophy,
       entries: Object.entries(titleCounts),
       accent: "from-amber-600 via-yellow-500 to-orange-500",
-      maxValue: Math.max(...Object.values(titleCounts)),
+      totalValue: Object.values(titleCounts).reduce((total, count) => total + count, 0),
     },
     finals: {
       title: t("champions.finalsByTeam"),
@@ -43,7 +43,7 @@ export const Champions = () => {
       icon: BarChart3,
       entries: Object.entries(finalAppearances),
       accent: "from-blue-600 via-sky-400 to-blue-500",
-      maxValue: Math.max(...Object.values(finalAppearances)),
+      totalValue: Object.values(finalAppearances).reduce((total, count) => total + count, 0),
     },
     cities: {
       title: t("champions.cityDistribution"),
@@ -51,7 +51,7 @@ export const Champions = () => {
       icon: MapPinned,
       entries: Object.entries(cityTitleCounts),
       accent: "from-emerald-600 via-teal-400 to-green-500",
-      maxValue: Math.max(...Object.values(cityTitleCounts)),
+      totalValue: Object.values(cityTitleCounts).reduce((total, count) => total + count, 0),
     },
   } as const;
 
@@ -183,7 +183,7 @@ export const Champions = () => {
                   place={index + 1}
                   label={label}
                   value={value}
-                  maxValue={currentRanking.maxValue}
+                  totalValue={currentRanking.totalValue}
                   accent={currentRanking.accent}
                 />
               ))}
@@ -220,7 +220,7 @@ export const Champions = () => {
                     <div className="h-1.5 overflow-hidden rounded-full bg-[#F5F2EC] dark:bg-zinc-900/60">
                       <div
                         className={`h-full rounded-full bg-gradient-to-r ${currentRanking.accent} transition-[width] duration-700 ease-out`}
-                        style={{ width: `${(count / currentRanking.maxValue) * 100}%` }}
+                        style={{ width: `${(count / currentRanking.totalValue) * 100}%` }}
                       />
                     </div>
                   </div>
@@ -319,15 +319,17 @@ function PodiumCard({
   place,
   label,
   value,
-  maxValue,
+  totalValue,
   accent,
 }: {
   place: number;
   label: string;
   value: number;
-  maxValue: number;
+  totalValue: number;
   accent: string;
 }) {
+  const percentage = totalValue > 0 ? (value / totalValue) * 100 : 0;
+
   return (
     <div className="space-y-2.5">
       <div className="flex items-center justify-between gap-4">
@@ -343,13 +345,13 @@ function PodiumCard({
           </div>
         </div>
         <div className="text-right text-xs font-extrabold text-slate-400 dark:text-zinc-500">
-          {Math.round((value / maxValue) * 100)}%
+          {Math.round(percentage)}%
         </div>
       </div>
       <div className="h-1.5 overflow-hidden rounded-full bg-[#F5F2EC] dark:bg-zinc-900/60">
         <div
           className={`h-full rounded-full bg-gradient-to-r ${accent}`}
-          style={{ width: `${(value / maxValue) * 100}%` }}
+          style={{ width: `${percentage}%` }}
         />
       </div>
     </div>

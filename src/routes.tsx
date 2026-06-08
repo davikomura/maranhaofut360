@@ -19,6 +19,7 @@ const Champions = lazy(() =>
   import("./pages/Champions.tsx").then((module) => ({ default: module.Champions }))
 );
 const TeamDetail = lazy(() => import("./pages/TeamDetail.tsx"));
+const MapPage = lazy(() => import("./pages/MapPage.tsx"));
 const ContactPage = lazy(() =>
   import("./pages/ContactPage.tsx").then((module) => ({ default: module.ContactPage }))
 );
@@ -39,6 +40,10 @@ const routes = [
       {
         path: "/teams",
         element: withLoader(<Teams />),
+      },
+      {
+        path: "/mapa",
+        element: withLoader(<MapPage />),
       },
       {
         path: "/team/:id",
@@ -67,6 +72,10 @@ const routes = [
       {
         path: "/Teams",
         element: <Navigate to="/teams" replace />,
+      },
+      {
+        path: "/map",
+        element: <Navigate to="/mapa" replace />,
       },
       {
         path: "/About",

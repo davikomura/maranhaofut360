@@ -11,6 +11,7 @@
     "champions": "Champions",
     "about": "About",
     "contact": "Contact",
+    "map": "Map",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
@@ -197,5 +198,21 @@
     "modeTitles": "Titles",
     "modeFinals": "Finals",
     "modeCities": "Cities"
+  },
+  "mapPage": {
+    "title": "Maranhao Football Map",
+    "description": "Geographically visualize the origins of Maranhense clubs. Explore where the main forces of our football are located.",
+    "searchPlaceholder": "Search team or city...",
+    "allDivisions": "All divisions",
+    "serieA": "Serie A",
+    "serieB": "Serie B",
+    "otherDivisions": "Other / No Division",
+    "sidebarTitle": "Clubs by City",
+    "cityTeamsCount": "{{count}} club",
+    "cityTeamsCount_plural": "{{count}} clubs",
+    "viewDetails": "View details",
+    "founded": "Founded in",
+    "noTeamsFound": "No clubs matching the filters were found on the map.",
+    "zoomToCity": "Focus city on map"
   }
 }
