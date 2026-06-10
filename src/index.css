@@ -28,32 +28,29 @@
 
   /* Custom subtle premium scrollbar matching warm/dark modes */
   ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #FAF8F5;
-  }
-  :global(.dark) ::-webkit-scrollbar-track,
-  .dark ::-webkit-scrollbar-track {
-    background-color: #07070a;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
     border-radius: 9999px;
-    background-color: #e2dcd5; /* Cozy Warm Sand */
+    background-color: rgba(44, 41, 39, 0.12); /* Cozy Warm Sand tint */
   }
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #cbd5e1;
+    background-color: rgba(44, 41, 39, 0.22);
   }
+  
   :global(.dark) ::-webkit-scrollbar-thumb,
   .dark ::-webkit-scrollbar-thumb {
-    background-color: #1f1f23;
+    background-color: rgba(255, 255, 255, 0.12);
   }
   :global(.dark) ::-webkit-scrollbar-thumb:hover,
   .dark ::-webkit-scrollbar-thumb:hover {
-    background-color: #27272a;
+    background-color: rgba(255, 255, 255, 0.22);
   }
 }
 
@@ -93,4 +90,55 @@
               radial-gradient(circle at 90% 10%, rgba(29, 78, 216, 0.06) 0%, transparent 40%),
               radial-gradient(circle at 50% 50%, rgba(217, 119, 6, 0.05) 0%, transparent 45%),
               radial-gradient(circle at 80% 85%, rgba(4, 120, 87, 0.04) 0%, transparent 40%);
+}
+
+/* Premium micro-animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Premium Card hover states */
+.glow-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(226, 220, 213, 0.3);
+}
+.dark .glow-card {
+  border: 1px solid rgba(39, 39, 42, 0.35);
+}
+.glow-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(239, 68, 68, 0.2);
+  box-shadow: 0 12px 24px -10px rgba(239, 68, 68, 0.08);
+}
+.dark .glow-card:hover {
+  border-color: rgba(239, 68, 68, 0.25);
+  box-shadow: 0 12px 24px -10px rgba(239, 68, 68, 0.15);
+}
+
+/* Timeline Custom Utilities */
+.timeline-gradient-line {
+  background: linear-gradient(to bottom, transparent, rgba(245, 158, 11, 0.25) 10%, rgba(245, 158, 11, 0.25) 90%, transparent);
+}
+.dark .timeline-gradient-line {
+  background: linear-gradient(to bottom, transparent, rgba(245, 158, 11, 0.15) 10%, rgba(245, 158, 11, 0.15) 90%, transparent);
+}
+
+/* Hide scrollbars completely on navigation / tab sliders */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

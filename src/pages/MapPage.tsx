@@ -282,6 +282,28 @@ export default function MapPage() {
           display: flex;
           justify-content: center;
         }
+        @keyframes mapPulseCount {
+          0% {
+            box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5), 0 8px 16px rgba(37, 99, 235, 0.25);
+          }
+          70% {
+            box-shadow: 0 0 0 8px rgba(37, 99, 235, 0), 0 8px 16px rgba(37, 99, 235, 0.25);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(37, 99, 235, 0), 0 8px 16px rgba(37, 99, 235, 0.25);
+          }
+        }
+        @keyframes mapPulseSingle {
+          0% {
+            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5), 0 6px 12px rgba(239, 68, 68, 0.2);
+          }
+          70% {
+            box-shadow: 0 0 0 6px rgba(239, 68, 68, 0), 0 6px 12px rgba(239, 68, 68, 0.2);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0), 0 6px 12px rgba(239, 68, 68, 0.2);
+          }
+        }
         .map-team-marker--count {
           background: linear-gradient(135deg, #3b82f6, #2563eb);
           border: 3px solid #ffffff;
@@ -293,6 +315,7 @@ export default function MapPage() {
           line-height: 1;
           outline: 3px solid rgba(59, 130, 246, 0.2);
           width: 44px;
+          animation: mapPulseCount 2s infinite ease-in-out;
         }
         .map-team-marker--single {
           background: linear-gradient(135deg, #ef4444, #dc2626);
@@ -301,6 +324,7 @@ export default function MapPage() {
           height: 16px;
           outline: 3px solid rgba(239, 68, 68, 0.15);
           width: 16px;
+          animation: mapPulseSingle 2.5s infinite ease-in-out;
         }
         .dark .map-team-marker--count {
           border-color: #18181b;

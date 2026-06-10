@@ -197,7 +197,15 @@
     "entriesLabel": "entries",
     "modeTitles": "Titles",
     "modeFinals": "Finals",
-    "modeCities": "Cities"
+    "modeCities": "Cities",
+    "decadeLabel": "Filter by era",
+    "allDecades": "All eras",
+    "decadePill": "{{decade}}s",
+    "noDecadeTitle": "No statistics",
+    "timelineTitle": "Champions Timeline",
+    "timelineDescription": "Follow the year-by-year journey of the trophy.",
+    "timelineShow": "View Timeline",
+    "timelineHide": "Hide Timeline"
   },
   "mapPage": {
     "title": "Maranhao Football Map",

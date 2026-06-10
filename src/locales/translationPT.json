@@ -197,7 +197,15 @@
     "entriesLabel": "entradas",
     "modeTitles": "Títulos",
     "modeFinals": "Finais",
-    "modeCities": "Cidades"
+    "modeCities": "Cidades",
+    "decadeLabel": "Filtrar por época",
+    "allDecades": "Todas as eras",
+    "decadePill": "Anos {{decade}}",
+    "noDecadeTitle": "Sem estatísticas",
+    "timelineTitle": "Linha do Tempo de Campeões",
+    "timelineDescription": "Veja ano a ano o caminho da taça.",
+    "timelineShow": "Ver Linha do Tempo",
+    "timelineHide": "Ocultar Linha do Tempo"
   },
   "mapPage": {
     "title": "Mapa do Futebol Maranhense",

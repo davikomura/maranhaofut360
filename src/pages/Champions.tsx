@@ -1,21 +1,172 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { BarChart3, Crown, MapPinned, Sparkles, Table2, Trophy } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { getChampionStats } from "../lib/champions";
+import { getValidChampions } from "../lib/champions";
+import { teamDetails } from "../lib/footballData";
 import { fixDisplayText } from "../utils/text";
 import { useSEO } from "../hooks/useSEO";
 
 type RankingMode = "titles" | "finals" | "cities";
 
+const DECADES = [
+  "all",
+  "2020",
+  "2010",
+  "2000",
+  "1990",
+  "1980",
+  "1970",
+  "1960",
+  "1950",
+  "1940",
+  "1930",
+];
+
+// Helper to look up team logo and id by name
+const resolveTeamDetails = (name: string, explicitId: number | null) => {
+  if (explicitId) {
+    const found = teamDetails.find((t) => t.id === explicitId);
+    if (found) return { id: found.id, logo: found.image, name: found.name };
+  }
+  if (!name) return { id: null, logo: null, name: "" };
+  const normalized = fixDisplayText(name).toLowerCase().trim();
+
+  // 1. Exact match
+  const exact = teamDetails.find(
+    (t) => fixDisplayText(t.name).toLowerCase().trim() === normalized
+  );
+  if (exact) return { id: exact.id, logo: exact.image, name: exact.name };
+
+  // 2. Nicknames & abbreviations
+  let resolvedId: number | null = null;
+  if (normalized.includes("sampaio")) resolvedId = 1;
+  else if (normalized.includes("moto")) resolvedId = 2;
+  else if (
+    normalized.includes("mac") ||
+    normalized.includes("maranhao") ||
+    normalized.includes("maranhão")
+  )
+    resolvedId = 3;
+  else if (normalized.includes("imperatriz")) resolvedId = 4;
+  else if (normalized.includes("cordino")) resolvedId = 5;
+  else if (normalized.includes("pinheiro")) resolvedId = 6;
+  else if (normalized.includes("tuntum")) resolvedId = 7;
+  else if (normalized.includes("iape")) resolvedId = 8;
+  else if (normalized.includes("viana")) resolvedId = 9;
+  else if (normalized.includes("bacabal")) resolvedId = 10;
+  else if (normalized.includes("expressinho")) resolvedId = 11;
+  else if (normalized.includes("sao jose") || normalized.includes("são josé")) resolvedId = 12;
+  else if (normalized.includes("tupan")) resolvedId = 13;
+  else if (normalized.includes("americano")) resolvedId = 14;
+  else if (normalized.includes("sao luis") || normalized.includes("são luís")) resolvedId = 15;
+  else if (normalized.includes("santa quiteria") || normalized.includes("santa quitéria")) resolvedId = 16;
+  else if (normalized.includes("timon")) resolvedId = 17;
+  else if (normalized.includes("luso")) resolvedId = 18;
+  else if (normalized.includes("juventude")) resolvedId = 19;
+  else if (normalized.includes("chapadinha")) resolvedId = 20;
+  else if (normalized.includes("araioses")) resolvedId = 21;
+  else if (normalized.includes("balsas")) resolvedId = 22;
+  else if (normalized.includes("sabia") || normalized.includes("sabiá")) resolvedId = 23;
+  else if (normalized.includes("jv lideral")) resolvedId = 24;
+  else if (normalized.includes("marilia") || normalized.includes("marília")) resolvedId = 25;
+  else if (normalized.includes("sirio") || normalized.includes("sírio")) resolvedId = 26;
+  else if (normalized.includes("itz")) resolvedId = 27;
+  else if (normalized.includes("luminense")) resolvedId = 28;
+  else if (normalized.includes("lago verde")) resolvedId = 29;
+
+  if (resolvedId) {
+    const found = teamDetails.find((t) => t.id === resolvedId);
+    if (found) return { id: found.id, logo: found.image, name: found.name };
+  }
+
+  // 3. Fallback partial
+  const partial = teamDetails.find((t) =>
+    fixDisplayText(t.name).toLowerCase().includes(normalized)
+  );
+  if (partial) return { id: partial.id, logo: partial.image, name: partial.name };
+
+  return { id: null, logo: null, name };
+};
+
 export const Champions = () => {
   const { t } = useTranslation();
   const [showTable, setShowTable] = useState(false);
   const [rankingMode, setRankingMode] = useState<RankingMode>("titles");
+  const [selectedDecade, setSelectedDecade] = useState<string>("all");
 
-  const { validChampions, titleCounts, cityTitleCounts, finalAppearances } = useMemo(
-    () => getChampionStats(),
+  const allValidChampions = useMemo(
+    () => getValidChampions().filter((c) => parseInt(c.year, 10) >= 1930),
     []
   );
+
+  // Dynamic calculations based on selected decade
+  const {
+    filteredChampions,
+    titleCounts,
+    cityTitleCounts,
+    finalAppearances,
+    topChampion,
+    topCity,
+    mostFinals,
+  } = useMemo(() => {
+    const list =
+      selectedDecade === "all"
+        ? allValidChampions
+        : allValidChampions.filter((c) => {
+            const yr = parseInt(c.year, 10);
+            const dec = parseInt(selectedDecade, 10);
+            return yr >= dec && yr < dec + 10;
+          });
+
+    const tCounts: Record<string, number> = {};
+    const viceCounts: Record<string, number> = {};
+    const cCounts: Record<string, number> = {};
+
+    list.forEach(({ champion, runner_up, cityChampion }) => {
+      const championName = fixDisplayText(champion);
+      const runnerUpName = fixDisplayText(runner_up);
+      const championCity = fixDisplayText(cityChampion);
+
+      tCounts[championName] = (tCounts[championName] || 0) + 1;
+      if (runnerUpName) {
+        viceCounts[runnerUpName] = (viceCounts[runnerUpName] || 0) + 1;
+      }
+      if (championCity) {
+        cCounts[championCity] = (cCounts[championCity] || 0) + 1;
+      }
+    });
+
+    const finals: Record<string, number> = {};
+    Object.keys({ ...tCounts, ...viceCounts }).forEach((team) => {
+      finals[team] = (tCounts[team] || 0) + (viceCounts[team] || 0);
+    });
+
+    const topChamp =
+      Object.entries(tCounts).length > 0
+        ? Object.entries(tCounts).reduce((a, b) => (b[1] > a[1] ? b : a))
+        : ([t("champions.noDecadeTitle"), 0] as [string, number]);
+
+    const topCit =
+      Object.entries(cCounts).length > 0
+        ? Object.entries(cCounts).reduce((a, b) => (b[1] > a[1] ? b : a))
+        : ([t("champions.noDecadeTitle"), 0] as [string, number]);
+
+    const topFin =
+      Object.entries(finals).length > 0
+        ? Object.entries(finals).reduce((a, b) => (b[1] > a[1] ? b : a))
+        : ([t("champions.noDecadeTitle"), 0] as [string, number]);
+
+    return {
+      filteredChampions: list,
+      titleCounts: tCounts,
+      cityTitleCounts: cCounts,
+      finalAppearances: finals,
+      topChampion: topChamp,
+      topCity: topCit,
+      mostFinals: topFin,
+    };
+  }, [allValidChampions, selectedDecade, t]);
 
   // Dynamic Page-level SEO
   useSEO({
@@ -23,10 +174,10 @@ export const Champions = () => {
     description: t("champions.description"),
   });
 
-  const latestChampion = validChampions[validChampions.length - 1];
-  const topChampion = Object.entries(titleCounts).reduce((a, b) => (b[1] > a[1] ? b : a));
-  const topCity = Object.entries(cityTitleCounts).reduce((a, b) => (b[1] > a[1] ? b : a));
-  const mostFinals = Object.entries(finalAppearances).reduce((a, b) => (b[1] > a[1] ? b : a));
+  const latestChampion =
+    filteredChampions.length > 0
+      ? filteredChampions[filteredChampions.length - 1]
+      : null;
 
   const rankingConfig = {
     titles: {
@@ -35,7 +186,7 @@ export const Champions = () => {
       icon: Trophy,
       entries: Object.entries(titleCounts),
       accent: "from-amber-600 via-yellow-500 to-orange-500",
-      totalValue: validChampions.length,
+      totalValue: filteredChampions.length,
     },
     finals: {
       title: t("champions.finalsByTeam"),
@@ -43,7 +194,7 @@ export const Champions = () => {
       icon: BarChart3,
       entries: Object.entries(finalAppearances),
       accent: "from-blue-600 via-sky-400 to-blue-500",
-      totalValue: validChampions.length,
+      totalValue: filteredChampions.length,
     },
     cities: {
       title: t("champions.cityDistribution"),
@@ -51,18 +202,19 @@ export const Champions = () => {
       icon: MapPinned,
       entries: Object.entries(cityTitleCounts),
       accent: "from-emerald-600 via-teal-400 to-green-500",
-      totalValue: validChampions.length,
+      totalValue: filteredChampions.length,
     },
   } as const;
 
   const currentRanking = rankingConfig[rankingMode];
   const RankingIcon = currentRanking.icon;
-  const topFive = [...currentRanking.entries].sort((a, b) => b[1] - a[1]).slice(0, 5);
+  const topFive = [...currentRanking.entries]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5);
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_0%,_rgba(251,191,36,0.05),_transparent_28%)] px-4 py-12 md:py-20 transition-theme">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_0%,_rgba(251,191,36,0.05),_transparent_28%)] px-4 py-12 md:py-20 transition-theme bg-stadium-dots bg-mesh-gradient-rich">
       <div className="mx-auto w-full max-w-6xl space-y-16">
-        
         <section className="relative py-4">
           <div className="grid gap-12 lg:grid-cols-[1.5fr_0.9fr]">
             <div className="space-y-6">
@@ -70,11 +222,11 @@ export const Champions = () => {
                 <Sparkles size={12} />
                 {t("champions.heroEyebrow")}
               </div>
-              
+
               <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 md:text-6xl dark:text-white leading-[1.08] font-heading">
                 {t("champions.title")}
               </h1>
-              
+
               <p className="max-w-2xl text-base leading-relaxed text-slate-600 dark:text-zinc-400">
                 {t("champions.description")}
               </p>
@@ -82,60 +234,116 @@ export const Champions = () => {
               {/* Stats column with fine divider borders */}
               <div className="grid gap-6 pt-4 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/60 dark:divide-zinc-900/60">
                 <div className="first:pt-0 pt-4 sm:pt-0">
-                  <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-550">{t("champions.biggestChampion")}</p>
-                  <p className="mt-1 text-lg font-extrabold text-slate-900 dark:text-white font-heading">{topChampion[0]}</p>
-                  <p className="text-xs text-amber-600 dark:text-amber-400 font-semibold">{topChampion[1]} {t("champions.titles")}</p>
+                  <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-550">
+                    {t("champions.biggestChampion")}
+                  </p>
+                  <p className="mt-1 text-lg font-extrabold text-slate-900 dark:text-white font-heading">
+                    {topChampion[0]}
+                  </p>
+                  <p className="text-xs text-amber-600 dark:text-amber-400 font-semibold">
+                    {topChampion[1]} {t("champions.titles")}
+                  </p>
                 </div>
                 <div className="pt-4 sm:pt-0 sm:pl-6">
-                  <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-550">{t("champions.topCity")}</p>
-                  <p className="mt-1 text-lg font-extrabold text-slate-900 dark:text-white font-heading">{topCity[0]}</p>
-                  <p className="text-xs text-amber-600 dark:text-amber-400 font-semibold">{topCity[1]} {t("champions.titles")}</p>
+                  <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-550">
+                    {t("champions.topCity")}
+                  </p>
+                  <p className="mt-1 text-lg font-extrabold text-slate-900 dark:text-white font-heading">
+                    {topCity[0]}
+                  </p>
+                  <p className="text-xs text-amber-600 dark:text-amber-400 font-semibold">
+                    {topCity[1]} {t("champions.titles")}
+                  </p>
                 </div>
                 <div className="pt-4 sm:pt-0 sm:pl-6">
-                  <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-550">{t("champions.mostFinals")}</p>
-                  <p className="mt-1 text-lg font-extrabold text-slate-900 dark:text-white font-heading">{mostFinals[0]}</p>
-                  <p className="text-xs text-amber-600 dark:text-amber-400 font-semibold">{mostFinals[1]} {t("champions.finalsLabel")}</p>
+                  <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-550">
+                    {t("champions.mostFinals")}
+                  </p>
+                  <p className="mt-1 text-lg font-extrabold text-slate-900 dark:text-white font-heading">
+                    {mostFinals[0]}
+                  </p>
+                  <p className="text-xs text-amber-600 dark:text-amber-400 font-semibold">
+                    {mostFinals[1]} {t("champions.finalsLabel")}
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Spotlight directly floating on the canvas */}
-            <div className="relative border-t lg:border-t-0 lg:border-l border-slate-200/60 dark:border-zinc-900/60 pt-8 lg:pt-0 lg:pl-12 flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="rounded-xl bg-amber-500/10 p-2.5 text-amber-600 dark:bg-amber-500/15 dark:text-amber-400">
-                    <Crown size={18} />
+            {latestChampion && (
+              <div className="relative border-t lg:border-t-0 lg:border-l border-slate-200/60 dark:border-zinc-900/60 pt-8 lg:pt-0 lg:pl-12 flex flex-col justify-between">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-xl bg-amber-500/10 p-2.5 text-amber-600 dark:bg-amber-500/15 dark:text-amber-400 animate-pulse">
+                      <Crown size={18} />
+                    </div>
+                    <div>
+                      <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-550">
+                        {selectedDecade === "all"
+                          ? t("champions.latestChampion")
+                          : `${t("champions.latestChampion")} (${t("champions.decadePill", {
+                              decade: selectedDecade,
+                            })})`}
+                      </p>
+                      <h2 className="text-xl font-bold text-slate-900 dark:text-white font-heading leading-tight">
+                        {fixDisplayText(latestChampion.champion)}
+                      </h2>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-550">
-                      {t("champions.latestChampion")}
-                    </p>
-                    <h2 className="text-xl font-bold text-slate-900 dark:text-white font-heading leading-tight">
-                      {fixDisplayText(latestChampion.champion)}
-                    </h2>
+
+                  <div className="divide-y divide-slate-200/60 dark:divide-zinc-900/60 text-sm font-semibold">
+                    <SpotlightLine
+                      label={t("champions.year")}
+                      value={latestChampion.year}
+                    />
+                    <SpotlightLine
+                      label={t("champions.runnerUp")}
+                      value={fixDisplayText(latestChampion.runner_up)}
+                    />
+                    <SpotlightLine
+                      label={t("champions.city")}
+                      value={fixDisplayText(latestChampion.cityChampion)}
+                    />
                   </div>
                 </div>
 
-                <div className="divide-y divide-slate-200/60 dark:divide-zinc-900/60 text-sm font-semibold">
-                  <SpotlightLine label={t("champions.year")} value={latestChampion.year} />
-                  <SpotlightLine
-                    label={t("champions.runnerUp")}
-                    value={fixDisplayText(latestChampion.runner_up)}
-                  />
-                  <SpotlightLine
-                    label={t("champions.city")}
-                    value={fixDisplayText(latestChampion.cityChampion)}
-                  />
-                </div>
+                <button
+                  onClick={() => setShowTable((current) => !current)}
+                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-slate-900 px-5 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 cursor-pointer"
+                >
+                  <Table2 size={16} />
+                  {showTable ? t("champions.timelineHide") : t("champions.timelineShow")}
+                </button>
               </div>
+            )}
+          </div>
+        </section>
 
-              <button
-                onClick={() => setShowTable((current) => !current)}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100"
-              >
-                <Table2 size={16} />
-                {showTable ? t("champions.hideTable") : t("champions.showTable")}
-              </button>
+        {/* Decade Selector Tabs */}
+        <section className="space-y-4 border-t border-b border-slate-200/60 dark:border-zinc-900/60 py-6">
+          <div className="flex flex-col gap-3">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-zinc-500">
+              {t("champions.decadeLabel")}
+            </span>
+            <div className="flex flex-wrap gap-2 pt-1">
+              {DECADES.map((dec) => {
+                const isActive = selectedDecade === dec;
+                return (
+                  <button
+                    key={dec}
+                    onClick={() => setSelectedDecade(dec)}
+                    className={`rounded-full px-4 py-2 text-xs font-bold transition-all duration-300 cursor-pointer ${
+                      isActive
+                        ? "bg-slate-900 text-white shadow-md shadow-slate-900/10 dark:bg-white dark:text-slate-950 scale-105"
+                        : "border border-slate-200 bg-[#FAF8F5]/40 text-slate-655 hover:bg-[#F5F2EC] dark:border-zinc-800 dark:bg-zinc-950/40 dark:text-zinc-400 dark:hover:bg-zinc-900"
+                    }`}
+                  >
+                    {dec === "all"
+                      ? t("champions.allDecades")
+                      : t("champions.decadePill", { decade: dec })}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -228,51 +436,130 @@ export const Champions = () => {
           </div>
         </section>
 
-        {/* Dynamic archive list table floating borderless */}
+        {/* Dynamic archive list timeline floating borderless */}
         {showTable && (
-          <section className="space-y-6">
+          <section className="space-y-8 animate-fade-in-up">
             <div className="border-b border-slate-200/60 dark:border-zinc-900/60 pb-4">
-              <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-550">
+              <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-500">
                 {t("champions.archiveEyebrow")}
               </p>
-              <h2 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">{t("champions.archiveTitle")}</h2>
+              <h2 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+                {t("champions.timelineTitle")}
+              </h2>
+              <p className="text-xs text-slate-400 dark:text-zinc-500 mt-1 font-semibold">
+                {t("champions.timelineDescription")}
+              </p>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[720px] text-sm text-left">
-                <thead>
-                  <tr className="border-b border-slate-200/60 dark:border-zinc-900/60 text-slate-400 dark:text-zinc-500 font-bold uppercase tracking-wider text-[10px]">
-                    <th className="px-4 py-3">{t("champions.year")}</th>
-                    <th className="px-4 py-3">{t("champions.champion")}</th>
-                    <th className="px-4 py-3">{t("champions.runnerUp")}</th>
-                    <th className="px-4 py-3">{t("champions.city")}</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-200/50 dark:divide-zinc-900/60">
-                  {[...validChampions]
-                    .slice()
-                    .reverse()
-                    .map((item, index) => (
-                      <tr
-                        key={`${item.year}-${item.champion}`}
-                        className={`transition-colors hover:bg-[#F5F2EC]/30 dark:hover:bg-zinc-900/20 ${
-                          index === 0 ? "bg-amber-500/[0.03]" : ""
-                        }`}
-                      >
-                        <td className="px-4 py-4.5 font-extrabold text-slate-950 dark:text-white">{item.year}</td>
-                        <td className="px-4 py-4.5 font-semibold text-amber-600 dark:text-amber-400">
-                          {fixDisplayText(item.champion)}
-                        </td>
-                        <td className="px-4 py-4.5 text-slate-500 dark:text-zinc-400 font-semibold">
-                          {fixDisplayText(item.runner_up) || "-"}
-                        </td>
-                        <td className="px-4 py-4.5 text-slate-500 dark:text-zinc-400 font-semibold">
-                          {fixDisplayText(item.cityChampion)}
-                        </td>
-                      </tr>
-                    ))}
-                </tbody>
-              </table>
+            {/* Vertical Timeline Container */}
+            <div className="relative pl-8 md:pl-10 space-y-6">
+              {/* Timeline Line */}
+              <div className="absolute left-3 md:left-3.5 top-2 bottom-2 w-0.5 timeline-gradient-line" />
+
+              {filteredChampions
+                .slice()
+                .reverse()
+                .map((item, index) => {
+                  const champDetail = resolveTeamDetails(item.champion, item.idTeamChampion);
+                  const runnerUpName = fixDisplayText(item.runner_up);
+                  const runnerUpDetail = resolveTeamDetails(runnerUpName, null);
+
+                  return (
+                    <div
+                      key={`${item.year}-${item.champion}-${index}`}
+                      className="relative flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 rounded-2xl bg-[#F5F2EC]/45 dark:bg-zinc-900/10 border border-slate-200/40 dark:border-zinc-800/20 hover:bg-[#F5F2EC]/80 dark:hover:bg-zinc-900/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md animate-fade-in-up glow-card"
+                      style={{ animationDelay: `${index * 30}ms` }}
+                    >
+                      {/* Bullet Dot */}
+                      <div className="absolute left-[-26px] md:left-[-27px] top-[26px] md:top-1/2 md:-translate-y-1/2 w-3.5 h-3.5 rounded-full bg-amber-500 border-2 border-white dark:border-[#07070A] shadow-sm ring-4 ring-amber-500/10" />
+
+                      {/* Year & Edition */}
+                      <div className="flex items-baseline gap-2.5 min-w-[110px]">
+                        <span className="text-2xl font-black text-slate-900 dark:text-white font-heading">
+                          {item.year}
+                        </span>
+                        <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-zinc-555">
+                          {item.edition}
+                        </span>
+                      </div>
+
+                      {/* Teams details */}
+                      <div className="flex-1 grid gap-4 md:grid-cols-2 md:items-center">
+                        {/* Champion */}
+                        <div className="flex items-center gap-3">
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FAF8F5]/80 p-1.5 dark:bg-zinc-950/60 border border-slate-200/40 dark:border-zinc-800/60 shadow-inner">
+                            {champDetail.logo ? (
+                              <img
+                                src={champDetail.logo}
+                                alt={champDetail.name}
+                                className="h-full w-full object-contain"
+                                loading="lazy"
+                              />
+                            ) : (
+                              <Trophy size={16} className="text-amber-500" />
+                            )}
+                          </div>
+                          <div>
+                            <span className="text-[9px] font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 block">
+                              Campeão
+                            </span>
+                            {champDetail.id ? (
+                              <Link
+                                to={`/team/${champDetail.id}`}
+                                className="text-sm font-extrabold text-slate-900 hover:text-red-650 dark:text-white dark:hover:text-red-400 transition-colors"
+                              >
+                                {champDetail.name}
+                              </Link>
+                            ) : (
+                              <span className="text-sm font-bold text-slate-800 dark:text-zinc-300">
+                                {champDetail.name}
+                              </span>
+                            )}
+                            <span className="text-[10px] text-slate-450 dark:text-zinc-500 block font-medium">
+                              {fixDisplayText(item.cityChampion)}
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Runner up */}
+                        <div className="flex items-center gap-3 border-t md:border-t-0 pt-3 md:pt-0 border-slate-200/30 dark:border-zinc-800/40">
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FAF8F5]/80 p-1.5 dark:bg-zinc-950/60 border border-slate-200/40 dark:border-zinc-800/60 shadow-inner">
+                            {runnerUpDetail.logo ? (
+                              <img
+                                src={runnerUpDetail.logo}
+                                alt={runnerUpDetail.name}
+                                className="h-full w-full object-contain"
+                                loading="lazy"
+                              />
+                            ) : (
+                              <div className="h-4 w-4 rounded-full bg-slate-200 dark:bg-zinc-800" />
+                            )}
+                          </div>
+                          <div>
+                            <span className="text-[9px] font-bold uppercase tracking-widest text-slate-450 dark:text-zinc-500 block">
+                              Vice-Campeão
+                            </span>
+                            {runnerUpDetail.id ? (
+                              <Link
+                                to={`/team/${runnerUpDetail.id}`}
+                                className="text-sm font-extrabold text-slate-700 hover:text-red-650 dark:text-zinc-350 dark:hover:text-red-400 transition-colors"
+                              >
+                                {runnerUpDetail.name || "-"}
+                              </Link>
+                            ) : (
+                              <span className="text-sm font-bold text-slate-655 dark:text-zinc-400">
+                                {runnerUpDetail.name || "-"}
+                              </span>
+                            )}
+                            <span className="text-[10px] text-slate-450 dark:text-zinc-500 block font-medium">
+                              {fixDisplayText(item.cityRunnerUp) || "-"}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
             </div>
           </section>
         )}
