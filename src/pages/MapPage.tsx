@@ -68,6 +68,15 @@ const DARK_STYLE: maplibregl.StyleSpecification = {
   ]
 };
 
+const teamsByCity = teamDetails.reduce<Record<string, typeof teamDetails>>((acc, team) => {
+  const city = team.city || "São Luís";
+  if (!acc[city]) {
+    acc[city] = [];
+  }
+  acc[city].push(team);
+  return acc;
+}, {});
+
 export default function MapPage() {
   const { t } = useTranslation();
   const { theme } = useTheme();
@@ -76,29 +85,15 @@ export default function MapPage() {
   const mapRef = useRef<maplibregl.Map | null>(null);
   const markersRef = useRef<maplibregl.Marker[]>([]);
 
+  // Capture current theme in a ref to avoid putting it in the map initialization useEffect dependency array
+  const themeRef = useRef(theme);
+  themeRef.current = theme;
+
   // Page SEO
   useSEO({
     title: t("mapPage.title"),
     description: t("mapPage.description"),
   });
-
-  const teamsByCity = teamDetails.reduce<Record<string, typeof teamDetails>>((acc, team) => {
-    const city = team.city || "São Luís";
-    if (!acc[city]) {
-      acc[city] = [];
-    }
-    acc[city].push(team);
-    return acc;
-  }, {});
-
-  const getTeamInitials = (name: string) =>
-    name
-      .replace(/\([^)]*\)/g, "")
-      .split(/\s+/)
-      .filter(Boolean)
-      .slice(0, 2)
-      .map((word) => word[0]?.toUpperCase())
-      .join("");
 
   // Initialize Map
   useEffect(() => {
@@ -107,7 +102,7 @@ export default function MapPage() {
     // Create Map
     const map = new maplibregl.Map({
       container: mapContainerRef.current,
-      style: theme === "dark" ? DARK_STYLE : LIGHT_STYLE,
+      style: themeRef.current === "dark" ? DARK_STYLE : LIGHT_STYLE,
       center: MARANHAO_CENTER,
       zoom: DEFAULT_ZOOM,
       minZoom: 5.5,
