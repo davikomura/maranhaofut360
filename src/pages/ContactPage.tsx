@@ -37,7 +37,7 @@ export const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_0%,_rgba(239,68,68,0.03),_transparent_28%)] px-6 py-12 md:py-20 transition-theme">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_0%,_rgba(239,68,68,0.03),_transparent_28%)] px-6 py-12 md:py-20 transition-theme animate-fade-in-up">
       <div className="mx-auto max-w-4xl space-y-12">
         
         <div className="max-w-2xl space-y-4">

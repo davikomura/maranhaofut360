@@ -6,15 +6,12 @@ import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { BackButton } from "../components/ui/BackButton";
 import { EmptyState } from "../components/ui/EmptyState";
-import {
-  getChampionsByTeamId,
-  getSocialLinksByTeamId,
-  getTeamDetailsById,
-  getTeamHistoryById,
-} from "../lib/footballData";
+import { getChampionsByTeamId, getSocialLinksByTeamId, getTeamDetailsById, getTeamHistoryById } from "../lib/footballData";
 import type { SocialLinks } from "../types/football";
 import { fixDisplayText } from "../utils/text";
 import { useSEO } from "../hooks/useSEO";
+import { getTeamColors } from "../utils/teamColors";
+import { useJSONLD } from "../hooks/useJSONLD";
 
 export default function TeamDetail() {
   const { id } = useParams();
@@ -24,6 +21,7 @@ export default function TeamDetail() {
   const fixedData = getTeamDetailsById(teamId);
   const translatedInfo = getTeamHistoryById(teamId, i18n.language);
   const socialLinks = getSocialLinksByTeamId(teamId);
+  const colors = getTeamColors(teamId);
 
   // Strong dynamic page SEO
   const teamName = fixedData ? fixDisplayText(fixedData.name) : "";
@@ -39,6 +37,36 @@ export default function TeamDetail() {
     title: seoTitle,
     description: seoDescription,
   });
+
+  // Dynamic JSON-LD structured data for sports clubs
+  useJSONLD(
+    fixedData
+      ? {
+          "@context": "https://schema.org",
+          "@type": "SportsTeam",
+          "name": teamName,
+          "sport": "Association Football",
+          "logo": typeof window !== "undefined" ? `${window.location.origin}${fixedData.image}` : fixedData.image,
+          "foundingDate": fixedData.foundationDate || undefined,
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": teamCity,
+            "addressRegion": "MA",
+            "addressCountry": "BR",
+          },
+          "sameAs": socialLinks
+            ? [
+                socialLinks.instagram,
+                socialLinks.twitter,
+                socialLinks.tiktok,
+                socialLinks.facebook,
+                socialLinks.youtube,
+                socialLinks.website,
+              ].filter(Boolean)
+            : [],
+        }
+      : null
+  );
 
   if (!fixedData || !translatedInfo) {
     return (
@@ -88,7 +116,12 @@ export default function TeamDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_0%,_rgba(239,68,68,0.03),_transparent_28%)] px-4 py-12 md:py-20 transition-theme">
+    <div 
+      style={{
+        backgroundImage: `radial-gradient(circle at 50% 0%, ${colors.glow}, transparent 35%)`
+      }}
+      className="min-h-screen px-4 py-12 md:py-20 transition-theme animate-fade-in-up"
+    >
       <div className="mx-auto max-w-5xl space-y-10">
         
         <div className="flex items-center">
@@ -102,7 +135,13 @@ export default function TeamDetail() {
           <div className="flex flex-col items-center md:items-start space-y-8">
             
             {/* Crest floats directly on canvas */}
-            <div className="flex h-48 w-48 shrink-0 items-center justify-center rounded-full bg-[#F5F2EC]/80 dark:bg-zinc-900/60 p-4 transition-transform duration-500 hover:scale-105">
+            <div 
+              style={{
+                boxShadow: `0 10px 25px -5px ${colors.glow}`,
+                border: `2px solid ${colors.primary}33`
+              }}
+              className="flex h-48 w-48 shrink-0 items-center justify-center rounded-full bg-[#F5F2EC]/80 dark:bg-zinc-900/60 p-4 transition-transform duration-500 hover:scale-105"
+            >
               <img
                 src={fixedData.image}
                 alt={`Escudo do ${fixDisplayText(fixedData.name)}`}
@@ -136,6 +175,13 @@ export default function TeamDetail() {
           <div className="space-y-8">
             
             <div className="space-y-4">
+              {/* Dynamic Line Decorator */}
+              <div 
+                style={{
+                  background: `linear-gradient(to right, ${colors.primary}, ${colors.secondary || colors.primary})`
+                }}
+                className="h-[4px] w-24 rounded-full" 
+              />
               <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white md:text-5xl font-heading leading-tight">
                 {fixDisplayText(fixedData.name)}
               </h1>
@@ -156,7 +202,10 @@ export default function TeamDetail() {
 
             {/* Typography narrative */}
             <div className="relative">
-              <p className="border-l-2 border-red-500 pl-5 text-base leading-relaxed text-slate-600 dark:text-zinc-300 md:text-lg md:leading-loose">
+              <p 
+                style={{ borderColor: colors.primary }}
+                className="border-l-4 pl-5 text-base leading-relaxed text-slate-600 dark:text-zinc-300 md:text-lg md:leading-loose"
+              >
                 {fixDisplayText(translatedInfo.history)}
               </p>
             </div>

@@ -52,6 +52,7 @@ export const Footer = () => {
                   <li key={item.to}>
                     <Link
                       to={item.to}
+                      viewTransition
                       className="transition-colors hover:text-red-600 dark:hover:text-red-400 text-slate-500 dark:text-zinc-500"
                     >
                       {t(item.key)}
@@ -71,6 +72,7 @@ export const Footer = () => {
                 <Link
                   key={item.to}
                   to={item.to}
+                  viewTransition
                   className="block transition-colors hover:text-red-600 dark:hover:text-red-400 text-slate-500 dark:text-zinc-500"
                 >
                   {t(item.key)}

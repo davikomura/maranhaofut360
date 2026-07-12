@@ -249,7 +249,7 @@ export default function MapPage() {
   }, [t, navigate]);
 
   return (
-    <div className="relative w-full h-[calc(100dvh-70px)] overflow-hidden transition-theme bg-slate-100 dark:bg-zinc-950">
+    <div className="relative w-full h-[calc(100dvh-70px)] overflow-hidden transition-theme bg-slate-100 dark:bg-zinc-950 animate-fade-in-up">
       <style>{`
         .custom-maplibre-popup .maplibregl-popup-content {
           background: transparent !important;

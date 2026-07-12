@@ -6,6 +6,7 @@ import { getValidChampions } from "../lib/champions";
 import { teamDetails } from "../lib/footballData";
 import { fixDisplayText } from "../utils/text";
 import { useSEO } from "../hooks/useSEO";
+import { useJSONLD } from "../hooks/useJSONLD";
 
 type RankingMode = "titles" | "finals" | "cities";
 
@@ -174,6 +175,24 @@ export const Champions = () => {
     description: t("champions.description"),
   });
 
+  // Structured Data (JSON-LD) for Search Engines
+  useJSONLD({
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": t("champions.title"),
+    "description": t("champions.description"),
+    "sport": "Association Football",
+    "location": {
+      "@type": "Place",
+      "name": "Maranhão, Brasil",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "MA",
+        "addressCountry": "BR"
+      }
+    }
+  });
+
   const latestChampion =
     filteredChampions.length > 0
       ? filteredChampions[filteredChampions.length - 1]
@@ -208,9 +227,6 @@ export const Champions = () => {
 
   const currentRanking = rankingConfig[rankingMode];
   const RankingIcon = currentRanking.icon;
-  const topFive = [...currentRanking.entries]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5);
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_50%_0%,_rgba(251,191,36,0.05),_transparent_28%)] px-4 py-12 md:py-20 transition-theme bg-stadium-dots bg-mesh-gradient-rich">
@@ -382,18 +398,19 @@ export const Champions = () => {
               />
             </div>
 
-            {/* Podium elements directly floating */}
-            <div className="mt-8 space-y-6">
-              {topFive.map(([label, value], index) => (
-                <PodiumCard
-                  key={`${rankingMode}-${label}`}
-                  place={index + 1}
-                  label={label}
-                  value={value}
-                  totalValue={currentRanking.totalValue}
-                  accent={currentRanking.accent}
-                />
-              ))}
+            {/* Interactive SVG Bar Chart */}
+            <div className="mt-6">
+              <InteractiveBarChart
+                rankingMode={rankingMode}
+                entries={currentRanking.entries}
+                labelSuffix={
+                  rankingMode === "titles"
+                    ? t("champions.titles")
+                    : rankingMode === "finals"
+                    ? t("champions.finalsLabel")
+                    : t("champions.titles")
+                }
+              />
             </div>
           </div>
 
@@ -601,43 +618,136 @@ function ModeButton({
   );
 }
 
-function PodiumCard({
-  place,
-  label,
-  value,
-  totalValue,
-  accent,
+function InteractiveBarChart({
+  rankingMode,
+  entries,
+  labelSuffix,
 }: {
-  place: number;
-  label: string;
-  value: number;
-  totalValue: number;
-  accent: string;
+  rankingMode: RankingMode;
+  entries: [string, number][];
+  labelSuffix: string;
 }) {
-  const percentage = totalValue > 0 ? (value / totalValue) * 100 : 0;
+  const topFive = useMemo(() => {
+    return [...entries].sort((a, b) => b[1] - a[1]).slice(0, 5);
+  }, [entries]);
+
+  const maxVal = topFive.length > 0 ? topFive[0][1] : 1;
+  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+
+  const colors = useMemo(() => {
+    if (rankingMode === "finals") {
+      return { stop1: "#2563eb", stop2: "#38bdf8" }; // blue to sky
+    }
+    if (rankingMode === "cities") {
+      return { stop1: "#059669", stop2: "#10b981" }; // emerald to green
+    }
+    return { stop1: "#d97706", stop2: "#f59e0b" }; // amber / gold
+  }, [rankingMode]);
 
   return (
-    <div className="space-y-2.5">
-      <div className="flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className={`rounded-xl bg-gradient-to-br ${accent} p-[1px]`}>
-            <div className="rounded-xl bg-white px-2.5 py-1 text-xs font-black text-slate-900 dark:bg-[#0c0c10] dark:text-white font-heading">
-              #{place}
-            </div>
+    <div className="w-full rounded-2xl border border-slate-200/50 bg-[#F5F2EC]/30 p-5 shadow-sm dark:border-zinc-800/30 dark:bg-zinc-900/10">
+      <svg viewBox="0 0 400 240" className="w-full overflow-visible">
+        <defs>
+          <linearGradient id="barSvgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor={colors.stop1} />
+            <stop offset="100%" stopColor={colors.stop2} />
+          </linearGradient>
+        </defs>
+        {topFive.map(([label, val], idx) => {
+          const barWidth = maxVal > 0 ? (val / maxVal) * 280 : 0; // scale to max 280px
+          const y = 15 + idx * 45;
+          const isHovered = hoveredIdx === idx;
+
+          return (
+            <g
+              key={label}
+              onMouseEnter={() => setHoveredIdx(idx)}
+              onMouseLeave={() => setHoveredIdx(null)}
+              className="cursor-pointer focus:outline-none"
+            >
+              {/* Rank Badge Indicator */}
+              <circle
+                cx="20"
+                cy={y + 16}
+                r="10"
+                className={`fill-[#F5F2EC] dark:fill-zinc-800 transition-colors ${
+                  isHovered ? "stroke-amber-500 stroke-2" : "stroke-transparent"
+                }`}
+              />
+              <text
+                x="20"
+                y={y + 19}
+                textAnchor="middle"
+                className="text-[9px] font-heading font-black fill-slate-500 dark:fill-zinc-400"
+              >
+                {idx + 1}
+              </text>
+
+              {/* Title / Name Label */}
+              <text
+                x="40"
+                y={y + 8}
+                className={`text-[10px] font-bold transition-colors ${
+                  isHovered ? "fill-slate-900 dark:fill-white font-extrabold" : "fill-slate-700 dark:fill-zinc-300"
+                }`}
+              >
+                {label}
+              </text>
+
+              {/* Background Track Bar */}
+              <rect
+                x="40"
+                y={y + 12}
+                width="280"
+                height="8"
+                rx="4"
+                className="fill-[#F5F2EC] dark:fill-zinc-800/60"
+              />
+
+              {/* Progress Bar (SVG) */}
+              <rect
+                x="40"
+                y={y + 12}
+                width={barWidth}
+                height="8"
+                rx="4"
+                fill="url(#barSvgGradient)"
+                className="transition-all duration-500 ease-out"
+                style={{
+                  transformOrigin: "40px 0px",
+                  scale: isHovered ? "1 1.2" : "1 1",
+                }}
+              />
+
+              {/* Numeric Value Label */}
+              <text
+                x={45 + barWidth}
+                y={y + 19}
+                className={`text-[9px] font-black transition-all ${
+                  isHovered ? "fill-slate-950 dark:fill-white font-extrabold scale-110" : "fill-slate-500 dark:fill-zinc-450"
+                }`}
+              >
+                {val}
+              </text>
+            </g>
+          );
+        })}
+      </svg>
+
+      {/* Interactive detail card matching current selection */}
+      <div className="mt-4 border-t border-slate-200/50 pt-3 dark:border-zinc-850">
+        {hoveredIdx !== null ? (
+          <div className="flex items-center justify-between text-xs font-bold text-slate-750 dark:text-zinc-350 animate-fade-in-up">
+            <span>{topFive[hoveredIdx][0]}</span>
+            <span className="text-amber-600 dark:text-amber-400 font-black">
+              {topFive[hoveredIdx][1]} {labelSuffix}
+            </span>
           </div>
-          <div>
-            <p className="text-sm font-bold text-slate-800 dark:text-zinc-200 leading-none">{label}</p>
-          </div>
-        </div>
-        <div className="text-right text-xs font-extrabold text-slate-400 dark:text-zinc-500">
-          {Math.round(percentage)}%
-        </div>
-      </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-[#F5F2EC] dark:bg-zinc-900/60">
-        <div
-          className={`h-full rounded-full bg-gradient-to-r ${accent}`}
-          style={{ width: `${percentage}%` }}
-        />
+        ) : (
+          <p className="text-[10px] text-center text-slate-400 dark:text-zinc-500 font-semibold italic">
+            Passe o mouse ou toque nas barras para ver detalhes adicionais
+          </p>
+        )}
       </div>
     </div>
   );

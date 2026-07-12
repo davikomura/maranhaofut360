@@ -118,6 +118,7 @@ function NavItem({ to, label, activeClass, hoverClass, mobile = false, onNavigat
       <NavLink
         to={to}
         onClick={onNavigate}
+        viewTransition
         className={({ isActive }) =>
           [
             "transition-colors duration-200",

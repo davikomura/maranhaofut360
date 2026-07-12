@@ -12,7 +12,7 @@ const Teams = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_0%,_rgba(59,130,246,0.04),_transparent_28%)] transition-theme">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_0%,_rgba(59,130,246,0.04),_transparent_28%)] transition-theme animate-fade-in-up">
       <div className="mx-auto max-w-4xl px-6 py-12 md:py-20">
         
         {/* Floating Header */}

@@ -11,7 +11,7 @@ export const About = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(220,38,38,0.03),_transparent_28%)] transition-theme">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(220,38,38,0.03),_transparent_28%)] transition-theme animate-fade-in-up">
       <main className="max-w-3xl mx-auto px-4 py-20 text-center space-y-6">
         <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white font-heading">
           {t("about.title")}

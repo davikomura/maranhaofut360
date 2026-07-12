@@ -19,7 +19,7 @@ export const SerieB = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(239,68,68,0.04),_transparent_28%)] transition-theme">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(239,68,68,0.04),_transparent_28%)] transition-theme animate-fade-in-up">
       <main className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="mb-10 text-center space-y-4">
           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white md:text-5xl font-heading">

@@ -218,6 +218,7 @@ function MobileTeamCard({
           src={team.logo}
           alt={fixDisplayText(team.name)}
           className="h-8 w-8 shrink-0 rounded-full object-contain bg-slate-50 dark:bg-zinc-900 p-0.5 border border-slate-200/40 dark:border-zinc-800"
+          loading="lazy"
         />
         <div className="min-w-0 flex-1">
           <h4 className="truncate text-sm font-bold text-[#2C2927] dark:text-white">{fixDisplayText(team.name)}</h4>
@@ -260,6 +261,7 @@ function DesktopTeamRow({
             src={team.logo}
             alt={fixDisplayText(team.name)}
             className="h-7 w-7 rounded-full bg-slate-50 dark:bg-zinc-900 p-0.5 border border-slate-200/50 dark:border-zinc-800"
+            loading="lazy"
           />
           <span className="font-bold text-[#2C2927] dark:text-zinc-200">{fixDisplayText(team.name)}</span>
         </div>

@@ -13,6 +13,7 @@ import { getChampionStats } from "../lib/champions";
 import { leagueSeasons, teamDetails } from "../lib/footballData";
 import { fixDisplayText } from "../utils/text";
 import { useSEO } from "../hooks/useSEO";
+import { useJSONLD } from "../hooks/useJSONLD";
 
 const quickLinks = [
   {
@@ -79,6 +80,15 @@ export default function HomePage() {
     description: t("homePage.p1"),
   });
 
+  // Structured Data (JSON-LD) for Search Engines
+  useJSONLD({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "FutMA 360",
+    "url": typeof window !== "undefined" ? window.location.origin : "https://maranhaofut360.vercel.app",
+    "description": t("homePage.p1"),
+  });
+
   const featuredTeams = [...teamDetails]
     .map((team) => ({
       ...team,
@@ -107,7 +117,7 @@ export default function HomePage() {
     .slice(0, 4);
 
   return (
-    <div className="min-h-screen bg-stadium-dots bg-mesh-gradient-rich transition-theme">
+    <div className="min-h-screen bg-stadium-dots bg-mesh-gradient-rich transition-theme animate-fade-in-up">
       <main className="mx-auto w-full max-w-6xl space-y-16 px-4 py-12 md:px-8 md:py-20">
         
         {/* Aggressive Cardless Hero: Floats directly on the cozy linen background */}
@@ -132,6 +142,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/teams"
+                  viewTransition
                   className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-650 via-rose-550 to-amber-550 px-6 py-3.5 text-sm font-semibold text-white shadow-md hover:shadow-lg hover:shadow-red-500/15 transition-transform hover:-translate-y-0.5"
                 >
                   {t("homePage.primaryCta")}
@@ -139,6 +150,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   to="/campeoes"
+                  viewTransition
                   className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-[#FAF8F5]/60 px-6 py-3.5 text-sm font-semibold text-[#2C2927] transition hover:bg-[#F5F2EC] dark:border-zinc-800 dark:bg-zinc-950/40 dark:text-zinc-200 dark:hover:bg-zinc-900"
                 >
                   {t("homePage.secondaryCta")}
@@ -180,6 +192,7 @@ export default function HomePage() {
                 <Link
                   key={item.to}
                   to={item.to}
+                  viewTransition
                   className={`group relative flex flex-col justify-between transition-all duration-300 rounded-2xl p-6 border border-transparent ${item.hoverBg} first:pt-0 pt-8 md:pt-6 ${index > 0 ? "md:ml-2" : ""}`}
                 >
                   {/* Decorative Active Indicator Line at the top of hovered link */}

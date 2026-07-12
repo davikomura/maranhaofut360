@@ -1,0 +1,17 @@
+{
+  "short_name": "FutMA 360",
+  "name": "FutMA 360 - Futebol Maranhense",
+  "icons": [
+    {
+      "src": "/logo/futma360_2.png",
+      "type": "image/png",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FAF8F5",
+  "theme_color": "#e30613",
+  "display": "standalone",
+  "orientation": "portrait"
+}
