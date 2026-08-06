@@ -142,3 +142,97 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* MapLibre Marker & Popup Styles */
+.custom-maplibre-popup .maplibregl-popup-content {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border: none !important;
+}
+.custom-maplibre-popup .maplibregl-popup-tip {
+  display: none !important;
+}
+.map-team-marker-wrap {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), filter 200ms ease;
+}
+.map-team-marker-wrap:hover {
+  filter: brightness(1.1);
+  transform: scale(1.15) translateY(-2px);
+  z-index: 50;
+}
+.map-team-marker {
+  align-items: center;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+}
+@keyframes mapPulseCount {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5), 0 8px 16px rgba(37, 99, 235, 0.25);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0), 0 8px 16px rgba(37, 99, 235, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0), 0 8px 16px rgba(37, 99, 235, 0.25);
+  }
+}
+@keyframes mapPulseSingle {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5), 0 6px 12px rgba(239, 68, 68, 0.2);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0), 0 6px 12px rgba(239, 68, 68, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0), 0 6px 12px rgba(239, 68, 68, 0.2);
+  }
+}
+.map-team-marker--count {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.35);
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  height: 44px;
+  line-height: 1;
+  outline: 3px solid rgba(59, 130, 246, 0.2);
+  width: 44px;
+  animation: mapPulseCount 2s infinite ease-in-out;
+}
+.map-team-marker--single {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: 2px solid #ffffff;
+  box-shadow: 0 6px 12px rgba(239, 68, 68, 0.3);
+  height: 16px;
+  outline: 3px solid rgba(239, 68, 68, 0.15);
+  width: 16px;
+  animation: mapPulseSingle 2.5s infinite ease-in-out;
+}
+.dark .map-team-marker--count {
+  border-color: #18181b;
+  outline-color: rgba(59, 130, 246, 0.3);
+}
+.dark .map-team-marker--single {
+  border-color: #18181b;
+  outline-color: rgba(239, 68, 68, 0.2);
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 4px;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(82, 82, 91, 0.5);
+}

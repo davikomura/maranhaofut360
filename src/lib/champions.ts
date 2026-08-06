@@ -1,13 +1,33 @@
 import { champions } from "./footballData";
 import { fixDisplayText } from "../utils/text";
 
+/**
+ * Normaliza textos para comparação insensível a acentos, caixa alta/baixa e espaços extras.
+ */
+function normalizeString(text: string): string {
+  return text
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
+/**
+ * Verifica se o nome informado representa um campeonato sem vencedor válido.
+ */
+function isInvalidChampionName(championName: string): boolean {
+  const normalized = normalizeString(championName);
+  return (
+    normalized.includes("nao houve campeonato") ||
+    normalized.includes("campeonato nao concluido") ||
+    normalized.includes("nao concluido")
+  );
+}
+
 export function getValidChampions() {
   return champions.filter(({ champion }) => {
     const championName = fixDisplayText(champion);
-    return (
-      championName !== "N\u00E3o houve campeonato" &&
-      championName !== "Campeonato n\u00E3o conclu\u00EDdo"
-    );
+    return championName && !isInvalidChampionName(championName);
   });
 }
 
