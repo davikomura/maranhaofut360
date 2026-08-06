@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "history": {
+      "PT": "O Sampaio Corrêa Futebol Clube, fundado em 25 de março de 1923 em São Luís, é o maior vencedor do Campeonato Maranhense. Conhecido carinhosamente como 'Bolívia Querida' devido às suas cores amarela, verde e vermelha, o clube tem um histórico glorioso no futebol brasileiro, sendo o único clube maranhense a conquistar títulos nacionais das Séries B, C e D do Campeonato Brasileiro, além da Copa do Nordeste de 2018.",
+      "EN": "Sampaio Corrêa Futebol Clube, founded on March 25, 1923 in São Luís, is the most successful club in the Maranhense Championship. Affectionately known as 'Bolívia Querida' due to its yellow, green, and red colors, the club boasts a glorious record in Brazilian football, being the only Maranhense club to win national titles in Brazilian Series B, C, and D, as well as the 2018 Copa do Nordeste."
+    },
+    "curiosities": {
+      "PT": [
+        "Maior campeão do estado do Maranhão com dezenas de títulos estaduais.",
+        "Único clube do Brasil a possuir os títulos das Séries B (1972), C (1997) e D (2012).",
+        "Campeão invicto da Copa do Nordeste em 2018, superando o Bahia na final."
+      ],
+      "EN": [
+        "The most decorated club in Maranhão with dozens of state championships.",
+        "The only club in Brazil to hold national titles in Series B (1972), C (1997), and D (2012).",
+        "Undefeated champion of the 2018 Copa do Nordeste, defeating Bahia in the final."
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "history": {
+      "PT": "O Moto Club de São Luís foi fundado em 13 de setembro de 1937 originalmente como um clube de ciclismo e motociclismo ('Clube do Remo e Motor'). Rapidamente migrou para o futebol, tornando-se uma das maiores forças e dono de uma das maiores torcidas do estado. Conhecido como 'Papão do Norte', é o segundo maior campeão estadual e protagoniza o clássico 'Superclássico' contra o Sampaio Corrêa.",
+      "EN": "Moto Club de São Luís was founded on September 13, 1937, originally as a cycling and motorcycling club. It quickly transitioned into football, becoming one of the strongest forces and boasting one of the largest fanbases in the state. Known as 'Papão do Norte', it is the second most successful state champion and plays in the fierce 'Superclássico' against Sampaio Corrêa."
+    },
+    "curiosities": {
+      "PT": [
+        "Detém a incrível marca do hepta-campeonato maranhense consecutivo (1944 a 1950).",
+        "Popularmente chamado de 'Papão do Norte' e 'Rubro-Negro Fabril'.",
+        "Disputou várias edições da Série A e Copa do Brasil com campanhas marcantes no Castelão."
+      ],
+      "EN": [
+        "Holds the impressive record of seven consecutive state titles (1944 to 1950).",
+        "Popularly known as 'Papão do Norte' and 'Rubro-Negro Fabril'.",
+        "Has competed in multiple editions of the Brazilian Série A and Copa do Brasil."
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "history": {
+      "PT": "Fundado em 24 de setembro de 1932, o Maranhão Atlético Clube (MAC) é conhecido como 'Bode Gregório' ou 'Quadricolor de Aço' (pelas cores azul, vermelha, preta e branca). É um dos clubes mais tradicionais do futebol maranhense, com títulos estaduais marcantes e participação sólida no cenário nacional.",
+      "EN": "Founded on September 24, 1932, Maranhão Atlético Clube (MAC) is known as 'Bode Gregório' or 'Quadricolor de Aço' (due to its blue, red, black, and white colors). It is one of the most traditional clubs in Maranhense football, with memorable state titles and a strong national presence."
+    },
+    "curiosities": {
+      "PT": [
+        "Tradicional terceira força histórica da capital São Luís.",
+        "Conquistou o Campeonato Maranhense de 2023 em uma final emocionante contra o Moto Club.",
+        "É apelidado carinhosamente por sua torcida como o 'Bode Gregório'."
+      ],
+      "EN": [
+        "Traditional third force of the state capital São Luís.",
+        "Won the 2023 Maranhense Championship in a thrilling final against Moto Club.",
+        "Affectionately nicknamed 'Bode Gregório' by its fans."
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "history": {
+      "PT": "A Sociedade Imperatriz de Desportos, fundada em 4 de janeiro de 1962 na cidade de Imperatriz, é a principal potência do futebol no interior do estado. O 'Cavalo de Aço' possui conquistas do Campeonato Maranhense (2005, 2015, 2019) e arrasta multidões ao Estádio Frei Epifânio.",
+      "EN": "Sociedade Imperatriz de Desportos, founded on January 4, 1962 in the city of Imperatriz, is the main football powerhouse in the interior of the state. 'Cavalo de Aço' holds multiple Maranhense Championship titles (2005, 2015, 2019) and draws enthusiastic crowds to the Frei Epifânio Stadium."
+    },
+    "curiosities": {
+      "PT": [
+        "Primeira equipe do interior a conquistar o título do Campeonato Maranhense (2005).",
+        "Conhecido como 'Cavalo de Aço' pelas cores tricolores (vermelho, branco e verde).",
+        "Conquistou o acesso à Série C do Campeonato Brasileiro em 2018."
+      ],
+      "EN": [
+        "First team from the interior to win the Maranhense Championship (2005).",
+        "Known as 'Cavalo de Aço' (Steel Horse) with tricolor colors (red, white, and green).",
+        "Achieved promotion to Brazilian Série C in 2018."
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "history": {
+      "PT": "O Cordino Esporte Clube foi fundado em 8 de março de 2010 na cidade de Barra do Corda. Conhecido como 'Onça de Barra do Corda', o clube rapidamente se destacou no interior maranhense com campanhas marcantes no campeonato estadual.",
+      "EN": "Cordino Esporte Clube was founded on March 8, 2010 in Barra do Corda. Known as 'Onça de Barra do Corda', the club rapidly gained prominence in the interior with strong state championship campaigns."
+    },
+    "curiosities": {
+      "PT": [
+        "Foi vice-campeão maranhense em 2017 e 2022.",
+        "Manda seus jogos no tradicional Estádio Leandrão em Barra do Corda.",
+        "Tem a onça-pintada como mascote oficial."
+      ],
+      "EN": [
+        "Runner-up in the Maranhense Championship in 2017 and 2022.",
+        "Plays home matches at the traditional Leandrão Stadium in Barra do Corda.",
+        "Features the jaguar (onça-pintada) as its official mascot."
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "history": {
+      "PT": "O Pinheiro Atlético Clube (PAC) foi fundado em 1º de abril de 1989 em Pinheiro, na baixada maranhense. O 'Búfalo da Baixada' representa com orgulho a região e se mantém competitivo no futebol estadual.",
+      "EN": "Pinheiro Atlético Clube (PAC) was founded on April 1, 1989 in Pinheiro, in the Baixada Maranhense region. Known as 'Búfalo da Baixada', it proudly represents the region in state football."
+    },
+    "curiosities": {
+      "PT": [
+        "Apelidado de 'Búfalo da Baixada'.",
+        "Manda seus jogos no Estádio Costa Rodrigues em Pinheiro.",
+        "Tradição de revelação de jovens talentos regionais."
+      ],
+      "EN": [
+        "Nicknamed 'Búfalo da Baixada'.",
+        "Plays home games at the Costa Rodrigues Stadium in Pinheiro.",
+        "A strong tradition of nurturing local young talent."
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "history": {
+      "PT": "Fundado em 1º de junho de 2021 em Tuntum, o Tuntum Esporte Clube escreveu história rapidamente. Com poucos anos de fundação, o clube venceu a Copa Maranhão (Copa FMF) e conquistou vaga inédita na Copa do Brasil.",
+      "EN": "Founded on June 1, 2021 in Tuntum, Tuntum Esporte Clube made quick history. Within a few years of foundation, the club won the Copa Maranhão (Copa FMF) and secured an unprecedented berth in the Copa do Brasil."
+    },
+    "curiosities": {
+      "PT": [
+        "Um dos clubes mais jovens a conquistar vaga na Copa do Brasil no país.",
+        "Eliminou o Volta Redonda-RJ em um jogo histórico da Copa do Brasil de 2022.",
+        "Conhecido como 'Leão do Sertão'."
+      ],
+      "EN": [
+        "One of the youngest clubs in Brazil to qualify for the Copa do Brasil.",
+        "Eliminated Volta Redonda-RJ in a historic 2022 Copa do Brasil match.",
+        "Known as 'Leão do Sertão'."
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "history": {
+      "PT": "O Instituto de Administração de Projetos Educacionais Futebol Clube (IAPE) foi fundado em 10 de agosto de 2008 em São Luís. O 'Canário da Ilha' é reconhecido pelo trabalho forte na formação de atletas de base.",
+      "EN": "Instituto de Administração de Projetos Educacionais Futebol Clube (IAPE) was founded on August 10, 2008 in São Luís. Known as 'Canário da Ilha', it is renowned for youth academy development."
+    },
+    "curiosities": {
+      "PT": [
+        "Campeão da Copa FMF em 2010.",
+        "Destaque no futebol de base do Maranhão.",
+        "Conhecido como 'Canário da Ilha'."
+      ],
+      "EN": [
+        "Winner of the 2010 Copa FMF.",
+        "Prominent youth academy in Maranhão.",
+        "Known as 'Canário da Ilha'."
+      ]
+    }
+  }
+]

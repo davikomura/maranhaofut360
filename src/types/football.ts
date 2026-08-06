@@ -4,6 +4,18 @@ export interface TeamHistory {
   curiosities?: string[];
 }
 
+export interface UnifiedTeamHistory {
+  id: number;
+  history: {
+    PT: string;
+    EN: string;
+  };
+  curiosities: {
+    PT: string[];
+    EN: string[];
+  };
+}
+
 export interface SocialLinks {
   id: number;
   instagram?: string | null;
