@@ -162,79 +162,75 @@
       "semifinals": [
         {
           "team1": {
-            "id": 8,
-            "name": "IAPE",
-            "image": "/img/iape.png"
+            "id": 4,
+            "name": "Imperatriz",
+            "image": "/img/Imperatriz FC.svg"
           },
           "team2": {
-            "id": 27,
-            "name": "Itz Sport",
-            "image": "/img/itz_sport.png"
+            "id": 13,
+            "name": "Tupan",
+            "image": "/img/SETupan.png"
           },
           "firstLeg": {
             "score1": 3,
             "score2": 0
           },
           "secondLeg": {
-            "score1": 3,
-            "score2": 1
+            "score1": 4,
+            "score2": 2
           },
           "aggregate": {
-            "team1": 6,
-            "team2": 1
+            "team1": 7,
+            "team2": 2
           },
-          "winnerId": 8
+          "winnerId": 4
         },
         {
           "team1": {
-            "id": 9,
-            "name": "Viana",
-            "image": "/img/ECViana.png"
+            "id": 17,
+            "name": "Timon",
+            "image": "/img/TimonEC.png"
           },
           "team2": {
-            "id": 15,
-            "name": "São Luís",
-            "image": "/img/EscudoSaoLuisFC.png"
+            "id": 7,
+            "name": "Tuntum",
+            "image": "/img/Escudo_Tuntum_EC.png"
           },
           "firstLeg": {
-            "score1": 3,
-            "score2": 1
+            "score1": 2,
+            "score2": 2
           },
           "secondLeg": {
-            "score1": 1,
-            "score2": 0
+            "score1": 0,
+            "score2": 3
           },
           "aggregate": {
-            "team1": 4,
-            "team2": 1
+            "team1": 2,
+            "team2": 5
           },
-          "winnerId": 9
+          "winnerId": 7
         }
       ],
       "final": [
         {
           "team1": {
-            "id": 8,
-            "name": "IAPE",
-            "image": "/img/iape.png"
+            "id": 7,
+            "name": "Tuntum",
+            "image": "/img/Escudo_Tuntum_EC.png"
           },
           "team2": {
-            "id": 9,
-            "name": "Viana",
-            "image": "/img/ECViana.png"
+            "id": 4,
+            "name": "Imperatriz",
+            "image": "/img/Imperatriz FC.svg"
           },
           "firstLeg": {
-            "score1": 0,
-            "score2": 0
+            "score1": 3,
+            "score2": 1
           },
-          "penaltys": {
-            "score1": 4,
-            "score2": 5
-          },
-          "winnerId": 9
+          "winnerId": 7
         }
       ],
-      "championId": 9
+      "championId": 7
     }
   },
   "2024": {
