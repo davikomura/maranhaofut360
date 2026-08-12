@@ -37,9 +37,10 @@ export const KnockoutStage = ({
     );
   }
 
+  const serieAData = leagueSeasons[year]?.serieA;
   const playoffTeams =
-    league === "A" && year === "2026" && "group" in leagueSeasons[year].serieA
-      ? sortLeagueTeams(withGoalDifference(leagueSeasons[year].serieA.teams)).slice(-3, -1)
+    league === "A" && year === "2026" && serieAData && "group" in serieAData
+      ? sortLeagueTeams(withGoalDifference(serieAData.teams)).slice(-3, -1)
       : [];
 
   const renderMatchRow = (

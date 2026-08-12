@@ -112,15 +112,15 @@ export type SerieBData = SerieGroupedStage;
 
 export interface LeagueSeasons {
   [year: string]: {
-    serieA: SerieAData;
-    serieB: SerieBData;
+    serieA?: SerieAData;
+    serieB?: SerieBData;
   };
 }
 
 export interface KnockoutStageData {
   [year: string]: {
-    serieA: KnockoutLeagueStage | KnockoutMultiStage;
-    serieB: KnockoutLeagueStage | KnockoutMultiStage;
+    serieA?: KnockoutLeagueStage | KnockoutMultiStage;
+    serieB?: KnockoutLeagueStage | KnockoutMultiStage;
   };
 }
 

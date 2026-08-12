@@ -1,4 +1,93 @@
 {
+  "2022": {
+    "serieB": {
+      "stages": {
+        "firstStage": {
+          "groups": {
+            "groupA": [
+              {
+                "name": "Maranhão",
+                "logo": "/img/Maranhão_Atlético_Clube.png",
+                "points": 13,
+                "games": 6,
+                "wins": 4,
+                "draws": 1,
+                "losses": 1,
+                "goalsFor": 12,
+                "goalsAgainst": 5
+              },
+              {
+                "name": "Imperatriz",
+                "logo": "/img/Imperatriz FC.svg",
+                "points": 12,
+                "games": 6,
+                "wins": 4,
+                "draws": 0,
+                "losses": 2,
+                "goalsFor": 6,
+                "goalsAgainst": 2
+              },
+              {
+                "name": "Chapadinha",
+                "logo": "/img/Chapadinha.png",
+                "points": 11,
+                "games": 6,
+                "wins": 3,
+                "draws": 2,
+                "losses": 1,
+                "goalsFor": 15,
+                "goalsAgainst": 5
+              },
+              {
+                "name": "Sabiá",
+                "logo": "/img/SabiaFC.png",
+                "points": 10,
+                "games": 6,
+                "wins": 3,
+                "draws": 1,
+                "losses": 2,
+                "goalsFor": 12,
+                "goalsAgainst": 10
+              },
+              {
+                "name": "Timon",
+                "logo": "/img/TimonEC.png",
+                "points": 8,
+                "games": 6,
+                "wins": 2,
+                "draws": 2,
+                "losses": 2,
+                "goalsFor": 8,
+                "goalsAgainst": 6
+              },
+              {
+                "name": "Tupan",
+                "logo": "/img/SETupan.png",
+                "points": 4,
+                "games": 6,
+                "wins": 1,
+                "draws": 1,
+                "losses": 4,
+                "goalsFor": 7,
+                "goalsAgainst": 15
+              },
+              {
+                "name": "Bacabal",
+                "logo": "/img/EscudoBacabal.svg",
+                "points": 1,
+                "games": 6,
+                "wins": 0,
+                "draws": 1,
+                "losses": 5,
+                "goalsFor": 2,
+                "goalsAgainst": 19
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
   "2023": {
     "serieA": {
       "stages": {

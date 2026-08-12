@@ -10,7 +10,7 @@ export const SerieB = () => {
   const deferredYear = useDeferredValue(selectedYear);
   const [isPending, startTransition] = useTransition();
 
-  const availableYears = ["2026", "2025", "2024", "2023"];
+  const availableYears = ["2026", "2025", "2024", "2023", "2022"];
 
   // Strong dynamic page-level SEO based on selected season
   useSEO({

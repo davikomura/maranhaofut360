@@ -27,7 +27,7 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
   const seriesKey: SeriesKey = league === "B" ? "serieB" : "serieA";
   const data = (leagueSeasons as LeagueSeasons)[year];
 
-  if (!data) {
+  if (!data || !data[seriesKey]) {
     return (
       <EmptyState
         title={t("leagueTable.emptyTitle")}
@@ -157,6 +157,15 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
   );
 
   if (seriesKey === "serieA") {
+    if (!data.serieA) {
+      return (
+        <EmptyState
+          title={t("leagueTable.emptyTitle")}
+          description={t("leagueTable.emptyDescription", { year })}
+        />
+      );
+    }
+
     if ("group" in data.serieA) {
       return (
         <div className="w-full space-y-12">
@@ -183,6 +192,15 @@ export const LeagueTable = ({ league, year }: LeagueProps) => {
         )}
         <KnockoutStage league="A" year={year} stageName="finalStage" />
       </div>
+    );
+  }
+
+  if (!data.serieB) {
+    return (
+      <EmptyState
+        title={t("leagueTable.emptyTitle")}
+        description={t("leagueTable.emptyDescription", { year })}
+      />
     );
   }
 
@@ -431,6 +449,10 @@ function getQualifiedSpots({
     if (groupName === "groupB" || groupName === "groupC") {
       return 2;
     }
+  }
+
+  if (league === "serieB" && year === "2022") {
+    return 4;
   }
 
   return Math.min(2, totalTeams);

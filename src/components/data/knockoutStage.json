@@ -1,4 +1,80 @@
 {
+  "2022": {
+    "serieB": {
+      "semifinals": [
+        {
+          "team1": {
+            "id": 23,
+            "name": "Sabiá",
+            "image": "/img/SabiaFC.png"
+          },
+          "team2": {
+            "id": 3,
+            "name": "Maranhão",
+            "image": "/img/Maranhão_Atlético_Clube.png"
+          },
+          "firstLeg": {
+            "score1": 2,
+            "score2": 4
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 2
+          },
+          "aggregate": {
+            "team1": 3,
+            "team2": 6
+          },
+          "winnerId": 3
+        },
+        {
+          "team1": {
+            "id": 20,
+            "name": "Chapadinha",
+            "image": "/img/Chapadinha.png"
+          },
+          "team2": {
+            "id": 4,
+            "name": "Imperatriz",
+            "image": "/img/Imperatriz FC.svg"
+          },
+          "firstLeg": {
+            "score1": 3,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 4,
+            "team2": 1
+          },
+          "winnerId": 20
+        }
+      ],
+      "final": [
+        {
+          "team1": {
+            "id": 3,
+            "name": "Maranhão",
+            "image": "/img/Maranhão_Atlético_Clube.png"
+          },
+          "team2": {
+            "id": 20,
+            "name": "Chapadinha",
+            "image": "/img/Chapadinha.png"
+          },
+          "firstLeg": {
+            "score1": 1,
+            "score2": 0
+          },
+          "winnerId": 3
+        }
+      ],
+      "championId": 3
+    }
+  },
   "2023": {
     "serieA": {
       "stages": {
