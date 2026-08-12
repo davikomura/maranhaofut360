@@ -782,45 +782,45 @@
       "championId": 8
     },
     "serieB": {
-      "semifinals": [
+      "quarterfinals": [
         {
           "team1": {
-            "id": 8,
-            "name": "IAPE",
-            "image": "/img/iape.png"
+            "id": 11,
+            "name": "Expressinho",
+            "image": "/img/ExpressinhoFC.png"
           },
           "team2": {
-            "id": 27,
-            "name": "Itz Sport",
-            "image": "/img/itz_sport.png"
+            "id": 29,
+            "name": "Lago Verde",
+            "image": "/img/LagoVerdeECLogo.png"
           },
           "firstLeg": {
-            "score1": 3,
-            "score2": 0
-          },
-          "secondLeg": {
-            "score1": 3,
+            "score1": 0,
             "score2": 1
           },
-          "aggregate": {
-            "team1": 6,
-            "team2": 1
+          "secondLeg": {
+            "score1": 2,
+            "score2": 5
           },
-          "winnerId": 8
+          "aggregate": {
+            "team1": 2,
+            "team2": 6
+          },
+          "winnerId": 29
         },
         {
           "team1": {
-            "id": 9,
-            "name": "Viana",
-            "image": "/img/ECViana.png"
+            "id": 6,
+            "name": "Pinheiro-MA",
+            "image": "/img/PinheiroMA.png"
           },
           "team2": {
             "id": 15,
-            "name": "São Luís",
+            "name": "São Luís FC",
             "image": "/img/EscudoSaoLuisFC.png"
           },
           "firstLeg": {
-            "score1": 3,
+            "score1": 1,
             "score2": 1
           },
           "secondLeg": {
@@ -828,36 +828,134 @@
             "score2": 0
           },
           "aggregate": {
-            "team1": 4,
+            "team1": 2,
             "team2": 1
           },
-          "winnerId": 9
+          "winnerId": 6
+        },
+        {
+          "team1": {
+            "id": 13,
+            "name": "Tupan",
+            "image": "/img/SETupan.png"
+          },
+          "team2": {
+            "id": 17,
+            "name": "Timon",
+            "image": "/img/TimonEC.png"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 1
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 5
+          },
+          "aggregate": {
+            "team1": 1,
+            "team2": 6
+          },
+          "winnerId": 17
+        },
+        {
+          "team1": {
+            "id": 5,
+            "name": "Cordino",
+            "image": "/img/Cordino_EC_logo.png"
+          },
+          "team2": {
+            "id": 21,
+            "name": "Araioses",
+            "image": "/img/AraiosesFC.png"
+          },
+          "firstLeg": {
+            "score1": 1,
+            "score2": 1
+          },
+          "secondLeg": {
+            "score1": 0,
+            "score2": 2
+          },
+          "aggregate": {
+            "team1": 1,
+            "team2": 3
+          },
+          "winnerId": 21
+        }
+      ],
+      "semifinals": [
+        {
+          "team1": {
+            "id": 21,
+            "name": "Araioses",
+            "image": "/img/AraiosesFC.png"
+          },
+          "team2": {
+            "id": 17,
+            "name": "Timon",
+            "image": "/img/TimonEC.png"
+          },
+          "firstLeg": {
+            "score1": 1,
+            "score2": 0
+          },
+          "secondLeg": {
+            "score1": 1,
+            "score2": 1
+          },
+          "aggregate": {
+            "team1": 2,
+            "team2": 1
+          },
+          "winnerId": 21
+        },
+        {
+          "team1": {
+            "id": 6,
+            "name": "Pinheiro-MA",
+            "image": "/img/PinheiroMA.png"
+          },
+          "team2": {
+            "id": 29,
+            "name": "Lago Verde",
+            "image": "/img/LagoVerdeECLogo.png"
+          },
+          "firstLeg": {
+            "score1": 0,
+            "score2": 2
+          },
+          "secondLeg": {
+            "score1": 2,
+            "score2": 2
+          },
+          "aggregate": {
+            "team1": 2,
+            "team2": 4
+          },
+          "winnerId": 29
         }
       ],
       "final": [
         {
           "team1": {
-            "id": 8,
-            "name": "IAPE",
-            "image": "/img/iape.png"
+            "id": 29,
+            "name": "Lago Verde",
+            "image": "/img/LagoVerdeECLogo.png"
           },
           "team2": {
-            "id": 9,
-            "name": "Viana",
-            "image": "/img/ECViana.png"
+            "id": 21,
+            "name": "Araioses",
+            "image": "/img/AraiosesFC.png"
           },
           "firstLeg": {
-            "score1": 0,
-            "score2": 0
+            "score1": 1,
+            "score2": 2
           },
-          "penaltys": {
-            "score1": 4,
-            "score2": 5
-          },
-          "winnerId": 9
+          "winnerId": 21
         }
       ],
-      "championId": 9
+      "championId": 21
     }
   }
 }

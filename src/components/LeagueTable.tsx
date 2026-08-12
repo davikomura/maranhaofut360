@@ -423,7 +423,7 @@ function getQualifiedSpots({
   groupName: string;
   totalTeams: number;
 }) {
-  if (league === "serieB" && year === "2025" && stageName === "firstStage") {
+  if (league === "serieB" && (year === "2025" || year === "2026") && stageName === "firstStage") {
     if (groupName === "groupA") {
       return 4;
     }

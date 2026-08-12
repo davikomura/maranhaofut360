@@ -6,11 +6,11 @@ import { useSEO } from "../hooks/useSEO";
 
 export const SerieB = () => {
   const { t } = useTranslation();
-  const [selectedYear, setSelectedYear] = useState("2025");
+  const [selectedYear, setSelectedYear] = useState("2026");
   const deferredYear = useDeferredValue(selectedYear);
   const [isPending, startTransition] = useTransition();
 
-  const availableYears = ["2025", "2024"];
+  const availableYears = ["2026", "2025", "2024", "2023"];
 
   // Strong dynamic page-level SEO based on selected season
   useSEO({
